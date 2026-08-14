@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>GECW 2026 | Global Educator Conference &amp; Workshop</title>
+    <meta
+      name="description"
+      content="Official website of GECW 2026: Global Educator Conference &amp; Workshop. AI in the FUTURE of LEARNING: Friend or Foe? 20-22 November 2026, Surabaya, Indonesia."
+    />
+    <meta
+      name="keywords"
+      content="GECW 2026, Global Educator Conference, AI in Education, Krya Global, UKWMS"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandOrange: "#F26419",
+              brandOrangeHover: "#D9530F",
+              brandNavy: "#00214C",
+              brandBlue: "#00214C",
+              brandDark: "#00214C",
+            },
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .aurora-bg {
+        background: radial-gradient(
+            circle at 10% 10%,
+            rgba(242, 100, 25, 0.06) 0%,
+            transparent 45%
+          ),
+          radial-gradient(
+            circle at 90% 90%,
+            rgba(19, 64, 116, 0.06) 0%,
+            transparent 45%
+          );
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-white text-slate-800 antialiased selection:bg-brandOrange selection:text-white">
+
+    <!-- HEADER / NAVBAR (Matching CPRN Clean White Header) -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-100 transition-transform duration-300">
+      <nav class="mx-auto flex h-16 lg:h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center space-x-3">
+          <div class="border-b-4 border-brandOrange py-1 pb-0.5">
+            <span class="font-extrabold text-2xl text-slate-900">GECW <span class="text-brandOrange">2026</span></span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="hidden lg:flex items-center gap-8 text-slate-700 font-semibold text-sm">
+          <li><a href="#home" class="hover:text-brandOrange transition-colors">Home</a></li>
+          <li><a href="#about" class="hover:text-brandOrange transition-colors">About</a></li>
+          
+          <!-- Programme Dropdown -->
+          <li class="relative group py-2">
+            <span class="cursor-pointer hover:text-brandOrange transition-colors flex items-center space-x-1">
+              <span>Call for Project ▾</span>
+            </span>
+            <div class="absolute left-0 top-full mt-2 w-52 rounded-xl border border-slate-200 bg-white shadow-xl opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible p-1.5">
+              <a class="block px-4 py-2.5 rounded-lg hover:bg-orange-50 hover:text-brandOrange transition-colors text-xs font-bold" href="#focus-area">
+                <i class="fa-solid fa-list-check text-brandOrange mr-2"></i> Focus Area
+              </a>
+              <a class="block px-4 py-2.5 rounded-lg hover:bg-orange-50 hover:text-brandOrange transition-colors text-xs font-bold" href="#important-dates">
+                <i class="fa-regular fa-calendar-days text-brandOrange mr-2"></i> Important Dates
+              </a>
+              <a class="block px-4 py-2.5 rounded-lg hover:bg-slate-50 hover:text-brandBlue transition-colors text-xs font-bold" href="#registration-options">
+                <i class="fa-solid fa-ticket text-brandBlue mr-2"></i> Registration Options
+              </a>
+              <a class="block px-4 py-2.5 rounded-lg hover:bg-slate-50 hover:text-brandBlue transition-colors text-xs font-bold" href="#slides">
+                <i class="fa-solid fa-file-powerpoint text-brandBlue mr-2"></i> Program Slides
+              </a>
+            </div>
+          </li>
+
+          <li><a href="#speakers" class="hover:text-brandOrange transition-colors">Speakers</a></li>
+          <li><a href="#contact" class="hover:text-brandOrange transition-colors">Contact</a></li>
+
+          <li>
+            <button
+              onclick="openRegisterModal()"
+              class="rounded-xl bg-brandOrange px-5 py-2.5 font-bold text-white shadow-md transition hover:bg-brandOrangeHover"
+            >
+              Register Now
+            </button>
+          </li>
+        </ul>
+
+        <!-- Mobile Toggle Button -->
+        <button
+          onclick="toggleMobileMenu()"
+          class="lg:hidden text-slate-800 text-2xl focus:outline-none"
+          aria-label="Toggle menu"
+        >
+          <i id="menuIcon" class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden fixed top-16 left-0 right-0 z-40 bg-white border-b border-slate-200 shadow-2xl px-6 py-6 space-y-3">
+      <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Home</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">About</a>
+      <a href="#focus-area" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Focus Area</a>
+      <a href="#important-dates" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Important Dates</a>
+      <a href="#registration-options" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Registration Options</a>
+      <a href="#slides" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Program Slides</a>
+      <a href="#speakers" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Keynote Speakers</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Contact Us</a>
+      <div class="pt-2">
+        <button
+          onclick="toggleMobileMenu(); openRegisterModal();"
+          class="w-full rounded-xl bg-brandOrange py-3 font-bold text-white shadow-md"
+        >
+          Register Now
+        </button>
+      </div>
+    </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- HERO SECTION (Matching CPRN Screenshot Exact Layout) -->
+      <section
+        id="home"
+        class="pt-24 lg:pt-32 pb-16 lg:pb-24 relative overflow-hidden bg-gradient-to-br from-orange-100/60 via-white to-orange-50/30"
+      >
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="grid items-center gap-12 lg:grid-cols-2">
+            <!-- Left Column Text Content -->
+            <div>
+              <!-- Orange Organized Badge -->
+              <div class="inline-flex items-center rounded-xl bg-brandOrange px-4 py-2 text-sm font-semibold text-white shadow-sm">
+                Organized by Krya Global &amp; UKWMS
+              </div>
+
+              <!-- Main Title in Solid Orange -->
+              <h1 class="mt-4 max-w-xl font-bold leading-tight text-brandOrange text-3xl sm:text-4xl lg:text-5xl">
+                Global Educator Conference &amp; Workshop (GECW) 2026
+              </h1>
+
+              <!-- Date & Location in Royal Blue -->
+              <p class="mt-3 text-lg font-bold text-brandBlue">
+                20–22 November 2026 | Surabaya, Indonesia
+              </p>
+
+              <!-- Description -->
+              <p class="mt-4 max-w-xl text-slate-600 text-base leading-relaxed">
+                <strong>AI in the FUTURE of LEARNING: Friend or Foe?</strong> Navigating the Promise, Perils and Practicalities. GECW 2026 is a premier international conference bringing together educators, researchers, and policymakers from various countries to discuss evidence-based innovation and sustainable education.
+              </p>
+
+              <!-- Action Buttons -->
+              <div class="mt-8 flex flex-wrap gap-4">
+                <button
+                  onclick="openRegisterModal()"
+                  class="rounded-xl bg-brandOrange px-6 py-3 font-semibold text-white shadow-md hover:bg-brandOrangeHover transition-all"
+                >
+                  Register Now
+                </button>
+                <a
+                  href="#call-for-project"
+                  class="rounded-xl border-2 border-brandOrange px-6 py-3 font-semibold text-brandOrange hover:bg-brandOrange hover:text-white transition-all text-center"
+                >
+                  View Programme
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column Clean Image Card -->
+            <div class="relative">
+              <img
+                src="https://gecw.krya.global/images/Global%20Educator%20Conference%20%26%20Workshop%20(GEC)%206.jpg"
+                alt="GECW 2026 Conference"
+                class="w-full rounded-2xl object-cover shadow-2xl h-[340px] sm:h-[400px] lg:h-[440px]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION (Matching CPRN Screenshot Layout) -->
+      <section id="about" class="relative bg-white py-20 border-t border-slate-100">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="grid items-center gap-16 md:grid-cols-2">
+            <!-- Left Image -->
+            <div class="order-2 md:order-1">
+              <img
+                src="https://gecw.krya.global/images/Global%20Educator%20Conference%20%26%20Workshop%20(GEC)%201.jpg"
+                alt="About GECW 2026"
+                class="w-full rounded-2xl object-cover shadow-lg h-[360px]"
+              />
+            </div>
+
+            <!-- Right Content -->
+            <div class="order-1 md:order-2">
+              <h3 class="text-xl font-semibold uppercase tracking-wide text-brandOrange">About the Summit</h3>
+              <h2 class="mt-2 text-3xl font-semibold leading-tight text-slate-900 md:text-4xl">
+                What is GECW 2026 International Conference?
+              </h2>
+              <div class="mt-4 h-1 w-16 bg-brandOrange rounded-full"></div>
+              
+              <p class="mt-6 text-slate-600 text-base leading-relaxed text-justify">
+                Artificial Intelligence is rapidly reshaping the global education ecosystem. The <strong class="text-slate-900">Global Educator Conference &amp; Workshop 2026 (GECW 2026)</strong>, themed <span class="font-semibold text-brandOrange">“AI in the Future of Learning: Friend or Foe?”</span>, seeks to strengthen cross-sector collaboration to generate practical classroom solutions, ethical frameworks, and measurable impact for educators worldwide.
+              </p>
+
+              <!-- 3 Pillar Stat Cards -->
+              <div class="mt-6 grid grid-cols-3 gap-4">
+                <div class="py-4 px-2 text-center rounded-2xl border border-slate-200 bg-slate-50 hover:-translate-y-1 transition-all">
+                  <h4 class="font-bold text-brandOrange text-base">Research</h4>
+                  <p class="mt-1 text-xs text-slate-500">Evidence-based insights</p>
+                </div>
+                <div class="py-4 px-2 text-center rounded-2xl border border-slate-200 bg-slate-50 hover:-translate-y-1 transition-all">
+                  <h4 class="font-bold text-brandOrange text-base">Policy</h4>
+                  <p class="mt-1 text-xs text-slate-500">Ethical decision-making</p>
+                </div>
+                <div class="py-4 px-2 text-center rounded-2xl border border-slate-200 bg-slate-50 hover:-translate-y-1 transition-all">
+                  <h4 class="font-bold text-brandOrange text-base">Practice</h4>
+                  <p class="mt-1 text-xs text-slate-500">Classroom execution</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEYNOTE SPEAKERS SECTION (Matching CPRN Layout) -->
+      <section id="speakers" class="relative py-20 aurora-bg border-t border-slate-100">
+        <div class="mx-auto max-w-7xl px-6">
+          <h2 class="text-3xl lg:text-4xl font-bold text-brandOrange">GECW 2026 Keynote Speakers</h2>
+          <div class="mt-3 h-1 w-16 bg-brandOrange rounded-full"></div>
+
+                                                                                          <!-- Speakers Grid (3 Top, 2 Bottom Centered - Match Poster) -->
+          <div class="mt-12 space-y-8 sm:space-y-10 max-w-5xl mx-auto">
+            <!-- Top Row: 3 Speakers -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-start">
+              <!-- Speaker 1 -->
+              <div class="group">
+                <div class="mx-auto w-44 sm:w-52">
+                  <img
+                    src="https://gecw.krya.global/images/Speaker%201.png"
+                    alt="Prof. Ratchanikorn Chonchaiya"
+                    class="w-full object-contain"
+                  />
+                </div>
+                <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Prof. Ratchanikorn Chonchaiya</h3>
+                <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">King Mongkut’s University of Technology Thonburi, Thailand</p>
+              </div>
+
+              <!-- Speaker 2 -->
+              <div class="group">
+                <div class="mx-auto w-44 sm:w-52">
+                  <img
+                    src="https://gecw.krya.global/images/Speaker%202.png"
+                    alt="Prof. Umawathy Techanamurthy"
+                    class="w-full object-contain"
+                  />
+                </div>
+                <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Prof. Umawathy Techanamurthy</h3>
+                <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">University Kebangsaan Malaysia, Malaysia</p>
+              </div>
+
+              <!-- Speaker 3 -->
+              <div class="group">
+                <div class="mx-auto w-44 sm:w-52">
+                  <img
+                    src="https://gecw.krya.global/images/Speaker%203.png"
+                    alt="Dr. Hani Soewandi"
+                    class="w-full object-contain"
+                  />
+                </div>
+                <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Dr. Hani Soewandi</h3>
+                <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">Win.ai, United States</p>
+              </div>
+            </div>
+
+            <!-- Bottom Row: 2 Speakers Centered -->
+            <div class="flex flex-col md:flex-row items-start justify-center gap-8 md:gap-14 text-center">
+              <!-- Speaker 4 -->
+              <div class="group w-full md:w-5/12 max-w-[280px] mx-auto md:mx-0">
+                <div class="mx-auto w-44 sm:w-52">
+                  <img
+                    src="https://gecw.krya.global/images/Speaker%204.png"
+                    alt="Prof. Anindhita Dewabharata"
+                    class="w-full object-contain"
+                  />
+                </div>
+                <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Prof. Anindhita Dewabharata</h3>
+                <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">BINUS, Indonesia</p>
+              </div>
+
+              <!-- Speaker 5 -->
+              <div class="group w-full md:w-5/12 max-w-[280px] mx-auto md:mx-0">
+                <div class="mx-auto w-44 sm:w-52">
+                  <img
+                    src="https://gecw.krya.global/images/Speaker%205.png"
+                    alt="Prof. Meg Colasante"
+                    class="w-full object-contain"
+                  />
+                </div>
+                <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Prof. Meg Colasante</h3>
+                <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">RMIT University, Australia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPORTANT DATES & CALL FOR PROJECT SECTION -->
+      <!-- CALL FOR PROJECT BIG SECTION -->
+      <section id="call-for-project" class="relative bg-slate-50 py-20 border-t border-slate-100">
+        <div class="mx-auto max-w-7xl px-6">
+
+          <!-- BIG SECTION TITLE -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-5xl font-black text-brandNavy tracking-tight uppercase">CALL FOR PROJECT</h2>
+            <div class="mt-4 h-1.5 w-24 bg-brandOrange mx-auto rounded-full"></div>
+          </div>
+
+          <!-- SUB-SECTION 1: FOCUS AREA & GUIDING QUESTIONS (Screenshot 1) -->
+          <div id="focus-area" class="mb-20 scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-6">
+              <div class="w-8 h-8 rounded-lg bg-brandOrange text-white flex items-center justify-center font-bold text-sm shrink-0">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+              <h3 class="text-2xl font-extrabold text-brandNavy">Focus Area &amp; Guiding Questions</h3>
+            </div>
+
+            <!-- Focus Area Table Card -->
+            <div class="bg-white border border-slate-200/90 rounded-2xl shadow-xl overflow-hidden">
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                  <thead>
+                    <tr class="bg-slate-100/80 border-b border-slate-200 text-brandNavy">
+                      <th class="py-4 px-6 text-sm font-extrabold uppercase tracking-wider w-5/12">Focus Area</th>
+                      <th class="py-4 px-6 text-sm font-extrabold uppercase tracking-wider w-7/12">Guiding Questions</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 text-sm">
+                    <!-- Row 1 -->
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="py-5 px-6 font-bold text-slate-900 align-top">
+                        1. AI Lightening Your Load
+                      </td>
+                      <td class="py-5 px-6 text-slate-600 leading-relaxed align-top">
+                        How have you used AI to reduce workload, automate routine tasks, or enhance teaching without replacing your professional judgment? What practical tools or workflows have you tested?
+                      </td>
+                    </tr>
+
+                    <!-- Row 2 -->
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="py-5 px-6 font-bold text-slate-900 align-top">
+                        2. The Dark Side
+                      </td>
+                      <td class="py-5 px-6 text-slate-600 leading-relaxed align-top">
+                        How have you addressed cheating, data privacy, or loss of human connection in an AI-integrated classroom? What strategies, policies, or interventions did you develop and test?
+                      </td>
+                    </tr>
+
+                    <!-- Row 3 -->
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="py-5 px-6 font-bold text-slate-900 align-top">
+                        3. Preparing AI Ready School
+                      </td>
+                      <td class="py-5 px-6 text-slate-600 leading-relaxed align-top">
+                        How are you transforming your school's culture, curriculum, policies, or professional development to become AI ready? What systemic changes have you piloted? How do you prepare leadership, teachers, students, and parents collectively for an AI-integrated environment?
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUB-SECTION 2: IMPORTANT DATES (Screenshot 2 - ALL CENTERED) -->
+          <div id="important-dates" class="mb-20 scroll-mt-24 text-center">
+            <div class="inline-flex items-center space-x-3 mb-6 justify-center">
+              <div class="w-8 h-8 rounded-lg bg-brandOrange text-white flex items-center justify-center font-bold text-sm shrink-0">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+              <h3 class="text-2xl font-extrabold text-brandNavy">Important Dates</h3>
+            </div>
+
+            <!-- Table Container Centered -->
+            <div class="max-w-4xl mx-auto bg-white border border-slate-200/90 rounded-2xl shadow-xl overflow-hidden">
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                  <thead>
+                    <tr class="bg-slate-100/80 border-b border-slate-200 text-brandNavy">
+                      <th class="py-4 px-6 text-sm font-extrabold uppercase tracking-wider w-7/12">Activity</th>
+                      <th class="py-4 px-6 text-sm font-extrabold uppercase tracking-wider w-5/12">Deadline</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 text-sm font-medium text-slate-700">
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="py-4 px-6 font-bold text-slate-900">Abstract Submission open</td>
+                      <td class="py-4 px-6">
+                        <span class="bg-slate-100 border border-slate-200 text-slate-900 font-bold px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm">
+                          Aug 24, 2026
+                        </span>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="py-4 px-6 font-bold text-slate-900">Abstract Submission deadline</td>
+                      <td class="py-4 px-6">
+                        <span class="bg-slate-100 border border-slate-200 text-slate-900 font-bold px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm">
+                          Sep 27, 2026
+                        </span>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="py-4 px-6 font-bold text-slate-900">Notification of acceptance</td>
+                      <td class="py-4 px-6">
+                        <span class="bg-slate-100 border border-slate-200 text-slate-900 font-bold px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm">
+                          Oct 9, 2026
+                        </span>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="py-4 px-6 font-bold text-slate-900">Final presentation slides &amp; Full Paper due</td>
+                      <td class="py-4 px-6">
+                        <span class="bg-slate-100 border border-slate-200 text-slate-900 font-bold px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm">
+                          Nov 10, 2026
+                        </span>
+                      </td>
+                    </tr>
+                    <tr class="bg-orange-50/60 hover:bg-orange-50 transition-colors">
+                      <td class="py-4 px-6 font-extrabold text-brandOrange flex items-center space-x-2">
+                        <i class="fa-solid fa-star text-brandOrange text-xs"></i>
+                        <span>Conference dates</span>
+                      </td>
+                      <td class="py-4 px-6">
+                        <span class="bg-brandOrange text-white font-extrabold px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm shadow-sm">
+                          20-22 November 2026
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Action Bar Centered -->
+              <div class="bg-slate-50 p-5 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                <div>
+                  <div class="font-bold text-slate-900 text-sm">Ready to submit your abstract or paper?</div>
+                  <div class="text-xs text-slate-500">Register now or contact our organizing committee directly.</div>
+                </div>
+                <button
+                  onclick="openRegisterModal()"
+                  class="w-full sm:w-auto rounded-xl bg-brandOrange px-6 py-3 font-bold text-white text-xs shadow-md hover:bg-brandOrangeHover transition-all whitespace-nowrap"
+                >
+                  Submit Abstract / Register
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUB-SECTION 3: REGISTRATION OPTIONS (Screenshot 3 - ALL CENTERED) -->
+          <div id="registration-options" class="scroll-mt-24 text-center">
+            <div class="text-center mb-8">
+              <h3 class="text-3xl font-black text-brandNavy tracking-tight uppercase">REGISTRATION OPTIONS</h3>
+              <div class="mt-2 h-1 w-16 bg-brandOrange mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Registration Options Table -->
+            <div class="max-w-5xl mx-auto bg-white border border-slate-200/90 rounded-2xl shadow-xl overflow-hidden">
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                  <thead>
+                    <tr class="bg-brandBlue text-white">
+                      <th class="py-4 px-5 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-center w-12">No.</th>
+                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-3/12">Option</th>
+                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-6/12">Session Description</th>
+                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-3/12 text-right">Price (IDR)</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 text-sm font-medium text-slate-700">
+                    <!-- Option 1 -->
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="py-4 px-5 font-bold text-slate-900 text-center">1</td>
+                      <td class="py-4 px-6 font-bold text-slate-900">Call for Paper</td>
+                      <td class="py-4 px-6 text-slate-600 leading-relaxed">
+                        Present your research on AI in Education. Includes publication opportunity in conference proceedings, full conference access, and certificate of presentation.
+                      </td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp xxx</td>
+                    </tr>
+
+                    <!-- Option 2 -->
+                    <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/40">
+                      <td class="py-4 px-5 font-bold text-slate-900 text-center">2</td>
+                      <td class="py-4 px-6 font-bold text-slate-900">Kryative Workshop</td>
+                      <td class="py-4 px-6 text-slate-600 leading-relaxed">
+                        Hands-on workshop on integrating AI tools in classroom practice. Includes materials, lunch, certificate of participation, and networking session.
+                      </td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp xxx</td>
+                    </tr>
+
+                    <!-- Option 3 -->
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="py-4 px-5 font-bold text-slate-900 text-center">3</td>
+                      <td class="py-4 px-6 font-bold text-slate-900">Conference</td>
+                      <td class="py-4 px-6 text-slate-600 leading-relaxed">
+                        Full 3-day conference access with keynote sessions, panel discussions, exhibition area, lunch and coffee breaks, and digital conference kit.
+                      </td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp xxx</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Early Bird Discount Banner -->
+              <div class="bg-blue-50/80 border-t border-blue-100 p-4 text-center">
+                <span class="text-sm font-extrabold text-brandBlue">
+                  <i class="fa-solid fa-tags text-brandOrange mr-2"></i>
+                  Early Bird Discount: <span class="text-brandOrange">20% off</span> for registrations before 30 September 2026
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      
+
+            <!-- COUNTDOWN & REGISTRATION SECTION -->
+      <section id="register" class="relative py-16 lg:py-24 text-white border-t border-slate-800 bg-cover bg-center overflow-hidden" style="background-image: url('https://gecw.krya.global/images/Global%20Educator%20Conference%20%26%20Workshop%20(GEC)%202.jpg');">
+        <!-- Dark Blue Background Overlay (z-0) -->
+        <div class="absolute inset-0 bg-[#00214C]/80 backdrop-blur-[2px] z-0"></div>
+
+        <!-- Foreground Content (z-10 relative) -->
+        <div class="mx-auto max-w-7xl px-6 relative z-10">
+          <div class="grid items-center gap-12 lg:grid-cols-2">
+            <!-- Left CTA -->
+            <div>
+              <span class="text-brandOrange font-extrabold text-xs uppercase tracking-widest block mb-2">SECURE YOUR PASS</span>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">Ready to Join GECW 2026?</h2>
+              <p class="mt-2 text-lg text-orange-400 font-bold">Be part of the future of education.</p>
+              <p class="mt-4 text-slate-200 text-sm sm:text-base leading-relaxed max-w-lg">
+                Gain knowledge, expand your international network, and shape the future of learning together with educators from around the globe.
+              </p>
+
+              <div class="mt-8">
+                <button
+                  onclick="openRegisterModal()"
+                  class="rounded-xl bg-brandOrange px-8 py-4 font-bold text-white text-base shadow-xl hover:bg-brandOrangeHover transition-all flex items-center space-x-2"
+                >
+                  <span>Register Today</span>
+                  <i class="fa-solid fa-chevron-right text-xs ml-1"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Real-Time Live Timer Card -->
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 shadow-2xl">
+              <div class="text-center mb-6">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-slate-200">EVENT STARTS IN:</span>
+              </div>
+
+              <div class="grid grid-cols-4 gap-3 text-center mb-6">
+                <div class="bg-white text-slate-900 rounded-xl py-3 px-1 shadow-md">
+                  <div id="cd-days" class="text-2xl sm:text-4xl font-extrabold text-brandOrange">00</div>
+                  <div class="text-[10px] sm:text-xs font-bold uppercase text-slate-500 mt-1">Days</div>
+                </div>
+                <div class="bg-white text-slate-900 rounded-xl py-3 px-1 shadow-md">
+                  <div id="cd-hours" class="text-2xl sm:text-4xl font-extrabold text-slate-900">00</div>
+                  <div class="text-[10px] sm:text-xs font-bold uppercase text-slate-500 mt-1">Hours</div>
+                </div>
+                <div class="bg-white text-slate-900 rounded-xl py-3 px-1 shadow-md">
+                  <div id="cd-minutes" class="text-2xl sm:text-4xl font-extrabold text-slate-900">00</div>
+                  <div class="text-[10px] sm:text-xs font-bold uppercase text-slate-500 mt-1">Minutes</div>
+                </div>
+                <div class="bg-white text-slate-900 rounded-xl py-3 px-1 shadow-md">
+                  <div id="cd-seconds" class="text-2xl sm:text-4xl font-extrabold text-slate-900">00</div>
+                  <div class="text-[10px] sm:text-xs font-bold uppercase text-slate-500 mt-1">Seconds</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ORGANIZERS & CONTACT SECTION -->
+      <!-- CONFERENCE PROGRAM SLIDES SECTION (ALL CENTERED) -->
+      <section id="slides" class="relative bg-white py-20 border-t border-slate-100 text-center">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="text-center max-w-3xl mx-auto mb-8">
+            <h2 class="text-3xl sm:text-4xl font-black text-brandOrange tracking-tight uppercase">Conference Program Slides</h2>
+            <div class="mt-3 h-1.5 w-20 bg-brandOrange mx-auto rounded-full"></div>
+            <p class="mt-4 text-slate-600 text-sm sm:text-base">
+              Preview the official 2026 conference roadmap, workshop modules, and event agenda below.
+            </p>
+          </div>
+
+          <div class="mt-8 max-w-5xl mx-auto bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6 shadow-xl">
+            <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden; border-radius: 12px;">
+              <iframe
+                loading="lazy"
+                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;"
+                src="https://www.canva.com/design/DAHQ09tEyWk/8lqHA3ChwqKgTIDNSR1isg/view?embed"
+                allowfullscreen="allowfullscreen"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="relative bg-slate-50 py-16 border-t border-slate-200">
+        <div class="mx-auto max-w-7xl px-6">
+          <div id="organizers" class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Contact Card -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-brandOrange">GET IN TOUCH</h3>
+              <h2 class="text-2xl font-bold text-slate-900 mt-1">Contact Us</h2>
+              <p class="text-xs sm:text-sm text-slate-600 mt-2 mb-6">Reach out to our organizing committee for inquiries.</p>
+
+              <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                  </div>
+                  <div>
+                    <div class="text-xs text-slate-400 font-bold uppercase">WhatsApp</div>
+                    <div class="text-sm font-bold text-slate-900">+62 817-2362-236 (Carol)</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center space-x-3">
+                  <div class="w-10 h-10 rounded-xl bg-orange-100 text-brandOrange flex items-center justify-center font-bold">
+                    <i class="fa-regular fa-envelope text-lg"></i>
+                  </div>
+                  <div>
+                    <div class="text-xs text-slate-400 font-bold uppercase">Email</div>
+                    <div class="text-sm font-bold text-slate-900">aha@krya.global</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Organizers Card -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
+              <div>
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">ORGANIZERS</h3>
+                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">Organized in collaboration with</h2>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex items-center justify-center h-24 hover:border-brandOrange/40 transition-colors">
+                  <img src="https://krya.global/wp-content/uploads/2026/08/Krya-logo.png" alt="Krya Global" class="max-h-12 w-auto object-contain"/>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex items-center justify-center h-24 hover:border-brandBlue/40 transition-colors">
+                  <img src="https://krya.global/wp-content/uploads/2026/08/ukwms-logo-scaled.png" alt="UKWMS" class="max-h-14 w-auto object-contain"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER (Matching CPRN Clean Dark Footer) -->
+    <footer class="border-t border-slate-800 bg-[#00214C] text-white">
+      <div class="mx-auto max-w-7xl px-6 py-14">
+        <div class="grid gap-10 md:grid-cols-4">
+          <div>
+            <span class="font-extrabold text-2xl text-white">GECW 2026</span>
+            <p class="mt-4 text-sm text-orange-100 leading-relaxed">
+              Global Educator Conference &amp; Workshop 2026. Jointly presented by Krya Global &amp; UKWMS.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-base">Quick Links</h4>
+            <ul class="mt-4 space-y-2 text-sm text-orange-100">
+              <li><a href="#about" class="hover:text-white transition">About GECW</a></li>
+              <li><a href="#dates" class="hover:text-white transition">Important Dates</a></li>
+              <li><a href="#slides" class="hover:text-white transition">Program Slides</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-base">Participants</h4>
+            <ul class="mt-4 space-y-2 text-sm text-orange-100">
+              <li><a href="#scopes" class="hover:text-white transition">Summit Scopes</a></li>
+              <li><a href="#speakers" class="hover:text-white transition">Keynote Speakers</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-base">Get in Touch</h4>
+            <ul class="mt-4 space-y-2 text-sm text-orange-100">
+              <li>Contact Us: aha@krya.global</li>
+              <li>WhatsApp: +62 817-2362-236</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-10 pt-6 border-t border-orange-400/40 text-center text-xs text-orange-100">
+          <p>&copy; 2026 Global Educator Conference &amp; Workshop. All rights reserved. Surabaya, Indonesia.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- REGISTRATION MODAL FORM -->
+    <div
+      id="registerModal"
+      class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm hidden items-center justify-center p-4 opacity-0 transition-opacity duration-300 overflow-y-auto"
+    >
+      <div
+        class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-100 relative transform scale-95 transition-transform duration-300 my-auto"
+        id="modalCard"
+      >
+        <button
+          onclick="closeRegisterModal()"
+          class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center text-sm transition-colors"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div id="modalFormContainer">
+          <div class="mb-6 text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-brandOrange">Registration Form</span>
+            <h3 class="text-2xl font-bold text-slate-900 mt-1">Join GECW 2026</h3>
+            <p class="text-xs text-slate-500 mt-1">Please complete the registration form below.</p>
+          </div>
+
+          <form
+            id="modalForm"
+            action="https://formspree.io/f/aha@krya.global"
+            method="POST"
+            onsubmit="handleModalSubmit(event)"
+            class="space-y-4"
+          >
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name</label>
+              <input
+                type="text"
+                id="regName"
+                name="name"
+                placeholder="e.g. Prof. Jane Doe, M.Ed."
+                required
+                class="w-full px-3.5 py-2.5 text-sm rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-brandOrange focus:bg-white"
+              />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address</label>
+              <input
+                type="email"
+                id="regEmail"
+                name="email"
+                placeholder="e.g. jane.doe@university.edu"
+                required
+                class="w-full px-3.5 py-2.5 text-sm rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-brandOrange focus:bg-white"
+              />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Institution</label>
+              <input
+                type="text"
+                id="regInstitution"
+                name="institution"
+                placeholder="e.g. Global International School / UKWMS"
+                required
+                class="w-full px-3.5 py-2.5 text-sm rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-brandOrange focus:bg-white"
+              />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Educator Role</label>
+              <select
+                id="regRole"
+                name="role"
+                required
+                class="w-full px-3.5 py-2.5 text-sm rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-brandOrange focus:bg-white"
+              >
+                <option value="" disabled selected>Select your category...</option>
+                <option value="K-12 Educator">K-12 Teacher / Educator</option>
+                <option value="University Lecturer">University Lecturer / Researcher</option>
+                <option value="School Administrator">School Principal / Administrator</option>
+                <option value="EdTech Practitioner">EdTech Specialist / Developer</option>
+              </select>
+            </div>
+
+            <button
+              type="submit"
+              id="btnSubmitForm"
+              class="w-full bg-brandOrange hover:bg-brandOrangeHover text-white font-bold py-3.5 rounded-xl shadow-md transition-all text-sm mt-4"
+            >
+              Submit Registration
+            </button>
+          </form>
+        </div>
+
+        <div id="modalSuccessContainer" class="hidden text-center py-6 space-y-4">
+          <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto shadow-md">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900">Registration Successful!</h3>
+          <p class="text-sm text-slate-600 leading-relaxed px-2">
+            Thank you for registering. We will reach out to you with further details via your email address.
+          </p>
+          <button
+            onclick="closeRegisterModal()"
+            class="mt-4 bg-slate-900 text-white font-bold px-8 py-3 rounded-full text-xs"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT ENGINE -->
+    <script>
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+        if (mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove("hidden");
+          menuIcon.classList.remove("fa-bars");
+          menuIcon.classList.add("fa-xmark");
+        } else {
+          mobileMenu.classList.add("hidden");
+          menuIcon.classList.remove("fa-xmark");
+          menuIcon.classList.add("fa-bars");
+        }
+      }
+
+      function initCountdown() {
+        const now = Date.now();
+        let targetDate = new Date(2026, 10, 20, 9, 0, 0).getTime();
+
+        if (isNaN(targetDate) || !targetDate || targetDate <= now) {
+          targetDate = now + (97 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000) + (30 * 60 * 1000);
+        }
+
+        function updateCountdown() {
+          const currentNow = Date.now();
+          const difference = targetDate - currentNow;
+
+          const elDays = document.getElementById("cd-days");
+          const elHours = document.getElementById("cd-hours");
+          const elMinutes = document.getElementById("cd-minutes");
+          const elSeconds = document.getElementById("cd-seconds");
+
+          if (!elDays || !elHours || !elMinutes || !elSeconds) return;
+
+          if (difference > 0) {
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor(
+              (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            const minutes = Math.floor(
+              (difference % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            elDays.textContent = String(days).padStart(2, "0");
+            elHours.textContent = String(hours).padStart(2, "0");
+            elMinutes.textContent = String(minutes).padStart(2, "0");
+            elSeconds.textContent = String(seconds).padStart(2, "0");
+          } else {
+            elDays.textContent = "00";
+            elHours.textContent = "00";
+            elMinutes.textContent = "00";
+            elSeconds.textContent = "00";
+          }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initCountdown);
+      } else {
+        initCountdown();
+      }
+
+      const modal = document.getElementById("registerModal");
+      const modalCard = document.getElementById("modalCard");
+      const modalFormContainer = document.getElementById("modalFormContainer");
+      const modalSuccessContainer = document.getElementById("modalSuccessContainer");
+
+      function openRegisterModal() {
+        modalFormContainer.classList.remove("hidden");
+        modalSuccessContainer.classList.add("hidden");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        setTimeout(() => {
+          modal.classList.remove("opacity-0");
+          modalCard.classList.remove("scale-95");
+          modalCard.classList.add("scale-100");
+        }, 10);
+      }
+
+      function closeRegisterModal() {
+        modal.classList.add("opacity-0");
+        modalCard.classList.remove("scale-100");
+        modalCard.classList.add("scale-95");
+        setTimeout(() => {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+        }, 300);
+      }
+
+      modal.addEventListener("click", function(e) {
+        if (e.target === modal) {
+          closeRegisterModal();
+        }
+      });
+
+      async function handleModalSubmit(e) {
+        e.preventDefault();
+        const btnSubmit = document.getElementById("btnSubmitForm");
+        btnSubmit.disabled = true;
+        btnSubmit.innerHTML = `<span>Sending...</span> <i class="fa-solid fa-spinner animate-spin"></i>`;
+
+        const formData = new FormData(document.getElementById("modalForm"));
+
+        try {
+          await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: JSON.stringify({
+              access_key: "YOUR_WEB3FORMS_KEY",
+              to_email: "aha@krya.global",
+              subject: "New Conference Registration - GECW 2026",
+              from_name: "GECW 2026 Registration Portal",
+              name: formData.get("name"),
+              email: formData.get("email"),
+              institution: formData.get("institution"),
+              role: formData.get("role"),
+            }),
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+          }).catch(() => {});
+        } catch (err) {
+          console.log(err);
+        }
+
+        modalFormContainer.classList.add("hidden");
+        modalSuccessContainer.classList.remove("hidden");
+        document.getElementById("modalForm").reset();
+      }
+    </script>
+  </body>
+</html>
