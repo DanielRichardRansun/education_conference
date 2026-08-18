@@ -507,53 +507,58 @@
               <div class="mt-2 h-1 w-16 bg-brandOrange mx-auto rounded-full"></div>
             </div>
 
-            <!-- Tab Buttons -->
-            <div class="max-w-5xl mx-auto flex justify-center mb-0">
-              <button id="tabLocal" onclick="switchRegTab('local')" class="relative px-8 py-3 text-sm font-extrabold uppercase tracking-wider rounded-t-xl transition-all duration-300 bg-brandBlue text-white shadow-md z-10">
-                <i class="fa-solid fa-flag mr-2"></i>Local
+            <!-- Floating Pill Tab Buttons -->
+            <div class="flex justify-center mb-4 gap-3">
+              <button id="tabLocal" onclick="switchRegTab('local')" class="px-6 sm:px-8 py-2.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-full transition-all duration-300 bg-brandBlue text-white shadow-lg hover:shadow-xl">
+                <span class="mr-1.5">🇮🇩</span> Local
               </button>
-              <button id="tabInternational" onclick="switchRegTab('international')" class="relative px-8 py-3 text-sm font-extrabold uppercase tracking-wider rounded-t-xl transition-all duration-300 bg-slate-200 text-slate-600 hover:bg-slate-300 z-10">
-                <i class="fa-solid fa-globe mr-2"></i>International
+              <button id="tabInternational" onclick="switchRegTab('international')" class="px-6 sm:px-8 py-2.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-full transition-all duration-300 bg-white text-slate-500 border-2 border-slate-200 hover:border-brandBlue hover:text-brandBlue">
+                <i class="fa-solid fa-globe mr-1.5"></i>International
               </button>
             </div>
 
             <!-- Registration Tables Container -->
-            <div class="max-w-5xl mx-auto bg-white border border-slate-200/90 rounded-2xl rounded-tl-none shadow-xl overflow-hidden">
+            <div class="bg-white border border-slate-200/90 rounded-2xl shadow-xl overflow-hidden">
               <!-- LOCAL TABLE -->
               <div id="regTableLocal" class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                   <thead>
                     <tr class="bg-brandBlue text-white">
-                      <th class="py-4 px-5 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-center w-12">No.</th>
-                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider">Option</th>
-                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-right">Onsite</th>
-                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-right">Online</th>
+                      <th class="py-4 px-3 sm:px-5 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-center w-[50px]">No.</th>
+                      <th class="py-4 px-4 sm:px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-[180px] sm:w-[200px]">Option</th>
+                      <th class="py-4 px-4 sm:px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider hidden sm:table-cell">Description</th>
+                      <th class="py-4 px-3 sm:px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-right whitespace-nowrap">Onsite</th>
+                      <th class="py-4 px-3 sm:px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-right whitespace-nowrap">Online</th>
                     </tr>
                   </thead>
                   <tbody class="divide-y divide-slate-100 text-sm font-medium text-slate-700">
                     <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="py-4 px-5 font-bold text-slate-900 text-center">1</td>
-                      <td class="py-4 px-6 font-bold text-slate-900">FGD Presenter</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp1,500,000</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp1,000,000</td>
+                      <td class="py-5 px-3 sm:px-5 font-bold text-slate-900 text-center align-top">1</td>
+                      <td class="py-5 px-4 sm:px-6 font-bold text-brandNavy align-top">Presenter FGD</td>
+                      <td class="py-5 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden sm:table-cell">Present your research on AI in Education. Exclude publication opportunity in conference proceedings, full conference access, and certificate of presentation.</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">Rp1,500,000</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">Rp1,000,000</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/40">
-                      <td class="py-4 px-5 font-bold text-slate-900 text-center">2</td>
-                      <td class="py-4 px-6 font-bold text-slate-900">Workshop Presenter</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp1,500,000</td>
-                      <td class="py-4 px-6 font-bold text-slate-400 text-right">—</td>
+                      <td class="py-5 px-3 sm:px-5 font-bold text-slate-900 text-center align-top">2</td>
+                      <td class="py-5 px-4 sm:px-6 font-bold text-brandNavy align-top">Presenter Workshop</td>
+                      <td class="py-5 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden sm:table-cell">Hands-on workshop on integrating AI tools in classroom practice. Includes materials, lunch, certificate of participation, and networking session.</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">Rp1,500,000</td>
+                      <td class="py-5 px-3 sm:px-6 font-bold text-slate-400 text-right align-top">—</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="py-4 px-5 font-bold text-slate-900 text-center">3</td>
-                      <td class="py-4 px-6 font-bold text-slate-900">General Participant</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp1,000,000</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp200,000</td>
+                      <td class="py-5 px-3 sm:px-5 font-bold text-slate-900 text-center align-top">3</td>
+                      <td class="py-5 px-4 sm:px-6 font-bold text-brandNavy align-top">Public Participants</td>
+                      <td class="py-5 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden sm:table-cell">Full 3-day conference access with keynote sessions, panel discussions, exhibition area, lunch and coffee breaks, and digital conference kit.</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">Rp1,000,000</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">Rp200,000</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/40">
-                      <td class="py-4 px-5 font-bold text-slate-900 text-center">4</td>
-                      <td class="py-4 px-6 font-bold text-slate-900">Uni Student</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp800,000</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp200,000</td>
+                      <td class="py-5 px-3 sm:px-5 font-bold text-slate-900 text-center align-top">4</td>
+                      <td class="py-5 px-4 sm:px-6 font-bold text-brandNavy align-top">Students Participants</td>
+                      <td class="py-5 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden sm:table-cell">Full 3-day conference access with keynote sessions, panel discussions, exhibition area, lunch and coffee breaks, and digital conference kit.</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">Rp800,000</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">Rp200,000</td>
                     </tr>
                   </tbody>
                 </table>
@@ -564,36 +569,41 @@
                 <table class="w-full text-left border-collapse">
                   <thead>
                     <tr class="bg-brandBlue text-white">
-                      <th class="py-4 px-5 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-center w-12">No.</th>
-                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider">Option</th>
-                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-right">Onsite</th>
-                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-right">Online</th>
+                      <th class="py-4 px-3 sm:px-5 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-center w-[50px]">No.</th>
+                      <th class="py-4 px-4 sm:px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-[180px] sm:w-[200px]">Option</th>
+                      <th class="py-4 px-4 sm:px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider hidden sm:table-cell">Description</th>
+                      <th class="py-4 px-3 sm:px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-right whitespace-nowrap">Onsite</th>
+                      <th class="py-4 px-3 sm:px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-right whitespace-nowrap">Online</th>
                     </tr>
                   </thead>
                   <tbody class="divide-y divide-slate-100 text-sm font-medium text-slate-700">
                     <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="py-4 px-5 font-bold text-slate-900 text-center">1</td>
-                      <td class="py-4 px-6 font-bold text-slate-900">FGD Presenter</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$199.00</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$99.00</td>
+                      <td class="py-5 px-3 sm:px-5 font-bold text-slate-900 text-center align-top">1</td>
+                      <td class="py-5 px-4 sm:px-6 font-bold text-brandNavy align-top">Presenter FGD</td>
+                      <td class="py-5 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden sm:table-cell">Present your research on AI in Education. Exclude publication opportunity in conference proceedings, full conference access, and certificate of presentation.</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">$199.00</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">$99.00</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/40">
-                      <td class="py-4 px-5 font-bold text-slate-900 text-center">2</td>
-                      <td class="py-4 px-6 font-bold text-slate-900">Workshop Presenter</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$199.00</td>
-                      <td class="py-4 px-6 font-bold text-slate-400 text-right">—</td>
+                      <td class="py-5 px-3 sm:px-5 font-bold text-slate-900 text-center align-top">2</td>
+                      <td class="py-5 px-4 sm:px-6 font-bold text-brandNavy align-top">Presenter Workshop</td>
+                      <td class="py-5 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden sm:table-cell">Hands-on workshop on integrating AI tools in classroom practice. Includes materials, lunch, certificate of participation, and networking session.</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">$199.00</td>
+                      <td class="py-5 px-3 sm:px-6 font-bold text-slate-400 text-right align-top">—</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="py-4 px-5 font-bold text-slate-900 text-center">3</td>
-                      <td class="py-4 px-6 font-bold text-slate-900">General Participant</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$99.00</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$49.00</td>
+                      <td class="py-5 px-3 sm:px-5 font-bold text-slate-900 text-center align-top">3</td>
+                      <td class="py-5 px-4 sm:px-6 font-bold text-brandNavy align-top">Public Participants</td>
+                      <td class="py-5 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden sm:table-cell">Full 3-day conference access with keynote sessions, panel discussions, exhibition area, lunch and coffee breaks, and digital conference kit.</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">$99.00</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">$49.00</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/40">
-                      <td class="py-4 px-5 font-bold text-slate-900 text-center">4</td>
-                      <td class="py-4 px-6 font-bold text-slate-900">Uni Student</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$79.00</td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$49.00</td>
+                      <td class="py-5 px-3 sm:px-5 font-bold text-slate-900 text-center align-top">4</td>
+                      <td class="py-5 px-4 sm:px-6 font-bold text-brandNavy align-top">Students Participants</td>
+                      <td class="py-5 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden sm:table-cell">Full 3-day conference access with keynote sessions, panel discussions, exhibition area, lunch and coffee breaks, and digital conference kit.</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">$79.00</td>
+                      <td class="py-5 px-3 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap align-top">$49.00</td>
                     </tr>
                   </tbody>
                 </table>
@@ -605,6 +615,106 @@
                   <i class="fa-solid fa-tags text-brandOrange mr-2"></i>
                   Early Bird Discount: <span class="text-brandOrange">20% off</span> for registrations from 24 August 2026 – 20 September 2026
                 </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUB-SECTION 4: ADDITIONAL PACKAGE (Optional) -->
+          <div id="additional-package" class="mt-16 scroll-mt-24 text-center">
+            <div class="text-center mb-8">
+              <h3 class="text-3xl font-black text-brandNavy tracking-tight uppercase">ADDITIONAL PACKAGE</h3>
+              <p class="mt-2 text-sm text-slate-500 font-medium">(Optional)</p>
+              <div class="mt-2 h-1 w-16 bg-brandOrange mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <!-- Publication Card -->
+              <div class="bg-white border border-slate-200/90 rounded-2xl shadow-xl overflow-hidden text-left">
+                <div class="bg-brandBlue px-5 sm:px-6 py-4 flex items-center space-x-3">
+                  <div class="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center text-white text-lg">
+                    <i class="fa-solid fa-book-open"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-extrabold text-sm sm:text-base uppercase tracking-wide">Publication</h4>
+                    <p class="text-blue-200 text-[11px] font-medium">Publish your research paper</p>
+                  </div>
+                </div>
+                <div class="overflow-x-auto">
+                  <table class="w-full text-left border-collapse">
+                    <thead>
+                      <tr class="bg-slate-50 border-b border-slate-200">
+                        <th class="py-3 px-5 sm:px-6 text-xs font-extrabold uppercase tracking-wider text-brandNavy">Journal</th>
+                        <th class="py-3 px-4 sm:px-6 text-xs font-extrabold uppercase tracking-wider text-brandNavy text-right">IDR</th>
+                        <th class="py-3 px-4 sm:px-6 text-xs font-extrabold uppercase tracking-wider text-brandNavy text-right">USD</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-sm">
+                      <tr class="hover:bg-slate-50/80 transition-colors">
+                        <td class="py-4 px-5 sm:px-6 font-bold text-slate-900">International Journal / SINTA 2</td>
+                        <td class="py-4 px-4 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp2,000,000</td>
+                        <td class="py-4 px-4 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$120.00</td>
+                      </tr>
+                      <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/40">
+                        <td class="py-4 px-5 sm:px-6 font-bold text-slate-900">SINTA 4</td>
+                        <td class="py-4 px-4 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp500,000</td>
+                        <td class="py-4 px-4 sm:px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$30.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Full Package Card -->
+              <div class="bg-white border border-slate-200/90 rounded-2xl shadow-xl overflow-hidden text-left">
+                <div class="bg-gradient-to-r from-brandOrange to-orange-500 px-5 sm:px-6 py-4 flex items-center space-x-3">
+                  <div class="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center text-white text-lg">
+                    <i class="fa-solid fa-suitcase-rolling"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-extrabold text-sm sm:text-base uppercase tracking-wide">Full Package</h4>
+                    <p class="text-orange-100 text-[11px] font-medium">Accommodation &amp; transport included</p>
+                  </div>
+                </div>
+                <div class="p-5 sm:p-6">
+                  <div class="space-y-3 mb-6">
+                    <div class="flex items-start space-x-3">
+                      <div class="w-8 h-8 rounded-lg bg-orange-100 text-brandOrange flex items-center justify-center text-sm shrink-0 mt-0.5">
+                        <i class="fa-solid fa-van-shuttle"></i>
+                      </div>
+                      <div>
+                        <p class="font-bold text-slate-900 text-sm">Local Transportation</p>
+                        <p class="text-xs text-slate-500">Hotel – Venue – Hotel (round-trip)</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                      <div class="w-8 h-8 rounded-lg bg-blue-100 text-brandBlue flex items-center justify-center text-sm shrink-0 mt-0.5">
+                        <i class="fa-solid fa-hotel"></i>
+                      </div>
+                      <div>
+                        <p class="font-bold text-slate-900 text-sm">2 Nights Stay</p>
+                        <p class="text-xs text-slate-500">3-star hotel accommodation</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-t border-slate-100 pt-4">
+                    <table class="w-full text-left border-collapse">
+                      <thead>
+                        <tr>
+                          <th class="pb-2 text-xs font-extrabold uppercase tracking-wider text-brandNavy">Package</th>
+                          <th class="pb-2 text-xs font-extrabold uppercase tracking-wider text-brandNavy text-right">International</th>
+                          <th class="pb-2 text-xs font-extrabold uppercase tracking-wider text-brandNavy text-right">Local</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="py-3 font-bold text-slate-900 text-sm">Full Package</td>
+                          <td class="py-3 font-extrabold text-brandOrange text-right whitespace-nowrap text-base">$200</td>
+                          <td class="py-3 font-extrabold text-brandOrange text-right whitespace-nowrap text-base">Rp2,900,000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -901,11 +1011,13 @@
 
     <!-- JAVASCRIPT ENGINE -->
     <script>
-      // Focus Area Guiding Questions Toggle
+      // Focus Area Guiding Questions Toggle — each card is independent
       function toggleFocusQuestion(id) {
         const content = document.getElementById('focusContent' + id);
         const icon = document.getElementById('focusIcon' + id);
-        if (content.classList.contains('hidden')) {
+        if (!content || !icon) return;
+        const isHidden = content.classList.contains('hidden');
+        if (isHidden) {
           content.classList.remove('hidden');
           icon.style.transform = 'rotate(180deg)';
         } else {
@@ -914,28 +1026,26 @@
         }
       }
 
-      // Registration Tab Switching
+      // Registration Tab Switching — pill style
       function switchRegTab(tab) {
         const localTable = document.getElementById('regTableLocal');
         const intlTable = document.getElementById('regTableIntl');
         const tabLocal = document.getElementById('tabLocal');
         const tabInternational = document.getElementById('tabInternational');
-        const container = localTable.closest('.rounded-2xl');
+
+        const activeClass = 'px-6 sm:px-8 py-2.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-full transition-all duration-300 bg-brandBlue text-white shadow-lg hover:shadow-xl';
+        const inactiveClass = 'px-6 sm:px-8 py-2.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-full transition-all duration-300 bg-white text-slate-500 border-2 border-slate-200 hover:border-brandBlue hover:text-brandBlue';
 
         if (tab === 'local') {
           localTable.classList.remove('hidden');
           intlTable.classList.add('hidden');
-          tabLocal.className = 'relative px-8 py-3 text-sm font-extrabold uppercase tracking-wider rounded-t-xl transition-all duration-300 bg-brandBlue text-white shadow-md z-10';
-          tabInternational.className = 'relative px-8 py-3 text-sm font-extrabold uppercase tracking-wider rounded-t-xl transition-all duration-300 bg-slate-200 text-slate-600 hover:bg-slate-300 z-10';
-          container.classList.add('rounded-tl-none');
-          container.classList.remove('rounded-tr-none');
+          tabLocal.className = activeClass;
+          tabInternational.className = inactiveClass;
         } else {
           localTable.classList.add('hidden');
           intlTable.classList.remove('hidden');
-          tabInternational.className = 'relative px-8 py-3 text-sm font-extrabold uppercase tracking-wider rounded-t-xl transition-all duration-300 bg-brandBlue text-white shadow-md z-10';
-          tabLocal.className = 'relative px-8 py-3 text-sm font-extrabold uppercase tracking-wider rounded-t-xl transition-all duration-300 bg-slate-200 text-slate-600 hover:bg-slate-300 z-10';
-          container.classList.remove('rounded-tl-none');
-          container.classList.add('rounded-tr-none');
+          tabInternational.className = activeClass;
+          tabLocal.className = inactiveClass;
         }
       }
 
