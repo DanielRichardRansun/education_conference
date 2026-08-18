@@ -193,15 +193,15 @@
       <!-- HERO SECTION (Matching CPRN Screenshot Exact Layout) -->
       <section
         id="home"
-        class="pt-24 lg:pt-32 pb-16 lg:pb-24 relative overflow-hidden bg-gradient-to-br from-orange-100/60 via-white to-orange-50/30"
+        class="min-h-screen flex items-center pt-20 pb-12 relative overflow-hidden bg-gradient-to-br from-orange-100/60 via-white to-orange-50/30"
       >
-        <div class="mx-auto max-w-7xl px-6">
+        <div class="mx-auto max-w-7xl px-6 w-full py-auto">
           <div class="grid items-center gap-12 lg:grid-cols-2">
             <!-- Left Column Text Content -->
-            <div>
+            <div class="anim-fade-in-up">
               <!-- Orange Organized Badge -->
               <div class="inline-flex items-center rounded-xl bg-brandOrange px-4 py-2 text-sm font-semibold text-white shadow-sm">
-                Global Educator Conference & Workshop 2026
+                Global Educator Conference &amp; Workshop 2026
               </div>
 
               <!-- Main Title in Solid Orange -->
@@ -231,7 +231,7 @@
                   href="#call-for-paper"
                   class="rounded-xl border-2 border-brandOrange px-6 py-3 font-semibold text-brandOrange hover:bg-brandOrange hover:text-white transition-all text-center"
                 >
-                  Explore the  Programme
+                  Explore the Programme
                 </a>
               </div>
             </div>
@@ -249,32 +249,38 @@
       </section>
 
       <!-- PROVOCATIVE TEASER STATEMENT SECTION (Before About) -->
-      <section class="relative bg-slate-900 py-16 sm:py-20 text-white overflow-hidden border-y border-slate-800">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F26419_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="relative mx-auto max-w-5xl px-6 text-center anim-fade-in-up">
-          <span class="inline-block rounded-full bg-brandOrange/20 px-4 py-1.5 text-xs sm:text-sm font-bold text-brandOrange tracking-wide uppercase mb-6">
+      <section
+        class="relative py-16 sm:py-20 text-white overflow-hidden border-y border-slate-800 bg-cover bg-center"
+        style="background-image: url('https://gecw.krya.global/images/Global%20Educator%20Conference%20%26%20Workshop%20(GEC)%207.jpg');"
+      >
+        <!-- Dark Navy Overlay (#00214C) -->
+        <div class="absolute inset-0 bg-[#00214C]/85 z-0"></div>
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F26419_1px,transparent_1px)] [background-size:16px_16px] z-0"></div>
+
+        <div class="relative mx-auto max-w-5xl px-6 text-center anim-fade-in-up z-10">
+          <span class="inline-block rounded-full bg-brandOrange/20 px-4 py-1.5 text-xs sm:text-sm font-bold text-brandOrange tracking-wide uppercase mb-6 border border-brandOrange/30 backdrop-blur-sm">
             The Reality of AI in Education
           </span>
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-snug sm:leading-tight text-white mb-6">
             AI is changing education faster than we can prepare for it.
           </h2>
           <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4 text-xs sm:text-sm md:text-base font-semibold text-orange-200/90 mb-8">
-            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm">Workload</span>
+            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">Workload</span>
             <span class="text-brandOrange">•</span>
-            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm">Cheating</span>
+            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">Cheating</span>
             <span class="text-brandOrange">•</span>
-            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm">Privacy</span>
+            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">Privacy</span>
             <span class="text-brandOrange">•</span>
-            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm">Creativity</span>
+            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">Creativity</span>
             <span class="text-brandOrange">•</span>
-            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm">Human Connection</span>
+            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">Human Connection</span>
             <span class="text-brandOrange">•</span>
-            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm">School Policy</span>
+            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">School Policy</span>
           </div>
           <p class="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3">
             Where do we draw the line?
           </p>
-          <p class="text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p class="text-sm sm:text-base md:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed">
             Don’t just debate AI. <strong class="text-brandOrange">Learn how to navigate it.</strong>
           </p>
         </div>
@@ -325,20 +331,20 @@
         </div>
       </section>
 
-      <!-- WHO IS THIS FOR & CHOOSE YOUR JOURNEY SECTION (After About) -->
+      <!-- WHO IS THIS FOR SECTION (After About) -->
       <section class="relative bg-slate-50 py-20 border-t border-slate-200/80">
         <div class="mx-auto max-w-7xl px-6">
           
-          <!-- Segment 1: WHO IS THIS FOR? -->
-          <div class="mb-20">
-            <div class="text-center max-w-3xl mx-auto mb-12 anim-fade-in-up">
-              <span class="text-xs font-bold uppercase tracking-widest text-brandOrange">Audience &amp; Participants</span>
-              <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-brandNavy tracking-tight">WHO IS THIS FOR?</h2>
-              <div class="mt-3 h-1.5 w-20 bg-brandOrange mx-auto rounded-full"></div>
-              <p class="mt-4 text-base text-slate-600 font-medium">Designed for forward-thinking educators and leaders who:</p>
-            </div>
+          <div class="text-center max-w-3xl mx-auto mb-12 anim-fade-in-up">
+            <span class="text-xs font-bold uppercase tracking-widest text-brandOrange">Audience &amp; Participants</span>
+            <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-brandNavy tracking-tight">WHO IS THIS FOR?</h2>
+            <div class="mt-3 h-1.5 w-20 bg-brandOrange mx-auto rounded-full"></div>
+            <p class="mt-4 text-base text-slate-600 font-medium">Designed for forward-thinking educators and leaders who:</p>
+          </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div class="max-w-6xl mx-auto space-y-6">
+            <!-- Top Row: 3 Items -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
               <!-- Item 1 -->
               <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-4 anim-fade-in-up anim-delay-1">
                 <div class="w-12 h-12 rounded-xl bg-orange-100 text-brandOrange flex items-center justify-center text-xl shrink-0 font-bold">
@@ -371,9 +377,12 @@
                   <p class="mt-1 text-sm text-slate-500 leading-relaxed">Are administrators and leaders setting institutional guidelines, ethics, and governance.</p>
                 </div>
               </div>
+            </div>
 
+            <!-- Bottom Row: 2 Items Centered -->
+            <div class="flex flex-col md:flex-row justify-center gap-6">
               <!-- Item 4 -->
-              <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-4 anim-fade-in-up anim-delay-1">
+              <div class="w-full md:w-[calc(33.333%-12px)] max-w-md bg-white rounded-2xl p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-4 anim-fade-in-up anim-delay-1">
                 <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0 font-bold">
                   <i class="fa-solid fa-screwdriver-wrench"></i>
                 </div>
@@ -384,72 +393,13 @@
               </div>
 
               <!-- Item 5 -->
-              <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-4 anim-fade-in-up anim-delay-2">
+              <div class="w-full md:w-[calc(33.333%-12px)] max-w-md bg-white rounded-2xl p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-4 anim-fade-in-up anim-delay-2">
                 <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0 font-bold">
                   <i class="fa-solid fa-share-nodes"></i>
                 </div>
                 <div>
                   <h3 class="font-bold text-slate-900 text-base leading-snug">Share Project / Research</h3>
                   <p class="mt-1 text-sm text-slate-500 leading-relaxed">Have exciting school pilot projects or academic papers to share with an international audience.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Segment 2: CHOOSE YOUR JOURNEY (Before Call for Paper) -->
-          <div class="border-t border-slate-200 pt-16">
-            <div class="text-center max-w-2xl mx-auto mb-10 anim-fade-in-up">
-              <span class="text-xs font-bold uppercase tracking-widest text-brandOrange">Tailored Experience</span>
-              <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-brandNavy tracking-tight">CHOOSE YOUR JOURNEY</h2>
-              <div class="mt-3 h-1.5 w-20 bg-brandOrange mx-auto rounded-full"></div>
-              <p class="mt-3 text-slate-600 text-sm sm:text-base">Select how you want to participate in the summit</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <!-- Journey 1: Participant -->
-              <div class="bg-white rounded-2xl p-8 border-2 border-slate-200 hover:border-brandNavy transition-all duration-300 shadow-md hover:shadow-xl flex flex-col justify-between anim-fade-in-up anim-delay-1">
-                <div>
-                  <div class="w-14 h-14 rounded-2xl bg-blue-50 text-brandNavy flex items-center justify-center text-2xl mb-5 font-black border border-blue-100">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                  </div>
-                  <div class="inline-block px-3 py-1 rounded-full bg-blue-100 text-brandNavy font-bold text-xs uppercase tracking-wider mb-2">
-                    Learn &amp; Practice
-                  </div>
-                  <h3 class="text-2xl font-black text-slate-900 mt-1">Participant</h3>
-                  <p class="text-slate-600 text-sm mt-3 leading-relaxed">
-                    Immerse yourself in keynote sessions, hands-on workshops, interactive panel discussions, and collaborative peer learning. Perfect for teachers, lecturers, and leaders looking to implement practical AI solutions.
-                  </p>
-                </div>
-                <div class="mt-8 pt-6 border-t border-slate-100">
-                  <a href="#registration-options" class="w-full inline-flex items-center justify-center space-x-2 rounded-xl bg-brandNavy px-6 py-3 font-bold text-white text-sm shadow hover:bg-slate-800 transition-all text-center">
-                    <span>View Participant Options</span>
-                    <i class="fa-solid fa-arrow-right text-xs"></i>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Journey 2: Presenter -->
-              <div class="bg-white rounded-2xl p-8 border-2 border-brandOrange/30 hover:border-brandOrange transition-all duration-300 shadow-md hover:shadow-xl flex flex-col justify-between relative overflow-hidden anim-fade-in-up anim-delay-2">
-                <div class="absolute top-0 right-0 bg-brandOrange text-white text-[10px] font-extrabold uppercase px-4 py-1 rounded-bl-xl tracking-wider">
-                  Call for Paper
-                </div>
-                <div>
-                  <div class="w-14 h-14 rounded-2xl bg-orange-50 text-brandOrange flex items-center justify-center text-2xl mb-5 font-black border border-orange-100">
-                    <i class="fa-solid fa-chalkboard-user"></i>
-                  </div>
-                  <div class="inline-block px-3 py-1 rounded-full bg-orange-100 text-brandOrange font-bold text-xs uppercase tracking-wider mb-2">
-                    Share &amp; Inspire
-                  </div>
-                  <h3 class="text-2xl font-black text-slate-900 mt-1">Presenter</h3>
-                  <p class="text-slate-600 text-sm mt-3 leading-relaxed">
-                    Present your innovative research, classroom case studies, or institutional frameworks through FGDs or Workshops. Gain international recognition, publication opportunities, and peer review.
-                  </p>
-                </div>
-                <div class="mt-8 pt-6 border-t border-slate-100">
-                  <a href="#call-for-paper" class="w-full inline-flex items-center justify-center space-x-2 rounded-xl bg-brandOrange px-6 py-3 font-bold text-white text-sm shadow hover:bg-brandOrangeHover transition-all text-center">
-                    <span>Explore Call for Paper</span>
-                    <i class="fa-solid fa-arrow-right text-xs"></i>
-                  </a>
                 </div>
               </div>
             </div>
@@ -464,12 +414,12 @@
           <h2 class="text-3xl lg:text-4xl font-bold text-brandOrange">GECW 2026 Keynote Speakers</h2>
           <div class="mt-3 h-1 w-16 bg-brandOrange rounded-full"></div>
 
-                                                                                          <!-- Speakers Grid (3 Top, 2 Bottom Centered - Match Poster) -->
+          <!-- Speakers Grid (3 Top, 2 Bottom Centered - Match Poster) -->
           <div class="mt-12 space-y-8 sm:space-y-10 max-w-5xl mx-auto">
             <!-- Top Row: 3 Speakers -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-start">
               <!-- Speaker 1 -->
-              <div class="group">
+              <div class="group anim-fade-in-up anim-delay-1">
                 <div class="mx-auto w-44 sm:w-52">
                   <img
                     src="https://gecw.krya.global/images/Speaker%201.png"
@@ -482,7 +432,7 @@
               </div>
 
               <!-- Speaker 2 -->
-              <div class="group">
+              <div class="group anim-fade-in-up anim-delay-2">
                 <div class="mx-auto w-44 sm:w-52">
                   <img
                     src="https://gecw.krya.global/images/Speaker%202.png"
@@ -495,7 +445,7 @@
               </div>
 
               <!-- Speaker 3 -->
-              <div class="group">
+              <div class="group anim-fade-in-up anim-delay-3">
                 <div class="mx-auto w-44 sm:w-52">
                   <img
                     src="https://gecw.krya.global/images/Speaker%203.png"
@@ -511,7 +461,7 @@
             <!-- Bottom Row: 2 Speakers Centered -->
             <div class="flex flex-col md:flex-row items-start justify-center gap-8 md:gap-14 text-center">
               <!-- Speaker 4 -->
-              <div class="group w-full md:w-5/12 max-w-[280px] mx-auto md:mx-0">
+              <div class="group w-full md:w-5/12 max-w-[280px] mx-auto md:mx-0 anim-fade-in-up anim-delay-1">
                 <div class="mx-auto w-44 sm:w-52">
                   <img
                     src="https://gecw.krya.global/images/Speaker%204.png"
@@ -524,7 +474,7 @@
               </div>
 
               <!-- Speaker 5 -->
-              <div class="group w-full md:w-5/12 max-w-[280px] mx-auto md:mx-0">
+              <div class="group w-full md:w-5/12 max-w-[280px] mx-auto md:mx-0 anim-fade-in-up anim-delay-2">
                 <div class="mx-auto w-44 sm:w-52">
                   <img
                     src="https://gecw.krya.global/images/Speaker%205.png"
@@ -534,6 +484,67 @@
                 </div>
                 <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Prof. Meg Colasante</h3>
                 <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">RMIT University, Australia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHOOSE YOUR JOURNEY SECTION (Below Speakers) -->
+      <section class="relative bg-slate-50 py-20 border-t border-slate-200">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="text-center max-w-2xl mx-auto mb-12 anim-fade-in-up">
+            <span class="text-xs font-bold uppercase tracking-widest text-brandOrange">Tailored Experience</span>
+            <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-brandNavy tracking-tight">CHOOSE YOUR JOURNEY</h2>
+            <div class="mt-3 h-1.5 w-20 bg-brandOrange mx-auto rounded-full"></div>
+            <p class="mt-3 text-slate-600 text-sm sm:text-base">Select how you want to participate in the summit</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Journey 1: Participant -->
+            <div class="bg-white rounded-2xl p-8 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between relative overflow-hidden anim-fade-in-up anim-delay-1">
+              <div class="absolute top-0 right-0 bg-brandNavy text-white text-[10px] font-extrabold uppercase px-4 py-1 rounded-bl-xl tracking-wider shadow-sm">
+                Call for Paper
+              </div>
+              <div>
+                <div class="w-14 h-14 rounded-2xl bg-blue-50 text-brandNavy flex items-center justify-center text-2xl mb-5 font-black border border-blue-100">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="inline-block px-3 py-1 rounded-full bg-blue-100 text-brandNavy font-bold text-xs uppercase tracking-wider mb-2">
+                  Learn &amp; Practice
+                </div>
+                <h3 class="text-2xl font-black text-slate-900 mt-1">Participant</h3>
+                <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                  Immerse yourself in keynote sessions, hands-on workshops, interactive panel discussions, and collaborative peer learning. Perfect for teachers, lecturers, and leaders looking to implement practical AI solutions.
+                </p>
+              </div>
+              <div class="mt-8 pt-6 border-t border-slate-100">
+                <a href="#call-for-paper" class="w-full inline-flex items-center justify-center space-x-2 rounded-xl bg-brandNavy px-6 py-3 font-bold text-white text-sm shadow hover:bg-slate-800 transition-all text-center">
+                  <span>Explore Call for Paper</span>
+                  <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Journey 2: Presenter -->
+            <div class="bg-white rounded-2xl p-8 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between anim-fade-in-up anim-delay-2">
+              <div>
+                <div class="w-14 h-14 rounded-2xl bg-orange-50 text-brandOrange flex items-center justify-center text-2xl mb-5 font-black border border-orange-100">
+                  <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <div class="inline-block px-3 py-1 rounded-full bg-orange-100 text-brandOrange font-bold text-xs uppercase tracking-wider mb-2">
+                  Share &amp; Inspire
+                </div>
+                <h3 class="text-2xl font-black text-slate-900 mt-1">Presenter</h3>
+                <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                  Present your innovative research, classroom case studies, or institutional frameworks through FGDs or Workshops. Gain international recognition, publication opportunities, and peer review.
+                </p>
+              </div>
+              <div class="mt-8 pt-6 border-t border-slate-100">
+                <a href="#registration-options" class="w-full inline-flex items-center justify-center space-x-2 rounded-xl bg-brandOrange px-6 py-3 font-bold text-white text-sm shadow hover:bg-brandOrangeHover transition-all text-center">
+                  <span>View Participant Options</span>
+                  <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -998,7 +1009,7 @@
             <!-- COUNTDOWN & REGISTRATION SECTION -->
       <section id="register" class="relative py-16 lg:py-24 text-white border-t border-slate-800 bg-cover bg-center overflow-hidden" style="background-image: url('https://gecw.krya.global/images/Global%20Educator%20Conference%20%26%20Workshop%20(GEC)%202.jpg');">
         <!-- Dark Blue Background Overlay (z-0) -->
-        <div class="absolute inset-0 bg-[#00214C]/80 backdrop-blur-[2px] z-0"></div>
+        <div class="absolute inset-0 bg-[#00214C]/80 z-0"></div>
 
         <!-- Foreground Content (z-10 relative) -->
         <div class="mx-auto max-w-7xl px-6 relative z-10">
@@ -1118,12 +1129,12 @@
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex items-center justify-center h-24 hover:border-brandOrange/40 transition-colors">
-                  <img src="https://krya.global/wp-content/uploads/2026/08/Krya-logo.png" alt="Krya Global" class="max-h-12 w-auto object-contain"/>
-                </div>
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex items-center justify-center h-24 hover:border-brandBlue/40 transition-colors">
-                  <img src="https://krya.global/wp-content/uploads/2026/08/ukwms-logo-scaled.png" alt="UKWMS" class="max-h-14 w-auto object-contain"/>
-                </div>
+                <a href="https://krya.global" target="_blank" rel="noopener noreferrer" class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex items-center justify-center h-24 hover:border-brandOrange/40 hover:shadow-md transition-all group">
+                  <img src="https://krya.global/wp-content/uploads/2026/08/Krya-logo.png" alt="Krya Global" class="max-h-12 w-auto object-contain group-hover:scale-105 transition-transform"/>
+                </a>
+                <a href="https://ukwms.ac.id" target="_blank" rel="noopener noreferrer" class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex items-center justify-center h-24 hover:border-brandBlue/40 hover:shadow-md transition-all group">
+                  <img src="https://krya.global/wp-content/uploads/2026/08/ukwms-logo-scaled.png" alt="UKWMS" class="max-h-14 w-auto object-contain group-hover:scale-105 transition-transform"/>
+                </a>
               </div>
             </div>
           </div>
