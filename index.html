@@ -343,57 +343,76 @@
             <div class="mt-4 h-1.5 w-24 bg-brandOrange mx-auto rounded-full"></div>
           </div>
 
-          <!-- SUB-SECTION 1: FOCUS AREA & GUIDING QUESTIONS (Screenshot 1) -->
+          <!-- SUB-SECTION 1: FOCUS AREA & GUIDING QUESTIONS -->
           <div id="focus-area" class="mb-20 scroll-mt-24">
-            <div class="flex items-center space-x-3 mb-6">
-              <div class="w-8 h-8 rounded-lg bg-brandOrange text-white flex items-center justify-center font-bold text-sm shrink-0">
-                <i class="fa-solid fa-chevron-right"></i>
-              </div>
-              <h3 class="text-2xl font-extrabold text-brandNavy">Focus Area &amp; Guiding Questions</h3>
+            <div class="text-center mb-10">
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-brandNavy">Focus Area &amp; Guiding Questions</h3>
+              <div class="mt-3 h-1 w-16 bg-brandOrange mx-auto rounded-full"></div>
             </div>
 
-            <!-- Focus Area Table Card -->
-            <div class="bg-white border border-slate-200/90 rounded-2xl shadow-xl overflow-hidden">
-              <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse">
-                  <thead>
-                    <tr class="bg-slate-100/80 border-b border-slate-200 text-brandNavy">
-                      <th class="py-4 px-6 text-sm font-extrabold uppercase tracking-wider w-5/12">Focus Area</th>
-                      <th class="py-4 px-6 text-sm font-extrabold uppercase tracking-wider w-7/12">Guiding Questions</th>
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-slate-100 text-sm">
-                    <!-- Row 1 -->
-                    <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="py-5 px-6 font-bold text-slate-900 align-top">
-                        1. AI Lightening Your Load
-                      </td>
-                      <td class="py-5 px-6 text-slate-600 leading-relaxed align-top">
-                        How have you used AI to reduce workload, automate routine tasks, or enhance teaching without replacing your professional judgment? What practical tools or workflows have you tested?
-                      </td>
-                    </tr>
+            <!-- Focus Area Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <!-- Card 1 -->
+              <div class="bg-white border border-slate-200/90 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                <div class="p-6">
+                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-400 to-orange-600 text-white flex items-center justify-center text-2xl shadow-md mb-5">
+                    <i class="fa-solid fa-bolt"></i>
+                  </div>
+                  <span class="text-[11px] font-bold uppercase tracking-widest text-brandOrange">Focus Area 1</span>
+                  <h4 class="mt-2 text-lg font-bold text-slate-900 leading-snug">AI Lightening Your Load</h4>
+                  <p class="mt-2 text-sm text-slate-500 leading-relaxed">Exploring how AI can reduce workload and enhance teaching without replacing professional judgment.</p>
+                </div>
+                <div class="border-t border-slate-100">
+                  <button onclick="toggleFocusQuestion(1)" class="w-full flex items-center justify-between px-6 py-3.5 text-sm font-bold text-brandNavy hover:bg-slate-50 transition-colors focus:outline-none">
+                    <span>Guiding Questions</span>
+                    <i id="focusIcon1" class="fa-solid fa-chevron-down text-xs text-brandOrange transition-transform duration-300"></i>
+                  </button>
+                  <div id="focusContent1" class="hidden px-6 pb-5">
+                    <p class="text-sm text-slate-600 leading-relaxed">How have you used AI to reduce workload, automate routine tasks, or enhance teaching without replacing your professional judgment? What practical tools or workflows have you tested?</p>
+                  </div>
+                </div>
+              </div>
 
-                    <!-- Row 2 -->
-                    <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="py-5 px-6 font-bold text-slate-900 align-top">
-                        2. The Dark Side
-                      </td>
-                      <td class="py-5 px-6 text-slate-600 leading-relaxed align-top">
-                        How have you addressed cheating, data privacy, or loss of human connection in an AI-integrated classroom? What strategies, policies, or interventions did you develop and test?
-                      </td>
-                    </tr>
+              <!-- Card 2 -->
+              <div class="bg-white border border-slate-200/90 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                <div class="p-6">
+                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-400 to-red-600 text-white flex items-center justify-center text-2xl shadow-md mb-5">
+                    <i class="fa-solid fa-shield-halved"></i>
+                  </div>
+                  <span class="text-[11px] font-bold uppercase tracking-widest text-brandOrange">Focus Area 2</span>
+                  <h4 class="mt-2 text-lg font-bold text-slate-900 leading-snug">The Dark Side</h4>
+                  <p class="mt-2 text-sm text-slate-500 leading-relaxed">Addressing cheating, data privacy, and loss of human connection in an AI-integrated classroom.</p>
+                </div>
+                <div class="border-t border-slate-100">
+                  <button onclick="toggleFocusQuestion(2)" class="w-full flex items-center justify-between px-6 py-3.5 text-sm font-bold text-brandNavy hover:bg-slate-50 transition-colors focus:outline-none">
+                    <span>Guiding Questions</span>
+                    <i id="focusIcon2" class="fa-solid fa-chevron-down text-xs text-brandOrange transition-transform duration-300"></i>
+                  </button>
+                  <div id="focusContent2" class="hidden px-6 pb-5">
+                    <p class="text-sm text-slate-600 leading-relaxed">How have you addressed cheating, data privacy, or loss of human connection in an AI-integrated classroom? What strategies, policies, or interventions did you develop and test?</p>
+                  </div>
+                </div>
+              </div>
 
-                    <!-- Row 3 -->
-                    <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="py-5 px-6 font-bold text-slate-900 align-top">
-                        3. Preparing AI Ready School
-                      </td>
-                      <td class="py-5 px-6 text-slate-600 leading-relaxed align-top">
-                        How are you transforming your school's culture, curriculum, policies, or professional development to become AI ready? What systemic changes have you piloted? How do you prepare leadership, teachers, students, and parents collectively for an AI-integrated environment?
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <!-- Card 3 -->
+              <div class="bg-white border border-slate-200/90 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                <div class="p-6">
+                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-400 to-blue-600 text-white flex items-center justify-center text-2xl shadow-md mb-5">
+                    <i class="fa-solid fa-school"></i>
+                  </div>
+                  <span class="text-[11px] font-bold uppercase tracking-widest text-brandOrange">Focus Area 3</span>
+                  <h4 class="mt-2 text-lg font-bold text-slate-900 leading-snug">Preparing AI Ready School</h4>
+                  <p class="mt-2 text-sm text-slate-500 leading-relaxed">Transforming school culture, curriculum, policies, and professional development to become AI ready.</p>
+                </div>
+                <div class="border-t border-slate-100">
+                  <button onclick="toggleFocusQuestion(3)" class="w-full flex items-center justify-between px-6 py-3.5 text-sm font-bold text-brandNavy hover:bg-slate-50 transition-colors focus:outline-none">
+                    <span>Guiding Questions</span>
+                    <i id="focusIcon3" class="fa-solid fa-chevron-down text-xs text-brandOrange transition-transform duration-300"></i>
+                  </button>
+                  <div id="focusContent3" class="hidden px-6 pb-5">
+                    <p class="text-sm text-slate-600 leading-relaxed">How are you transforming your school's culture, curriculum, policies, or professional development to become AI ready? What systemic changes have you piloted? How do you prepare leadership, teachers, students, and parents collectively for an AI-integrated environment?</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -481,54 +500,100 @@
             </div>
           </div>
 
-          <!-- SUB-SECTION 3: REGISTRATION OPTIONS (Screenshot 3 - ALL CENTERED) -->
+          <!-- SUB-SECTION 3: REGISTRATION OPTIONS (Tabbed Local/International) -->
           <div id="registration-options" class="scroll-mt-24 text-center">
             <div class="text-center mb-8">
               <h3 class="text-3xl font-black text-brandNavy tracking-tight uppercase">REGISTRATION OPTIONS</h3>
               <div class="mt-2 h-1 w-16 bg-brandOrange mx-auto rounded-full"></div>
             </div>
 
-            <!-- Registration Options Table -->
-            <div class="max-w-5xl mx-auto bg-white border border-slate-200/90 rounded-2xl shadow-xl overflow-hidden">
-              <div class="overflow-x-auto">
+            <!-- Tab Buttons -->
+            <div class="max-w-5xl mx-auto flex justify-center mb-0">
+              <button id="tabLocal" onclick="switchRegTab('local')" class="relative px-8 py-3 text-sm font-extrabold uppercase tracking-wider rounded-t-xl transition-all duration-300 bg-brandBlue text-white shadow-md z-10">
+                <i class="fa-solid fa-flag mr-2"></i>Local
+              </button>
+              <button id="tabInternational" onclick="switchRegTab('international')" class="relative px-8 py-3 text-sm font-extrabold uppercase tracking-wider rounded-t-xl transition-all duration-300 bg-slate-200 text-slate-600 hover:bg-slate-300 z-10">
+                <i class="fa-solid fa-globe mr-2"></i>International
+              </button>
+            </div>
+
+            <!-- Registration Tables Container -->
+            <div class="max-w-5xl mx-auto bg-white border border-slate-200/90 rounded-2xl rounded-tl-none shadow-xl overflow-hidden">
+              <!-- LOCAL TABLE -->
+              <div id="regTableLocal" class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                   <thead>
                     <tr class="bg-brandBlue text-white">
                       <th class="py-4 px-5 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-center w-12">No.</th>
-                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-3/12">Option</th>
-                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-6/12">Session Description</th>
-                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-3/12 text-right">Price (IDR)</th>
+                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider">Option</th>
+                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-right">Onsite</th>
+                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-right">Online</th>
                     </tr>
                   </thead>
                   <tbody class="divide-y divide-slate-100 text-sm font-medium text-slate-700">
-                    <!-- Option 1 -->
                     <tr class="hover:bg-slate-50/80 transition-colors">
                       <td class="py-4 px-5 font-bold text-slate-900 text-center">1</td>
-                      <td class="py-4 px-6 font-bold text-slate-900">Call for Paper</td>
-                      <td class="py-4 px-6 text-slate-600 leading-relaxed">
-                        Present your research on AI in Education. Includes publication opportunity in conference proceedings, full conference access, and certificate of presentation.
-                      </td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp xxx</td>
+                      <td class="py-4 px-6 font-bold text-slate-900">FGD Presenter</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp1,500,000</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp1,000,000</td>
                     </tr>
-
-                    <!-- Option 2 -->
                     <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/40">
                       <td class="py-4 px-5 font-bold text-slate-900 text-center">2</td>
-                      <td class="py-4 px-6 font-bold text-slate-900">Kryative Workshop</td>
-                      <td class="py-4 px-6 text-slate-600 leading-relaxed">
-                        Hands-on workshop on integrating AI tools in classroom practice. Includes materials, lunch, certificate of participation, and networking session.
-                      </td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp xxx</td>
+                      <td class="py-4 px-6 font-bold text-slate-900">Workshop Presenter</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp1,500,000</td>
+                      <td class="py-4 px-6 font-bold text-slate-400 text-right">—</td>
                     </tr>
-
-                    <!-- Option 3 -->
                     <tr class="hover:bg-slate-50/80 transition-colors">
                       <td class="py-4 px-5 font-bold text-slate-900 text-center">3</td>
-                      <td class="py-4 px-6 font-bold text-slate-900">Conference</td>
-                      <td class="py-4 px-6 text-slate-600 leading-relaxed">
-                        Full 3-day conference access with keynote sessions, panel discussions, exhibition area, lunch and coffee breaks, and digital conference kit.
-                      </td>
-                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp xxx</td>
+                      <td class="py-4 px-6 font-bold text-slate-900">General Participant</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp1,000,000</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp200,000</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/40">
+                      <td class="py-4 px-5 font-bold text-slate-900 text-center">4</td>
+                      <td class="py-4 px-6 font-bold text-slate-900">Uni Student</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp800,000</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">Rp200,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- INTERNATIONAL TABLE -->
+              <div id="regTableIntl" class="overflow-x-auto hidden">
+                <table class="w-full text-left border-collapse">
+                  <thead>
+                    <tr class="bg-brandBlue text-white">
+                      <th class="py-4 px-5 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-center w-12">No.</th>
+                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider">Option</th>
+                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-right">Onsite</th>
+                      <th class="py-4 px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-right">Online</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 text-sm font-medium text-slate-700">
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="py-4 px-5 font-bold text-slate-900 text-center">1</td>
+                      <td class="py-4 px-6 font-bold text-slate-900">FGD Presenter</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$199.00</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$99.00</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/40">
+                      <td class="py-4 px-5 font-bold text-slate-900 text-center">2</td>
+                      <td class="py-4 px-6 font-bold text-slate-900">Workshop Presenter</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$199.00</td>
+                      <td class="py-4 px-6 font-bold text-slate-400 text-right">—</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="py-4 px-5 font-bold text-slate-900 text-center">3</td>
+                      <td class="py-4 px-6 font-bold text-slate-900">General Participant</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$99.00</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$49.00</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/40">
+                      <td class="py-4 px-5 font-bold text-slate-900 text-center">4</td>
+                      <td class="py-4 px-6 font-bold text-slate-900">Uni Student</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$79.00</td>
+                      <td class="py-4 px-6 font-extrabold text-brandOrange text-right whitespace-nowrap">$49.00</td>
                     </tr>
                   </tbody>
                 </table>
@@ -538,7 +603,7 @@
               <div class="bg-blue-50/80 border-t border-blue-100 p-4 text-center">
                 <span class="text-sm font-extrabold text-brandBlue">
                   <i class="fa-solid fa-tags text-brandOrange mr-2"></i>
-                  Early Bird Discount: <span class="text-brandOrange">20% off</span> for registrations before 30 September 2026
+                  Early Bird Discount: <span class="text-brandOrange">20% off</span> for registrations from 24 August 2026 – 20 September 2026
                 </span>
               </div>
             </div>
@@ -836,6 +901,44 @@
 
     <!-- JAVASCRIPT ENGINE -->
     <script>
+      // Focus Area Guiding Questions Toggle
+      function toggleFocusQuestion(id) {
+        const content = document.getElementById('focusContent' + id);
+        const icon = document.getElementById('focusIcon' + id);
+        if (content.classList.contains('hidden')) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        } else {
+          content.classList.add('hidden');
+          icon.style.transform = 'rotate(0deg)';
+        }
+      }
+
+      // Registration Tab Switching
+      function switchRegTab(tab) {
+        const localTable = document.getElementById('regTableLocal');
+        const intlTable = document.getElementById('regTableIntl');
+        const tabLocal = document.getElementById('tabLocal');
+        const tabInternational = document.getElementById('tabInternational');
+        const container = localTable.closest('.rounded-2xl');
+
+        if (tab === 'local') {
+          localTable.classList.remove('hidden');
+          intlTable.classList.add('hidden');
+          tabLocal.className = 'relative px-8 py-3 text-sm font-extrabold uppercase tracking-wider rounded-t-xl transition-all duration-300 bg-brandBlue text-white shadow-md z-10';
+          tabInternational.className = 'relative px-8 py-3 text-sm font-extrabold uppercase tracking-wider rounded-t-xl transition-all duration-300 bg-slate-200 text-slate-600 hover:bg-slate-300 z-10';
+          container.classList.add('rounded-tl-none');
+          container.classList.remove('rounded-tr-none');
+        } else {
+          localTable.classList.add('hidden');
+          intlTable.classList.remove('hidden');
+          tabInternational.className = 'relative px-8 py-3 text-sm font-extrabold uppercase tracking-wider rounded-t-xl transition-all duration-300 bg-brandBlue text-white shadow-md z-10';
+          tabLocal.className = 'relative px-8 py-3 text-sm font-extrabold uppercase tracking-wider rounded-t-xl transition-all duration-300 bg-slate-200 text-slate-600 hover:bg-slate-300 z-10';
+          container.classList.remove('rounded-tl-none');
+          container.classList.add('rounded-tr-none');
+        }
+      }
+
       function toggleMobileMenu() {
         const mobileMenu = document.getElementById("mobileMenu");
         const menuIcon = document.getElementById("menuIcon");
