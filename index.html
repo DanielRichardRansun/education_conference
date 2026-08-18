@@ -502,10 +502,7 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <!-- Journey 1: Participant -->
-            <div class="bg-white rounded-2xl p-8 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between relative overflow-hidden anim-fade-in-up anim-delay-1">
-              <div class="absolute top-0 right-0 bg-brandNavy text-white text-[10px] font-extrabold uppercase px-4 py-1 rounded-bl-xl tracking-wider shadow-sm">
-                Call for Paper
-              </div>
+            <div class="bg-white rounded-2xl p-8 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between anim-fade-in-up anim-delay-1">
               <div>
                 <div class="w-14 h-14 rounded-2xl bg-blue-50 text-brandNavy flex items-center justify-center text-2xl mb-5 font-black border border-blue-100">
                   <i class="fa-solid fa-graduation-cap"></i>
@@ -519,15 +516,18 @@
                 </p>
               </div>
               <div class="mt-8 pt-6 border-t border-slate-100">
-                <a href="#call-for-paper" class="w-full inline-flex items-center justify-center space-x-2 rounded-xl bg-brandNavy px-6 py-3 font-bold text-white text-sm shadow hover:bg-slate-800 transition-all text-center">
-                  <span>Explore Call for Paper</span>
+                <a href="#registration-options" class="w-full inline-flex items-center justify-center space-x-2 rounded-xl bg-brandNavy px-6 py-3 font-bold text-white text-sm shadow hover:bg-slate-800 transition-all text-center">
+                  <span>View Participant Options</span>
                   <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
               </div>
             </div>
 
             <!-- Journey 2: Presenter -->
-            <div class="bg-white rounded-2xl p-8 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between anim-fade-in-up anim-delay-2">
+            <div class="bg-white rounded-2xl p-8 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between relative overflow-hidden anim-fade-in-up anim-delay-2">
+              <div class="absolute top-0 right-0 bg-brandOrange text-white text-[10px] font-extrabold uppercase px-4 py-1 rounded-bl-xl tracking-wider shadow-sm">
+                Call for Paper
+              </div>
               <div>
                 <div class="w-14 h-14 rounded-2xl bg-orange-50 text-brandOrange flex items-center justify-center text-2xl mb-5 font-black border border-orange-100">
                   <i class="fa-solid fa-chalkboard-user"></i>
@@ -541,8 +541,8 @@
                 </p>
               </div>
               <div class="mt-8 pt-6 border-t border-slate-100">
-                <a href="#registration-options" class="w-full inline-flex items-center justify-center space-x-2 rounded-xl bg-brandOrange px-6 py-3 font-bold text-white text-sm shadow hover:bg-brandOrangeHover transition-all text-center">
-                  <span>View Participant Options</span>
+                <a href="#call-for-paper" class="w-full inline-flex items-center justify-center space-x-2 rounded-xl bg-brandOrange px-6 py-3 font-bold text-white text-sm shadow hover:bg-brandOrangeHover transition-all text-center">
+                  <span>Explore Call for Paper</span>
                   <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
               </div>
@@ -649,13 +649,19 @@
               <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                   <thead>
-                    <tr class="bg-slate-100/80 border-b border-slate-200 text-brandNavy">
-                      <th rowspan="2" class="py-3 px-4 sm:px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider align-middle border-r border-slate-200">Activity</th>
-                      <th colspan="2" class="py-2 px-4 sm:px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-center border-b border-slate-200">Date</th>
+                    <tr class="bg-slate-100/90 border-b border-slate-200 text-brandNavy">
+                      <th rowspan="2" class="py-4 px-4 sm:px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider align-middle border-r border-slate-200">Activity</th>
+                      <th colspan="2" class="py-2.5 px-4 sm:px-6 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-center border-b border-slate-200">Date</th>
                     </tr>
-                    <tr class="bg-slate-50/80 border-b border-slate-200 text-brandNavy">
-                      <th class="py-2 px-4 sm:px-6 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-center border-r border-slate-200">Participant</th>
-                      <th class="py-2 px-4 sm:px-6 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-center">Presenter</th>
+                    <tr class="border-b border-slate-200">
+                      <!-- Participant Header: Distinct Navy Tint with larger font -->
+                      <th class="py-3 px-4 sm:px-6 text-xs sm:text-sm font-black uppercase tracking-wider text-center border-r border-slate-200 bg-blue-50/90 text-brandNavy">
+                        <i class="fa-solid fa-graduation-cap text-xs mr-1 text-brandBlue"></i> Participant
+                      </th>
+                      <!-- Presenter Header: Distinct Orange Tint with larger font -->
+                      <th class="py-3 px-4 sm:px-6 text-xs sm:text-sm font-black uppercase tracking-wider text-center bg-orange-50/90 text-brandOrange">
+                        <i class="fa-solid fa-chalkboard-user text-xs mr-1 text-brandOrange"></i> Presenter
+                      </th>
                     </tr>
                   </thead>
                   <tbody class="divide-y divide-slate-100 text-sm font-medium text-slate-700">
@@ -668,31 +674,31 @@
                           <span class="tooltip-text">Abstract Submission open</span>
                         </span>
                       </td>
-                      <td class="py-4 px-4 sm:px-6 text-center border-r border-slate-100">
-                        <span class="bg-slate-100 border border-slate-200 text-slate-900 font-bold px-3 sm:px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm">Aug 24, 2026</span>
+                      <td class="py-4 px-4 sm:px-6 text-center border-r border-slate-100 bg-blue-50/30">
+                        <span class="bg-white border border-slate-200 text-slate-900 font-bold px-3 sm:px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm shadow-2xs">Aug 24, 2026</span>
                       </td>
-                      <td class="py-4 px-4 sm:px-6 text-center">
-                        <span class="bg-slate-100 border border-slate-200 text-slate-900 font-bold px-3 sm:px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm">Aug 24, 2026</span>
+                      <td class="py-4 px-4 sm:px-6 text-center bg-orange-50/30">
+                        <span class="bg-white border border-slate-200 text-slate-900 font-bold px-3 sm:px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm shadow-2xs">Aug 24, 2026</span>
                       </td>
                     </tr>
                     <!-- Row 2: Abstract Submission deadline (Presenter only) -->
                     <tr class="hover:bg-slate-50/80 transition-colors">
                       <td class="py-4 px-4 sm:px-6 font-bold text-slate-900 border-r border-slate-100">Abstract Submission deadline</td>
-                      <td class="py-4 px-4 sm:px-6 text-center border-r border-slate-100">
+                      <td class="py-4 px-4 sm:px-6 text-center border-r border-slate-100 bg-blue-50/30">
                         <span class="text-slate-300 font-bold">—</span>
                       </td>
-                      <td class="py-4 px-4 sm:px-6 text-center">
-                        <span class="bg-slate-100 border border-slate-200 text-slate-900 font-bold px-3 sm:px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm">Sep 27, 2026</span>
+                      <td class="py-4 px-4 sm:px-6 text-center bg-orange-50/30">
+                        <span class="bg-white border border-slate-200 text-slate-900 font-bold px-3 sm:px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm shadow-2xs">Sep 27, 2026</span>
                       </td>
                     </tr>
                     <!-- Row 3: Notification of acceptance (Presenter only) -->
                     <tr class="hover:bg-slate-50/80 transition-colors">
                       <td class="py-4 px-4 sm:px-6 font-bold text-slate-900 border-r border-slate-100">Notification of acceptance</td>
-                      <td class="py-4 px-4 sm:px-6 text-center border-r border-slate-100">
+                      <td class="py-4 px-4 sm:px-6 text-center border-r border-slate-100 bg-blue-50/30">
                         <span class="text-slate-300 font-bold">—</span>
                       </td>
-                      <td class="py-4 px-4 sm:px-6 text-center">
-                        <span class="bg-slate-100 border border-slate-200 text-slate-900 font-bold px-3 sm:px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm">Oct 9, 2026</span>
+                      <td class="py-4 px-4 sm:px-6 text-center bg-orange-50/30">
+                        <span class="bg-white border border-slate-200 text-slate-900 font-bold px-3 sm:px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm shadow-2xs">Oct 9, 2026</span>
                       </td>
                     </tr>
                     <!-- Row 4: Close Registration -->
@@ -704,11 +710,11 @@
                           <span class="tooltip-text">Final presentation slides &amp; Full Paper due</span>
                         </span>
                       </td>
-                      <td class="py-4 px-4 sm:px-6 text-center border-r border-slate-100">
-                        <span class="bg-slate-100 border border-slate-200 text-slate-900 font-bold px-3 sm:px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm">Nov 10, 2026</span>
+                      <td class="py-4 px-4 sm:px-6 text-center border-r border-slate-100 bg-blue-50/30">
+                        <span class="bg-white border border-slate-200 text-slate-900 font-bold px-3 sm:px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm shadow-2xs">Nov 10, 2026</span>
                       </td>
-                      <td class="py-4 px-4 sm:px-6 text-center">
-                        <span class="bg-slate-100 border border-slate-200 text-slate-900 font-bold px-3 sm:px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm">Nov 10, 2026</span>
+                      <td class="py-4 px-4 sm:px-6 text-center bg-orange-50/30">
+                        <span class="bg-white border border-slate-200 text-slate-900 font-bold px-3 sm:px-4 py-1.5 rounded-full inline-block text-xs sm:text-sm shadow-2xs">Nov 10, 2026</span>
                       </td>
                     </tr>
                     <!-- Row 5: Conference dates -->
