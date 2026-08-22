@@ -135,7 +135,6 @@
           <li><a href="#home" class="hover:text-brandOrange transition-colors">Home</a></li>
           <li><a href="#about" class="hover:text-brandOrange transition-colors">About</a></li>
           <li><a href="#speakers" class="hover:text-brandOrange transition-colors">Speakers</a></li>
-          <li><a href="#agenda" class="hover:text-brandOrange transition-colors">Agenda</a></li>
           
           <!-- Call for Paper Dropdown -->
           <li class="relative group py-2">
@@ -186,7 +185,6 @@
       <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Home</a>
       <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">About</a>
       <a href="#speakers" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Keynote Speakers</a>
-      <a href="#agenda" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Agenda</a>
       <a href="#focus-area" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Focus Area</a>
       <a href="#important-dates" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Important Dates</a>
       <a href="#registration-options" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Registration Options</a>
@@ -215,10 +213,9 @@
             <!-- Left Column Text Content (7 cols) -->
             <div class="anim-fade-in-up lg:col-span-7 flex flex-col items-start space-y-5">
               <!-- Orange Organized Badge with subtle accent -->
-              <div class="inline-flex items-center space-x-2.5 rounded-xl bg-brandOrange px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-orange-500/20">
-                <span class="h-2 w-2 rounded-full bg-white animate-pulse"></span>
+              <div class="inline-flex items-center space-x-2 rounded-xl bg-brandOrange px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-orange-500/20">
+                <span class="h-2 w-2 rounded-full bg-[#ffffff]"></span>
                 <span>Global Educator Conference &amp; Workshop 2026</span>
-                <span class="h-2 w-2 rounded-full bg-white animate-pulse"></span>
               </div>
 
               <!-- Main Title with Single-Line 'AI in the Future of Learning:' -->
@@ -237,7 +234,7 @@
 
               <!-- Description -->
               <p class="max-w-xl text-slate-600 text-base sm:text-lg leading-relaxed">
-                An immersive 3-day global conference and hands-on workshop connecting educators, researchers, and school leaders to navigate AI integration, exchange classroom solutions, and shape transformative educational policies.
+                <strong class="text-[#013379]">AI in the FUTURE of LEARNING: Friend or Foe?</strong> Navigating the Promise, Perils and Practicalities. AI is already in our classrooms. The question is no longer whether it will change education, but how we choose to respond.
               </p>
 
               <!-- Action Buttons (Orange Primary, #013379 Secondary) - Side by Side on Mobile -->
@@ -433,142 +430,79 @@
       <!-- KEYNOTE SPEAKERS SECTION (Matching CPRN Layout) -->
       <section id="speakers" class="relative py-20 aurora-bg border-t border-slate-100">
         <div class="mx-auto max-w-7xl px-6">
-          <div class="text-center max-w-2xl mx-auto mb-12 anim-fade-in-up">
-            <span class="text-xs font-bold uppercase tracking-widest text-brandOrange">Distinguished Experts</span>
-            <h2 class="mt-2 text-3xl lg:text-4xl font-bold text-brandOrange">GECW 2026 Keynote Speakers</h2>
-            <div class="mt-3 h-1 w-16 bg-brandOrange mx-auto rounded-full"></div>
-          </div>
+          <h2 class="text-3xl lg:text-4xl font-bold text-brandOrange">GECW 2026 Keynote Speakers</h2>
+          <div class="mt-3 h-1 w-16 bg-brandOrange rounded-full"></div>
 
-          <!-- Speakers Grid (3 Top, 2 Bottom Centered - Updated Order) -->
-          <div class="mt-8 space-y-8 sm:space-y-10 max-w-5xl mx-auto">
+          <!-- Speakers Grid (3 Top, 2 Bottom Centered - Match Poster) -->
+          <div class="mt-12 space-y-8 sm:space-y-10 max-w-5xl mx-auto">
             <!-- Top Row: 3 Speakers -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-start">
-              <!-- Speaker 1 (Prof. Meg Colasante) -->
+              <!-- Speaker 1 -->
               <div class="group anim-fade-in-up anim-delay-1">
-                <div class="mx-auto w-44 sm:w-52">
-                  <img
-                    src="https://gecw.krya.global/images/Speaker%205.png"
-                    alt="Prof. Meg Colasante"
-                    class="w-full object-contain transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Prof. Meg Colasante</h3>
-                <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">RMIT University, Australia</p>
-              </div>
-
-              <!-- Speaker 2 (Prof. Anindhita Dewabharata) -->
-              <div class="group anim-fade-in-up anim-delay-2">
-                <div class="mx-auto w-44 sm:w-52">
-                  <img
-                    src="https://gecw.krya.global/images/Speaker%204.png"
-                    alt="Prof. Anindhita Dewabharata"
-                    class="w-full object-contain transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Prof. Anindhita Dewabharata</h3>
-                <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">BINUS, Indonesia</p>
-              </div>
-
-              <!-- Speaker 3 (Dr. Ratchanikorn Chonchaiya) -->
-              <div class="group anim-fade-in-up anim-delay-3">
                 <div class="mx-auto w-44 sm:w-52">
                   <img
                     src="https://gecw.krya.global/images/Speaker%201.png"
                     alt="Dr. Ratchanikorn Chonchaiya"
-                    class="w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    class="w-full object-contain"
                   />
                 </div>
                 <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Dr. Ratchanikorn Chonchaiya</h3>
                 <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">King Mongkut’s University of Technology Thonburi, Thailand</p>
               </div>
-            </div>
 
-            <!-- Bottom Row: 2 Speakers Centered -->
-            <div class="flex flex-col md:flex-row items-start justify-center gap-8 md:gap-14 text-center">
-              <!-- Speaker 4 (Dr. Umawathy Techanamurthy) -->
-              <div class="group w-full md:w-5/12 max-w-[280px] mx-auto md:mx-0 anim-fade-in-up anim-delay-1">
+              <!-- Speaker 2 -->
+              <div class="group anim-fade-in-up anim-delay-2">
                 <div class="mx-auto w-44 sm:w-52">
                   <img
                     src="https://gecw.krya.global/images/Speaker%202.png"
                     alt="Dr. Umawathy Techanamurthy"
-                    class="w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    class="w-full object-contain"
                   />
                 </div>
                 <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Dr. Umawathy Techanamurthy</h3>
                 <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">University Kebangsaan Malaysia, Malaysia</p>
               </div>
 
-              <!-- Speaker 5 (Dr. Hani Soewandi) -->
-              <div class="group w-full md:w-5/12 max-w-[280px] mx-auto md:mx-0 anim-fade-in-up anim-delay-2">
+              <!-- Speaker 3 -->
+              <div class="group anim-fade-in-up anim-delay-3">
                 <div class="mx-auto w-44 sm:w-52">
                   <img
                     src="https://gecw.krya.global/images/Speaker%203.png"
                     alt="Dr. Hani Soewandi"
-                    class="w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    class="w-full object-contain"
                   />
                 </div>
                 <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Dr. Hani Soewandi</h3>
                 <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">pWin.ai, United States</p>
               </div>
             </div>
-          </div>
 
-          <!-- GECW COACH, FACILITATOR AND INSPIRATION SECTION -->
-          <div class="mt-24 pt-16 border-t border-slate-200/90 max-w-5xl mx-auto">
-            <div class="text-center max-w-2xl mx-auto mb-12 anim-fade-in-up">
-              <span class="text-xs font-bold uppercase tracking-widest text-brandOrange">Mentorship &amp; Workshop Leads</span>
-              <h3 class="mt-2 text-2xl sm:text-3xl font-extrabold text-brandNavy tracking-tight">GECW Coach, Facilitator &amp; Inspiration</h3>
-              <div class="mt-3 h-1 w-16 bg-brandOrange mx-auto rounded-full"></div>
-              <p class="mt-3 text-slate-600 text-sm sm:text-base">Guiding mentors and master trainers facilitating hands-on prototyping, group ideation, and collaborative educational design.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-start">
-              <!-- Coach 1 -->
-              <div class="group anim-fade-in-up anim-delay-1 bg-white/80 backdrop-blur-xs p-6 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div class="mx-auto w-40 sm:w-48">
+            <!-- Bottom Row: 2 Speakers Centered -->
+            <div class="flex flex-col md:flex-row items-start justify-center gap-8 md:gap-14 text-center">
+              <!-- Speaker 4 -->
+              <div class="group w-full md:w-5/12 max-w-[280px] mx-auto md:mx-0 anim-fade-in-up anim-delay-1">
+                <div class="mx-auto w-44 sm:w-52">
                   <img
-                    src="https://gecw.krya.global/images/Speaker%201.png"
-                    alt="Dr. Ratchanikorn Chonchaiya - Workshop Coach"
-                    class="w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    src="https://gecw.krya.global/images/Speaker%204.png"
+                    alt="Prof. Anindhita Dewabharata"
+                    class="w-full object-contain"
                   />
                 </div>
-                <span class="mt-4 inline-block px-3 py-1 rounded-full bg-orange-100 text-brandOrange font-bold text-xs uppercase tracking-wider">
-                  Workshop Coach
-                </span>
-                <h4 class="mt-2 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Dr. Ratchanikorn Chonchaiya</h4>
-                <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">King Mongkut’s University of Technology Thonburi, Thailand</p>
+                <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Prof. Anindhita Dewabharata</h3>
+                <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">BINUS, Indonesia</p>
               </div>
 
-              <!-- Coach 2 -->
-              <div class="group anim-fade-in-up anim-delay-2 bg-white/80 backdrop-blur-xs p-6 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div class="mx-auto w-40 sm:w-48">
+              <!-- Speaker 5 -->
+              <div class="group w-full md:w-5/12 max-w-[280px] mx-auto md:mx-0 anim-fade-in-up anim-delay-2">
+                <div class="mx-auto w-44 sm:w-52">
                   <img
-                    src="https://gecw.krya.global/images/Speaker%202.png"
-                    alt="Dr. Umawathy Techanamurthy - Ideation Facilitator"
-                    class="w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    src="https://gecw.krya.global/images/Speaker%205.png"
+                    alt="Prof. Meg Colasante"
+                    class="w-full object-contain"
                   />
                 </div>
-                <span class="mt-4 inline-block px-3 py-1 rounded-full bg-blue-100 text-brandBlue font-bold text-xs uppercase tracking-wider">
-                  Ideation Facilitator
-                </span>
-                <h4 class="mt-2 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandBlue transition-colors">Dr. Umawathy Techanamurthy</h4>
-                <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">University Kebangsaan Malaysia, Malaysia</p>
-              </div>
-
-              <!-- Coach 3 -->
-              <div class="group anim-fade-in-up anim-delay-3 bg-white/80 backdrop-blur-xs p-6 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div class="mx-auto w-40 sm:w-48">
-                  <img
-                    src="https://gecw.krya.global/images/Speaker%203.png"
-                    alt="Dr. Hani Soewandi - Innovation Inspiration"
-                    class="w-full object-contain transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <span class="mt-4 inline-block px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs uppercase tracking-wider">
-                  Innovation Inspiration
-                </span>
-                <h4 class="mt-2 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Dr. Hani Soewandi</h4>
-                <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">pWin.ai, United States</p>
+                <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Prof. Meg Colasante</h3>
+                <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">RMIT University, Australia</p>
               </div>
             </div>
           </div>
@@ -582,547 +516,54 @@
             <span class="text-xs font-bold uppercase tracking-widest text-brandOrange">Tailored Experience</span>
             <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-brandNavy tracking-tight">CHOOSE YOUR JOURNEY</h2>
             <div class="mt-3 h-1.5 w-20 bg-brandOrange mx-auto rounded-full"></div>
-            <p class="mt-3 text-slate-600 text-sm sm:text-base">Discover the two core tracks of GECW 2026: Academic Conference and Hands-on Workshop</p>
+            <p class="mt-3 text-slate-600 text-sm sm:text-base">Select how you want to participate in the summit</p>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <!-- Journey 1: Conference -->
-            <div class="bg-white rounded-2xl p-8 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between anim-fade-in-up anim-delay-1 relative overflow-hidden">
-              <div class="absolute top-0 right-0 bg-brandNavy text-white text-[10px] font-extrabold uppercase px-4 py-1 rounded-bl-xl tracking-wider shadow-xs">
-                Academic &amp; Research Track
-              </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Journey 1: Participant -->
+            <div class="bg-white rounded-2xl p-8 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between anim-fade-in-up anim-delay-1">
               <div>
                 <div class="w-14 h-14 rounded-2xl bg-blue-50 text-brandNavy flex items-center justify-center text-2xl mb-5 font-black border border-blue-100">
-                  <i class="fa-solid fa-book-open-reader"></i>
+                  <i class="fa-solid fa-graduation-cap"></i>
                 </div>
                 <div class="inline-block px-3 py-1 rounded-full bg-blue-100 text-brandNavy font-bold text-xs uppercase tracking-wider mb-2">
-                  Scholarly Discourse &amp; FGD
+                  Learn &amp; Practice
                 </div>
-                <h3 class="text-2xl font-black text-slate-900 mt-1">Conference</h3>
+                <h3 class="text-2xl font-black text-slate-900 mt-1">Participant</h3>
                 <p class="text-slate-600 text-sm mt-3 leading-relaxed">
-                  An immersive 3-day program where educators, researchers, and academic leaders present papers and exchange perspectives in dynamic Focus Group Discussions (FGD) with opportunities for indexed international publication.
+                  Immerse yourself in keynote sessions, hands-on workshops, interactive panel discussions, and collaborative peer learning. Perfect for teachers, lecturers, and leaders looking to implement practical AI solutions.
                 </p>
-
-                <!-- Participation Options for Conference -->
-                <div class="mt-6 space-y-3 bg-slate-50/80 rounded-xl p-4 border border-slate-100 text-left">
-                  <h4 class="text-xs font-black uppercase tracking-wider text-slate-700">Participation Pathways:</h4>
-                  <div class="flex items-start space-x-2.5 text-xs text-slate-600">
-                    <i class="fa-solid fa-circle-check text-brandBlue mt-0.5 shrink-0"></i>
-                    <div><strong class="text-slate-900">Conference Presenter (FGD):</strong> Submit paper/abstract, present in FGD sub-themes, and access indexed journal publications (SINTA / International Journal).</div>
-                  </div>
-                  <div class="flex items-start space-x-2.5 text-xs text-slate-600">
-                    <i class="fa-solid fa-circle-check text-brandBlue mt-0.5 shrink-0"></i>
-                    <div><strong class="text-slate-900">Conference Participant:</strong> Join all keynote sessions, participate in plenary &amp; FGD discussions, network with global leaders, and receive an accredited certificate.</div>
-                  </div>
-                </div>
               </div>
-
-              <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
-                <a href="#focus-area" class="w-full inline-flex items-center justify-center space-x-2 rounded-xl bg-brandNavy px-5 py-3 font-bold text-white text-xs sm:text-sm shadow hover:bg-slate-800 transition-all text-center">
-                  <span>Explore FGD &amp; Call for Paper</span>
+              <div class="mt-8 pt-6 border-t border-slate-100">
+                <a href="#registration-options" class="w-full inline-flex items-center justify-center space-x-2 rounded-xl bg-brandNavy px-6 py-3 font-bold text-white text-sm shadow hover:bg-slate-800 transition-all text-center">
+                  <span>View Participant Options</span>
                   <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
               </div>
             </div>
 
-            <!-- Journey 2: Workshop -->
+            <!-- Journey 2: Presenter -->
             <div class="bg-white rounded-2xl p-8 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between relative overflow-hidden anim-fade-in-up anim-delay-2">
-              <div class="absolute top-0 right-0 bg-brandOrange text-white text-[10px] font-extrabold uppercase px-4 py-1 rounded-bl-xl tracking-wider shadow-xs">
-                Hands-on &amp; Innovation Track
+              <div class="absolute top-0 right-0 bg-brandOrange text-white text-[10px] font-extrabold uppercase px-4 py-1 rounded-bl-xl tracking-wider shadow-sm">
+                Call for Paper
               </div>
               <div>
                 <div class="w-14 h-14 rounded-2xl bg-orange-50 text-brandOrange flex items-center justify-center text-2xl mb-5 font-black border border-orange-100">
                   <i class="fa-solid fa-chalkboard-user"></i>
                 </div>
                 <div class="inline-block px-3 py-1 rounded-full bg-orange-100 text-brandOrange font-bold text-xs uppercase tracking-wider mb-2">
-                  Ideation, Prototyping &amp; Exhibition
+                  Share &amp; Inspire
                 </div>
-                <h3 class="text-2xl font-black text-slate-900 mt-1">Workshop</h3>
+                <h3 class="text-2xl font-black text-slate-900 mt-1">Presenter</h3>
                 <p class="text-slate-600 text-sm mt-3 leading-relaxed">
-                  A 3-day immersive hands-on collaborative program where educators translate AI concepts into classroom practice through structured group ideation, rapid prototyping, and a public exhibition.
+                  Present your innovative research, classroom case studies, or institutional frameworks through FGDs or Workshops. Gain international recognition, publication opportunities, and peer review.
                 </p>
-
-                <!-- Participation Options for Workshop -->
-                <div class="mt-6 space-y-3 bg-orange-50/40 rounded-xl p-4 border border-orange-100/60 text-left">
-                  <h4 class="text-xs font-black uppercase tracking-wider text-slate-700">Participation Pathways:</h4>
-                  <div class="flex items-start space-x-2.5 text-xs text-slate-600">
-                    <i class="fa-solid fa-circle-check text-brandOrange mt-0.5 shrink-0"></i>
-                    <div><strong class="text-slate-900">Workshop Presenter:</strong> Showcase innovative classroom tools or lesson models, lead peer ideation, and display prototypes at the dedicated public exhibition.</div>
-                  </div>
-                  <div class="flex items-start space-x-2.5 text-xs text-slate-600">
-                    <i class="fa-solid fa-circle-check text-brandOrange mt-0.5 shrink-0"></i>
-                    <div><strong class="text-slate-900">Workshop Participant:</strong> Collaborate in sprint groups, create AI classroom prototypes, learn practical prompt engineering, and take home ready-to-use lesson frameworks.</div>
-                  </div>
-                </div>
               </div>
-
-              <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
-                <a href="#registration-options" class="w-full inline-flex items-center justify-center space-x-2 rounded-xl bg-brandOrange px-5 py-3 font-bold text-white text-xs sm:text-sm shadow hover:bg-brandOrangeHover transition-all text-center">
-                  <span>View Workshop Registration</span>
+              <div class="mt-8 pt-6 border-t border-slate-100">
+                <a href="#call-for-paper" class="w-full inline-flex items-center justify-center space-x-2 rounded-xl bg-brandOrange px-6 py-3 font-bold text-white text-sm shadow hover:bg-brandOrangeHover transition-all text-center">
+                  <span>Explore Call for Paper</span>
                   <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- EVENT AGENDA SECTION -->
-      <section id="agenda" class="relative bg-white py-20 border-t border-slate-100">
-        <div class="mx-auto max-w-7xl px-6">
-          <div class="text-center max-w-3xl mx-auto mb-12 anim-fade-in-up">
-            <span class="text-xs font-bold uppercase tracking-widest text-brandOrange">Conference &amp; Workshop Schedule</span>
-            <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-brandNavy tracking-tight">EVENT AGENDA</h2>
-            <div class="mt-3 h-1.5 w-20 bg-brandOrange mx-auto rounded-full"></div>
-            <p class="mt-3 text-slate-600 text-sm sm:text-base">
-              A comprehensive 3-day schedule blending keynote insights, research discussions, hands-on workshop ideation, and interactive exhibitions.
-            </p>
-          </div>
-
-          <!-- Day Selector Navigation Tabs -->
-          <div class="flex flex-wrap justify-center items-center gap-3 mb-10 anim-fade-in-up">
-            <button
-              id="agendaTab1"
-              onclick="switchAgendaDay(1)"
-              class="px-5 sm:px-7 py-3 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 bg-brandOrange text-white shadow-lg shadow-orange-500/25 flex items-center space-x-2"
-            >
-              <i class="fa-regular fa-calendar-check"></i>
-              <span>Day 1 (20 Nov)</span>
-            </button>
-            <button
-              id="agendaTab2"
-              onclick="switchAgendaDay(2)"
-              class="px-5 sm:px-7 py-3 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 bg-white text-slate-700 border border-slate-200 hover:border-brandNavy hover:text-brandNavy flex items-center space-x-2"
-            >
-              <i class="fa-solid fa-code-fork"></i>
-              <span>Day 2 (21 Nov)</span>
-            </button>
-            <button
-              id="agendaTab3"
-              onclick="switchAgendaDay(3)"
-              class="px-5 sm:px-7 py-3 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 bg-white text-slate-700 border border-slate-200 hover:border-brandNavy hover:text-brandNavy flex items-center space-x-2"
-            >
-              <i class="fa-solid fa-trophy"></i>
-              <span>Day 3 (22 Nov)</span>
-            </button>
-          </div>
-
-          <!-- DAY 1 CONTENT -->
-          <div id="agendaDay1" class="max-w-4xl mx-auto anim-fade-in-up">
-            <!-- Day 1 Card Header -->
-            <div class="bg-gradient-to-r from-[#00214C] to-[#013379] text-white rounded-t-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md">
-              <div class="flex items-center space-x-3">
-                <span class="px-3 py-1 rounded-lg bg-brandOrange text-white font-black text-xs uppercase tracking-wider">Day 1</span>
-                <div>
-                  <h3 class="text-lg sm:text-xl font-extrabold">Welcoming, Keynotes &amp; Industry Visit</h3>
-                  <p class="text-xs text-blue-200">Friday, 20 November 2026 • Opening &amp; Plenary Sessions</p>
-                </div>
-              </div>
-              <div class="flex items-center space-x-2 text-xs font-bold text-orange-200">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Surabaya, Indonesia</span>
-              </div>
-            </div>
-
-            <!-- Schedule Items Container -->
-            <div class="bg-white border-x border-b border-slate-200 rounded-b-2xl shadow-xl overflow-hidden divide-y divide-slate-100">
-              <!-- Item 1 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-orange-100 text-brandOrange flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-id-card"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">08.00 AM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Registration</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Welcoming the participants and Registration</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">Arrival, badge pick-up, morning greetings, and digital conference kit distribution.</p>
-                </div>
-              </div>
-
-              <!-- Item 2 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-blue-100 text-brandBlue flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-bullhorn"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">09.00 AM – 09.30 AM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Plenary Hall</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Opening Ceremony</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">Official event opening remarks by organizing committee, Krya Global, and UKWMS leadership.</p>
-                </div>
-              </div>
-
-              <!-- Item 3 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-orange-50/20">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-brandOrange text-white flex items-center justify-center font-bold text-sm shadow-sm">
-                    <i class="fa-solid fa-microphone"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandOrange text-base block">09.30 AM – 12.30 PM</span>
-                    <span class="text-[11px] font-semibold text-slate-500">Keynote Plenary</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <div class="inline-block px-2.5 py-0.5 rounded-full bg-orange-100 text-brandOrange text-[11px] font-bold uppercase mb-1">Main Session</div>
-                  <h4 class="text-base font-bold text-slate-900">Keynote Speakers</h4>
-                  <p class="text-xs sm:text-sm text-slate-600 mt-1">Insightful keynotes by international thought leaders exploring AI promises, risks, and educational paradigms.</p>
-                </div>
-              </div>
-
-              <!-- Item 4 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-award"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">01.30 PM – 03.30 PM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Afternoon Session</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Case Studies ; Success Story from TEACH ME AWARD Teachers</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">Real classroom implementations, innovative pedagogies, and inspiring award-winning teacher stories.</p>
-                </div>
-              </div>
-
-              <!-- Item 5 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-building-columns"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">04.00 PM – 06.00 PM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Field Trip</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Cultural / Industry Visit</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">Guided experiential visit to Surabaya cultural landmarks and cutting-edge education/tech facilities.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- DAY 2 CONTENT (Two Parallel Tracks: Focus Group Discussion & Workshop Session) -->
-          <div id="agendaDay2" class="max-w-5xl mx-auto hidden anim-fade-in-up">
-            <!-- Day 2 Card Header -->
-            <div class="bg-gradient-to-r from-[#00214C] to-[#013379] text-white rounded-t-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md">
-              <div class="flex items-center space-x-3">
-                <span class="px-3 py-1 rounded-lg bg-brandOrange text-white font-black text-xs uppercase tracking-wider">Day 2</span>
-                <div>
-                  <h3 class="text-lg sm:text-xl font-extrabold">Parallel Tracks: FGD &amp; Workshop Session</h3>
-                  <p class="text-xs text-blue-200">Saturday, 21 November 2026 • Interactive Discussions &amp; Hands-on Ideation</p>
-                </div>
-              </div>
-              <!-- Track Switcher Pills -->
-              <div class="flex items-center space-x-2 bg-white/10 p-1 rounded-xl backdrop-blur-xs">
-                <button
-                  id="trackBtnFgd"
-                  onclick="switchDay2Track('fgd')"
-                  class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-brandOrange text-white shadow-xs"
-                >
-                  Focus Group Discussion
-                </button>
-                <button
-                  id="trackBtnWorkshop"
-                  onclick="switchDay2Track('workshop')"
-                  class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-200 hover:text-white"
-                >
-                  Workshop Session
-                </button>
-              </div>
-            </div>
-
-            <!-- DAY 2 TRACK 1: FOCUS GROUP DISCUSSION -->
-            <div id="trackFgdContent" class="bg-white border-x border-b border-slate-200 rounded-b-2xl shadow-xl overflow-hidden divide-y divide-slate-100">
-              <div class="bg-blue-50/70 px-6 py-3 border-b border-blue-100 flex items-center justify-between">
-                <span class="text-xs font-extrabold text-brandNavy uppercase tracking-wider flex items-center">
-                  <i class="fa-solid fa-comments text-brandBlue mr-2"></i> Track A: Focus Group Discussion (Conference)
-                </span>
-                <span class="text-[11px] font-bold text-slate-500">Breakout Rooms</span>
-              </div>
-
-              <!-- FGD 1 -->
-              <div class="p-5 sm:p-6 hover:bg-blue-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-blue-100 text-brandBlue flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-users"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">08.00 AM – 09.30 AM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Sub-theme 1</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Focus Group Discussion Sub-theme 1</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">AI Lightening Your Load: Classroom productivity, automated feedback, and workload reduction case studies.</p>
-                </div>
-              </div>
-
-              <!-- FGD 2 -->
-              <div class="p-5 sm:p-6 hover:bg-blue-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-blue-100 text-brandBlue flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-shield-halved"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">10.00 AM – 11.30 AM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Sub-theme 2</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Focus Group Discussion Sub-theme 2</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">The Dark Side: Addressing ethics, cheating detection, data privacy, and loss of human touch.</p>
-                </div>
-              </div>
-
-              <!-- FGD 3 -->
-              <div class="p-5 sm:p-6 hover:bg-blue-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-blue-100 text-brandBlue flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-school"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">12.30 PM – 02.00 PM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Sub-theme 3</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Focus Group Discussion Sub-theme 3</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">Preparing AI Ready School: Systemic institutional reforms, curriculum adaptation, and leadership governance.</p>
-                </div>
-              </div>
-
-              <!-- FGD 4 -->
-              <div class="p-5 sm:p-6 hover:bg-blue-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-blue-50/20">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-brandNavy text-white flex items-center justify-center font-bold text-sm shadow-xs">
-                    <i class="fa-solid fa-handshake"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">03.00 PM – 05.00 PM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Collaborative Session</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <div class="inline-block px-2.5 py-0.5 rounded-full bg-blue-100 text-brandNavy text-[11px] font-bold uppercase mb-1">Networking &amp; BOR</div>
-                  <h4 class="text-base font-bold text-slate-900">Structured Matchmaking/Ideation (BOR)</h4>
-                  <p class="text-xs sm:text-sm text-slate-600 mt-1">Breakout room matchmaking for cross-institutional research collaboration and joint publication planning.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- DAY 2 TRACK 2: WORKSHOP SESSION -->
-            <div id="trackWorkshopContent" class="bg-white border-x border-b border-slate-200 rounded-b-2xl shadow-xl overflow-hidden divide-y divide-slate-100 hidden">
-              <div class="bg-orange-50/70 px-6 py-3 border-b border-orange-100 flex items-center justify-between">
-                <span class="text-xs font-extrabold text-brandOrange uppercase tracking-wider flex items-center">
-                  <i class="fa-solid fa-laptop-code text-brandOrange mr-2"></i> Track B: Workshop Session (Hands-on Track)
-                </span>
-                <span class="text-[11px] font-bold text-slate-500">Workshop Studio</span>
-              </div>
-
-              <!-- Workshop 1 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-orange-100 text-brandOrange flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">08.00 AM – 09.00 AM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Inspiration Stage</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Inspiring Session</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">Kick-off inspirational showcase on creative AI prompts, interactive classroom workflows, and rapid design thinking.</p>
-                </div>
-              </div>
-
-              <!-- Workshop 2 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-orange-100 text-brandOrange flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-lightbulb"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">09.30 AM – 12.00 PM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Ideation Sprint Part 1</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Creating Ideas in Group</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">Facilitated group ideation: brainstorming practical AI-driven lesson modules and assessment instruments.</p>
-                </div>
-              </div>
-
-              <!-- Workshop 3 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-orange-100 text-brandOrange flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-people-group"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">01.00 PM – 02.00 PM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Ideation Sprint Part 2</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Creating Ideas in Group</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">Refining project frameworks, peer feedback loops, and finalizing actionable teaching modules.</p>
-                </div>
-              </div>
-
-              <!-- Workshop 4 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-orange-50/20">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-brandOrange text-white flex items-center justify-center font-bold text-sm shadow-xs">
-                    <i class="fa-solid fa-cubes"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandOrange text-base block">02.00 PM – 04.00 PM</span>
-                    <span class="text-[11px] font-semibold text-slate-500">Prototyping Lab</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <div class="inline-block px-2.5 py-0.5 rounded-full bg-orange-100 text-brandOrange text-[11px] font-bold uppercase mb-1">Hands-on Build</div>
-                  <h4 class="text-base font-bold text-slate-900">Creating Prototype in Group</h4>
-                  <p class="text-xs sm:text-sm text-slate-600 mt-1">Hands-on prototyping with live AI models, interactive rubrics, teaching materials, and digital assets.</p>
-                </div>
-              </div>
-
-              <!-- Workshop 5 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-palette"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">04.00 PM – 05.00 PM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Exhibition Setup</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Exhibition Preparation</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">Booth setup, display curation, and rehearsal for the public dedication session on Day 3.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- DAY 3 CONTENT -->
-          <div id="agendaDay3" class="max-w-4xl mx-auto hidden anim-fade-in-up">
-            <!-- Day 3 Card Header -->
-            <div class="bg-gradient-to-r from-[#00214C] to-[#013379] text-white rounded-t-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md">
-              <div class="flex items-center space-x-3">
-                <span class="px-3 py-1 rounded-lg bg-brandOrange text-white font-black text-xs uppercase tracking-wider">Day 3</span>
-                <div>
-                  <h3 class="text-lg sm:text-xl font-extrabold">Public Exhibition, Awarding &amp; Closing</h3>
-                  <p class="text-xs text-blue-200">Sunday, 22 November 2026 • Showcase, Celebration &amp; Farewell</p>
-                </div>
-              </div>
-              <div class="flex items-center space-x-2 text-xs font-bold text-orange-200">
-                <i class="fa-solid fa-flag-checkered"></i>
-                <span>Final Day</span>
-              </div>
-            </div>
-
-            <!-- Schedule Items Container -->
-            <div class="bg-white border-x border-b border-slate-200 rounded-b-2xl shadow-xl overflow-hidden divide-y divide-slate-100">
-              <!-- Item 1 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-orange-100 text-brandOrange flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-wrench"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">08.00 AM – 09.00 AM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Morning Setup</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Exhibition preparation</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">Final booth checks, poster display positioning, and multimedia installation testing.</p>
-                </div>
-              </div>
-
-              <!-- Item 2 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-orange-50/20">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-brandOrange text-white flex items-center justify-center font-bold text-sm shadow-xs">
-                    <i class="fa-solid fa-users-viewfinder"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandOrange text-base block">09.00 AM – 01.00 PM</span>
-                    <span class="text-[11px] font-semibold text-slate-500">Public Showcase</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <div class="inline-block px-2.5 py-0.5 rounded-full bg-orange-100 text-brandOrange text-[11px] font-bold uppercase mb-1">Open for Public</div>
-                  <h4 class="text-base font-bold text-slate-900">Dedicating session open for public</h4>
-                  <p class="text-xs sm:text-sm text-slate-600 mt-1">Public showcase of group prototypes, interactive tool demonstrations, and cross-school project reviews.</p>
-                </div>
-              </div>
-
-              <!-- Item 3 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-trophy"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">02.00 PM – 03.00 PM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Main Auditorium</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Awarding Session</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">Recognition and awards for best papers, standout classroom prototypes, and remarkable educator presentations.</p>
-                </div>
-              </div>
-
-              <!-- Item 4 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-blue-100 text-brandBlue flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-champagne-glasses"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">03.00 PM – 04.00 PM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Closing Stage</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Closing Ceremony</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">Official GECW 2026 closing remarks, certificate distribution, group photo, and community declaration.</p>
-                </div>
-              </div>
-
-              <!-- Item 5 -->
-              <div class="p-5 sm:p-6 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="sm:w-56 shrink-0 flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-plane-departure"></i>
-                  </div>
-                  <div>
-                    <span class="font-extrabold text-brandNavy text-base block">05.00 PM</span>
-                    <span class="text-[11px] font-semibold text-slate-400">Departure</span>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-base font-bold text-slate-900">Ready to the airport</h4>
-                  <p class="text-xs sm:text-sm text-slate-500 mt-1">Airport shuttle and participant departure. Safe travels!</p>
-                </div>
               </div>
             </div>
           </div>
@@ -1421,7 +862,7 @@
               <div class="bg-emerald-50/80 border-t border-emerald-100 px-5 py-3 text-center">
                 <span class="text-xs sm:text-sm font-bold text-emerald-700">
                   <i class="fa-solid fa-check-circle text-emerald-500 mr-1.5"></i>
-                  <span class="font-extrabold">Inclusion:</span> Certificate, conference kit, lunch and coffee breaks
+                  All fees include certificate, conference kit, lunch and coffee breaks
                 </span>
               </div>
 
@@ -1534,7 +975,7 @@
               <div class="bg-emerald-50/80 border-t border-emerald-100 px-5 py-3 text-center">
                 <span class="text-xs sm:text-sm font-bold text-emerald-700">
                   <i class="fa-solid fa-check-circle text-emerald-500 mr-1.5"></i>
-                  <span class="font-extrabold">Inclusion:</span> Certificate, conference kit, lunch and coffee breaks
+                  All fees include certificate, conference kit, lunch and coffee breaks
                 </span>
               </div>
 
@@ -1734,13 +1175,13 @@
                   </div>
                 </a>
 
-                <a href="mailto:gecw@krya.global" class="flex items-center space-x-3 group hover:bg-slate-50 p-2 -m-2 rounded-xl transition-colors">
+                <a href="mailto:aha@krya.global" class="flex items-center space-x-3 group hover:bg-slate-50 p-2 -m-2 rounded-xl transition-colors">
                   <div class="w-10 h-10 rounded-xl bg-orange-100 text-brandOrange flex items-center justify-center font-bold group-hover:scale-105 transition-transform">
                     <i class="fa-regular fa-envelope text-lg"></i>
                   </div>
                   <div>
                     <div class="text-xs text-slate-400 font-bold uppercase">Email</div>
-                    <div class="text-sm font-bold text-slate-900 group-hover:text-brandOrange transition-colors">gecw@krya.global</div>
+                    <div class="text-sm font-bold text-slate-900 group-hover:text-brandOrange transition-colors">aha@krya.global</div>
                   </div>
                 </a>
               </div>
@@ -1806,7 +1247,6 @@
               <li><a href="#home" class="hover:text-brandOrange transition-colors">Home</a></li>
               <li><a href="#about" class="hover:text-brandOrange transition-colors">About GECW 2026</a></li>
               <li><a href="#speakers" class="hover:text-brandOrange transition-colors">Keynote Speakers</a></li>
-              <li><a href="#agenda" class="hover:text-brandOrange transition-colors">Event Agenda</a></li>
               <li><a href="#slides" class="hover:text-brandOrange transition-colors">Program Slides</a></li>
               <li><a href="#contact" class="hover:text-brandOrange transition-colors">Organizers &amp; Venue</a></li>
             </ul>
@@ -1831,7 +1271,7 @@
             <ul class="space-y-3 text-sm text-slate-300">
               <li class="flex items-start space-x-2.5">
                 <i class="fa-regular fa-envelope text-brandOrange mt-1 shrink-0"></i>
-                <a href="mailto:gecw@krya.global" class="hover:text-white hover:underline transition-colors">gecw@krya.global</a>
+                <a href="mailto:aha@krya.global" class="hover:text-white hover:underline transition-colors">aha@krya.global</a>
               </li>
               <li class="flex items-start space-x-2.5">
                 <i class="fa-brands fa-whatsapp text-emerald-400 mt-1 shrink-0"></i>
@@ -1893,65 +1333,6 @@
           regularView.classList.remove('hidden');
           tabRegular.className = activeRegularClass;
           tabEarlyBird.className = inactiveClass;
-        }
-      }
-
-      // Agenda Day Switching — Day 1, Day 2, Day 3
-      function switchAgendaDay(day) {
-        const day1 = document.getElementById('agendaDay1');
-        const day2 = document.getElementById('agendaDay2');
-        const day3 = document.getElementById('agendaDay3');
-        const tab1 = document.getElementById('agendaTab1');
-        const tab2 = document.getElementById('agendaTab2');
-        const tab3 = document.getElementById('agendaTab3');
-
-        const activeClass = 'px-5 sm:px-7 py-3 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 bg-brandOrange text-white shadow-lg shadow-orange-500/25 flex items-center space-x-2';
-        const inactiveClass = 'px-5 sm:px-7 py-3 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 bg-white text-slate-700 border border-slate-200 hover:border-brandNavy hover:text-brandNavy flex items-center space-x-2';
-
-        if (day === 1) {
-          day1.classList.remove('hidden');
-          day2.classList.add('hidden');
-          day3.classList.add('hidden');
-          tab1.className = activeClass;
-          tab2.className = inactiveClass;
-          tab3.className = inactiveClass;
-        } else if (day === 2) {
-          day1.classList.add('hidden');
-          day2.classList.remove('hidden');
-          day3.classList.add('hidden');
-          tab1.className = inactiveClass;
-          tab2.className = activeClass;
-          tab3.className = inactiveClass;
-        } else if (day === 3) {
-          day1.classList.add('hidden');
-          day2.classList.add('hidden');
-          day3.classList.remove('hidden');
-          tab1.className = inactiveClass;
-          tab2.className = inactiveClass;
-          tab3.className = activeClass;
-        }
-      }
-
-      // Day 2 Track Switching — FGD vs Workshop Session
-      function switchDay2Track(track) {
-        const fgdContent = document.getElementById('trackFgdContent');
-        const workshopContent = document.getElementById('trackWorkshopContent');
-        const btnFgd = document.getElementById('trackBtnFgd');
-        const btnWorkshop = document.getElementById('trackBtnWorkshop');
-
-        const activeTrackClass = 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-brandOrange text-white shadow-xs';
-        const inactiveTrackClass = 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-200 hover:text-white';
-
-        if (track === 'fgd') {
-          fgdContent.classList.remove('hidden');
-          workshopContent.classList.add('hidden');
-          btnFgd.className = activeTrackClass;
-          btnWorkshop.className = inactiveTrackClass;
-        } else {
-          fgdContent.classList.add('hidden');
-          workshopContent.classList.remove('hidden');
-          btnWorkshop.className = activeTrackClass;
-          btnFgd.className = inactiveTrackClass;
         }
       }
 
