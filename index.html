@@ -268,41 +268,69 @@
         </div>
       </section>
 
-      <!-- PROVOCATIVE TEASER STATEMENT SECTION (Before About) -->
-      <section
-        class="relative py-16 sm:py-20 text-white overflow-hidden border-y border-slate-800 bg-cover bg-center"
-        style="background-image: url('https://gecw.krya.global/images/Global%20Educator%20Conference%20%26%20Workshop%20(GEC)%207.jpg');"
-      >
-        <!-- Dark Navy Overlay (#00214C) -->
-        <div class="absolute inset-0 bg-[#00214C]/85 z-0"></div>
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F26419_1px,transparent_1px)] [background-size:16px_16px] z-0"></div>
+      <!-- TEASER VIDEO SECTION (Below Hero) -->
+      <section id="teaser" class="relative py-8 sm:py-12 bg-[#001736] text-white overflow-hidden border-b border-white/10 bg-cover bg-center" style="background-image: url('https://gecw.krya.global/images/Global%20Educator%20Conference%20%26%20Workshop%20(GEC)%208.jpg');">
+        <!-- Deep Royal Navy Gradient Overlay -->
+        <div class="absolute inset-0 bg-[#00214C]/85  z-0"></div>
+        
+        <!-- Multi-Layered Dual Glowing Auroras (Orange + Deep Blue) -->
+        <div class="absolute -top-24 left-1/4 w-[500px] h-[350px] bg-brandOrange/25 blur-[120px] rounded-full pointer-events-none z-0"></div>
+        <div class="absolute -bottom-24 right-1/4 w-[500px] h-[350px] bg-blue-500/20 blur-[130px] rounded-full pointer-events-none z-0"></div>
+        
+        <!-- Tech Radial Dot Grid Overlay -->
+        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#F26419_1.2px,transparent_1.2px)] [background-size:20px_20px] pointer-events-none z-0"></div>
 
         <div class="relative mx-auto max-w-5xl px-6 text-center anim-fade-in-up z-10">
-          <span class="inline-block rounded-full bg-brandOrange/20 px-4 py-1.5 text-xs sm:text-sm font-bold text-brandOrange tracking-wide uppercase mb-6 border border-brandOrange/30 backdrop-blur-sm">
-            The Reality of AI in Education
-          </span>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-snug sm:leading-tight text-white mb-6">
-            AI is changing education faster than we can prepare for it.
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+            GECW 2026 Trailer
           </h2>
-          <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4 text-xs sm:text-sm md:text-base font-semibold text-orange-200/90 mb-8">
-            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">Workload</span>
-            <span class="text-brandOrange">•</span>
-            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">DeepFake</span>
-            <span class="text-brandOrange">•</span>
-            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">Privacy</span>
-            <span class="text-brandOrange">•</span>
-            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">Creativity</span>
-            <span class="text-brandOrange">•</span>
-            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">Human Connection</span>
-            <span class="text-brandOrange">•</span>
-            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">School Policy</span>
+          <p class="mt-2 text-slate-200 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+            Get a quick glimpse of the global educator movement shaping the future of learning.
+          </p>
+
+          <!-- Aesthetic Video Frame with Gradient Ring Glow -->
+          <div class="mt-8 relative max-w-4xl mx-auto p-1 rounded-2xl sm:rounded-[2rem] bg-gradient-to-r from-brandOrange/60 via-white/20 to-blue-500/50 shadow-2xl shadow-orange-950/40">
+            <div class="relative rounded-xl sm:rounded-[1.75rem] overflow-hidden bg-[#001026] aspect-video min-h-[240px] sm:min-h-[400px] group flex items-center justify-center">
+              <video
+                id="teaserVideo"
+                autoplay
+                muted
+                playsinline
+                loop
+                preload="auto"
+                poster="https://gecw.krya.global/images/Global%20Educator%20Conference%20%26%20Workshop%20(GEC)%203.jpg"
+                class="w-full h-full object-cover block mx-auto cursor-pointer"
+                title="Click to play/pause"
+                onclick="toggleTeaserPlayPause()"
+              >
+                <source src="https://gecw.krya.global/2026_Krya_GECW%20Teaser.mp4" type="video/mp4" />
+                <source src="2026_Krya_GECW%20Teaser.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+
+              <!-- Video Play/Pause Control Button (Bottom Left) -->
+              <button
+                id="videoPlayPauseBtn"
+                onclick="toggleTeaserPlayPause()"
+                class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-[#00214C]/85 hover:bg-brandOrange text-white p-3 rounded-full backdrop-blur-md border border-white/20 transition-all duration-300 shadow-xl focus:outline-none flex items-center justify-center group-hover:scale-105 z-10"
+                aria-label="Toggle Play/Pause"
+                title="Toggle Play / Pause"
+              >
+                <i id="videoPlayPauseIcon" class="fa-solid fa-pause text-sm sm:text-base"></i>
+              </button>
+
+              <!-- Video Mute/Unmute Control Button (Bottom Right) -->
+              <button
+                id="videoMuteBtn"
+                onclick="toggleTeaserMute()"
+                class="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 bg-[#00214C]/85 hover:bg-brandOrange text-white p-3 rounded-full backdrop-blur-md border border-white/20 transition-all duration-300 shadow-xl focus:outline-none flex items-center justify-center group-hover:scale-105 z-10"
+                aria-label="Toggle Audio"
+                title="Toggle Audio Mute"
+              >
+                <i id="videoMuteIcon" class="fa-solid fa-volume-xmark text-sm sm:text-base"></i>
+              </button>
+            </div>
           </div>
-          <p class="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3">
-            Where do we draw the line?
-          </p>
-          <p class="text-sm sm:text-base md:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed">
-            Don’t just debate AI. <strong class="text-brandOrange">Learn how to navigate it.</strong>
-          </p>
         </div>
       </section>
 
@@ -425,6 +453,44 @@
             </div>
           </div>
 
+        </div>
+      </section>
+
+      <!-- PROVOCATIVE TEASER STATEMENT SECTION (After Audience & Participants) -->
+      <section
+        class="relative py-16 sm:py-20 text-white overflow-hidden border-y border-slate-800 bg-cover bg-center"
+        style="background-image: url('https://gecw.krya.global/images/Global%20Educator%20Conference%20%26%20Workshop%20(GEC)%207.jpg');"
+      >
+        <!-- Dark Navy Overlay (#00214C) -->
+        <div class="absolute inset-0 bg-[#00214C]/85 z-0"></div>
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F26419_1px,transparent_1px)] [background-size:16px_16px] z-0"></div>
+
+        <div class="relative mx-auto max-w-5xl px-6 text-center anim-fade-in-up z-10">
+          <span class="inline-block rounded-full bg-brandOrange/20 px-4 py-1.5 text-xs sm:text-sm font-bold text-brandOrange tracking-wide uppercase mb-6 border border-brandOrange/30 backdrop-blur-sm">
+            The Reality of AI in Education
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-snug sm:leading-tight text-white mb-6">
+            AI is changing education faster than we can prepare for it.
+          </h2>
+          <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4 text-xs sm:text-sm md:text-base font-semibold text-orange-200/90 mb-8">
+            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">Workload</span>
+            <span class="text-brandOrange">•</span>
+            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">DeepFake</span>
+            <span class="text-brandOrange">•</span>
+            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">Privacy</span>
+            <span class="text-brandOrange">•</span>
+            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">Creativity</span>
+            <span class="text-brandOrange">•</span>
+            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">Human Connection</span>
+            <span class="text-brandOrange">•</span>
+            <span class="bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-sm border border-white/10">School Policy</span>
+          </div>
+          <p class="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3">
+            Where do we draw the line?
+          </p>
+          <p class="text-sm sm:text-base md:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed">
+            Don’t just debate AI. <strong class="text-brandOrange">Learn how to navigate it.</strong>
+          </p>
         </div>
       </section>
 
@@ -2292,6 +2358,69 @@
       } else {
         initAnimations();
       }
+
+      // Teaser Video Loop (0-12s) and Controls
+      (function initTeaserVideo() {
+        const video = document.getElementById("teaserVideo");
+        const muteIcon = document.getElementById("videoMuteIcon");
+        const playPauseIcon = document.getElementById("videoPlayPauseIcon");
+
+        if (!video) return;
+
+        // Try playing video as soon as possible
+        const playVideo = function () {
+          if (video.paused) {
+            video.play().catch(() => {});
+          }
+        };
+
+        playVideo();
+        video.addEventListener("canplay", playVideo);
+        video.addEventListener("loadedmetadata", playVideo);
+
+        // Synchronize Play/Pause Icon state
+        video.addEventListener("play", function () {
+          if (playPauseIcon) playPauseIcon.className = "fa-solid fa-pause text-sm sm:text-base";
+        });
+        video.addEventListener("pause", function () {
+          if (playPauseIcon) playPauseIcon.className = "fa-solid fa-play text-sm sm:text-base ml-0.5";
+        });
+
+        // Force loop strictly between 0 and 12 seconds
+        video.addEventListener("timeupdate", function () {
+          if (this.currentTime >= 12) {
+            this.currentTime = 0;
+            this.play().catch(() => {});
+          }
+        });
+
+        // Loop if ended before 12s
+        video.addEventListener("ended", function () {
+          this.currentTime = 0;
+          this.play().catch(() => {});
+        });
+
+        window.toggleTeaserMute = function () {
+          if (!video) return;
+          video.muted = !video.muted;
+          if (muteIcon) {
+            if (video.muted) {
+              muteIcon.className = "fa-solid fa-volume-xmark text-sm sm:text-base";
+            } else {
+              muteIcon.className = "fa-solid fa-volume-high text-sm sm:text-base";
+            }
+          }
+        };
+
+        window.toggleTeaserPlayPause = function () {
+          if (!video) return;
+          if (video.paused) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        };
+      })();
     </script>
   </body>
 </html>
