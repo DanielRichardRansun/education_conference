@@ -289,8 +289,8 @@
           </p>
 
           <!-- Aesthetic Video Frame with Gradient Ring Glow -->
-          <div class="mt-8 relative max-w-4xl mx-auto p-1 rounded-2xl sm:rounded-[2rem] bg-gradient-to-r from-brandOrange/60 via-white/20 to-blue-500/50 shadow-2xl shadow-orange-950/40">
-            <div class="relative rounded-xl sm:rounded-[1.75rem] overflow-hidden bg-[#001026] aspect-video min-h-[240px] sm:min-h-[400px] group flex items-center justify-center">
+          <div class="mt-6 sm:mt-8 relative w-full max-w-4xl mx-auto p-1 rounded-2xl sm:rounded-[2rem] bg-gradient-to-r from-brandOrange/60 via-white/20 to-blue-500/50 shadow-2xl shadow-orange-950/40 overflow-hidden">
+            <div class="relative w-full rounded-xl sm:rounded-[1.75rem] overflow-hidden bg-[#001026] aspect-video group flex items-center justify-center">
               <video
                 id="teaserVideo"
                 autoplay
@@ -312,22 +312,22 @@
               <button
                 id="videoPlayPauseBtn"
                 onclick="toggleTeaserPlayPause()"
-                class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-[#00214C]/85 hover:bg-brandOrange text-white p-3 rounded-full backdrop-blur-md border border-white/20 transition-all duration-300 shadow-xl focus:outline-none flex items-center justify-center group-hover:scale-105 z-10"
+                class="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 bg-[#00214C]/85 hover:bg-brandOrange text-white p-2.5 sm:p-3 rounded-full backdrop-blur-md border border-white/20 transition-all duration-300 shadow-xl focus:outline-none flex items-center justify-center group-hover:scale-105 z-10"
                 aria-label="Toggle Play/Pause"
                 title="Toggle Play / Pause"
               >
-                <i id="videoPlayPauseIcon" class="fa-solid fa-pause text-sm sm:text-base"></i>
+                <i id="videoPlayPauseIcon" class="fa-solid fa-pause text-xs sm:text-base"></i>
               </button>
 
               <!-- Video Mute/Unmute Control Button (Bottom Right) -->
               <button
                 id="videoMuteBtn"
                 onclick="toggleTeaserMute()"
-                class="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 bg-[#00214C]/85 hover:bg-brandOrange text-white p-3 rounded-full backdrop-blur-md border border-white/20 transition-all duration-300 shadow-xl focus:outline-none flex items-center justify-center group-hover:scale-105 z-10"
+                class="absolute bottom-2.5 right-2.5 sm:bottom-4 sm:right-4 bg-[#00214C]/85 hover:bg-brandOrange text-white p-2.5 sm:p-3 rounded-full backdrop-blur-md border border-white/20 transition-all duration-300 shadow-xl focus:outline-none flex items-center justify-center group-hover:scale-105 z-10"
                 aria-label="Toggle Audio"
                 title="Toggle Audio Mute"
               >
-                <i id="videoMuteIcon" class="fa-solid fa-volume-xmark text-sm sm:text-base"></i>
+                <i id="videoMuteIcon" class="fa-solid fa-volume-xmark text-xs sm:text-base"></i>
               </button>
             </div>
           </div>
@@ -390,64 +390,64 @@
             <p class="mt-4 text-base text-slate-600 font-medium">Designed for forward-thinking educators and leaders who:</p>
           </div>
 
-          <div class="max-w-6xl mx-auto space-y-6">
+          <div class="max-w-6xl mx-auto space-y-5 sm:space-y-6">
             <!-- Top Row: 3 Items -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               <!-- Item 1 -->
-              <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-4 anim-fade-in-up anim-delay-1">
-                <div class="w-12 h-12 rounded-xl bg-orange-100 text-brandOrange flex items-center justify-center text-xl shrink-0 font-bold">
+              <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-3.5 sm:space-x-4 anim-fade-in-up anim-delay-1">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-orange-100 text-brandOrange flex items-center justify-center text-lg sm:text-xl shrink-0 font-bold">
                   <i class="fa-solid fa-lightbulb"></i>
                 </div>
                 <div>
-                  <h3 class="font-bold text-slate-900 text-base leading-snug">Understand Beyond the Hype</h3>
-                  <p class="mt-1 text-sm text-slate-500 leading-relaxed">Want to understand AI beyond the marketing buzz and discover realistic educational impact.</p>
+                  <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-snug">Understand Beyond the Hype</h3>
+                  <p class="mt-1 text-xs sm:text-sm text-slate-500 leading-relaxed">Want to understand AI beyond the marketing buzz and discover realistic educational impact.</p>
                 </div>
               </div>
 
               <!-- Item 2 -->
-              <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-4 anim-fade-in-up anim-delay-2">
-                <div class="w-12 h-12 rounded-xl bg-blue-100 text-brandBlue flex items-center justify-center text-xl shrink-0 font-bold">
+              <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-3.5 sm:space-x-4 anim-fade-in-up anim-delay-2">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-100 text-brandBlue flex items-center justify-center text-lg sm:text-xl shrink-0 font-bold">
                   <i class="fa-solid fa-flask-vial"></i>
                 </div>
                 <div>
-                  <h3 class="font-bold text-slate-900 text-base leading-snug">Classroom Experimentation</h3>
-                  <p class="mt-1 text-sm text-slate-500 leading-relaxed">Are experimenting with AI tools, automated feedback, and customized student workflows.</p>
+                  <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-snug">Classroom Experimentation</h3>
+                  <p class="mt-1 text-xs sm:text-sm text-slate-500 leading-relaxed">Are experimenting with AI tools, automated feedback, and customized student workflows.</p>
                 </div>
               </div>
 
               <!-- Item 3 -->
-              <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-4 anim-fade-in-up anim-delay-3">
-                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl shrink-0 font-bold">
+              <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-3.5 sm:space-x-4 anim-fade-in-up anim-delay-3 sm:col-span-2 lg:col-span-1">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg sm:text-xl shrink-0 font-bold">
                   <i class="fa-solid fa-scale-balanced"></i>
                 </div>
                 <div>
-                  <h3 class="font-bold text-slate-900 text-base leading-snug">Shaping School Policy</h3>
-                  <p class="mt-1 text-sm text-slate-500 leading-relaxed">Are administrators and leaders setting institutional guidelines, ethics, and governance.</p>
+                  <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-snug">Shaping School Policy</h3>
+                  <p class="mt-1 text-xs sm:text-sm text-slate-500 leading-relaxed">Are administrators and leaders setting institutional guidelines, ethics, and governance.</p>
                 </div>
               </div>
             </div>
 
             <!-- Bottom Row: 2 Items Centered -->
-            <div class="flex flex-col md:flex-row justify-center gap-6">
+            <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
               <!-- Item 4 -->
-              <div class="w-full md:w-[calc(33.333%-12px)] max-w-md bg-white rounded-2xl p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-4 anim-fade-in-up anim-delay-1">
-                <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0 font-bold">
+              <div class="w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-12px)] max-w-md bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-3.5 sm:space-x-4 anim-fade-in-up anim-delay-1">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-lg sm:text-xl shrink-0 font-bold">
                   <i class="fa-solid fa-screwdriver-wrench"></i>
                 </div>
                 <div>
-                  <h3 class="font-bold text-slate-900 text-base leading-snug">Practical Strategies</h3>
-                  <p class="mt-1 text-sm text-slate-500 leading-relaxed">Want actionable frameworks, lesson integration tips, and tested evaluation methods.</p>
+                  <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-snug">Practical Strategies</h3>
+                  <p class="mt-1 text-xs sm:text-sm text-slate-500 leading-relaxed">Want actionable frameworks, lesson integration tips, and tested evaluation methods.</p>
                 </div>
               </div>
 
               <!-- Item 5 -->
-              <div class="w-full md:w-[calc(33.333%-12px)] max-w-md bg-white rounded-2xl p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-4 anim-fade-in-up anim-delay-2">
-                <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0 font-bold">
+              <div class="w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-12px)] max-w-md bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start space-x-3.5 sm:space-x-4 anim-fade-in-up anim-delay-2">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg sm:text-xl shrink-0 font-bold">
                   <i class="fa-solid fa-share-nodes"></i>
                 </div>
                 <div>
-                  <h3 class="font-bold text-slate-900 text-base leading-snug">Share Project / Research</h3>
-                  <p class="mt-1 text-sm text-slate-500 leading-relaxed">Have exciting school pilot projects or academic papers to share with an international audience.</p>
+                  <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-snug">Share Project / Research</h3>
+                  <p class="mt-1 text-xs sm:text-sm text-slate-500 leading-relaxed">Have exciting school pilot projects or academic papers to share with an international audience.</p>
                 </div>
               </div>
             </div>
