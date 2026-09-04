@@ -111,8 +111,60 @@
           left: 50%; right: auto; transform: translateX(-50%);
         }
       }
-      .info-tooltip:hover .tooltip-text,
-      .info-tooltip:focus .tooltip-text { visibility: visible; opacity: 1; }
+      /* Registration Option Mobile Info Popover */
+      .reg-info-btn {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        outline: none;
+      }
+      .reg-info-btn .reg-popover {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 8px;
+        width: 250px;
+        max-width: 80vw;
+        background: #ffffff;
+        color: #334155;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 1.45;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 10px 25px -5px rgba(0, 33, 76, 0.2), 0 8px 10px -6px rgba(0, 33, 76, 0.1);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+        transform: translateY(-4px);
+        z-index: 50;
+        text-align: left;
+        white-space: normal;
+        pointer-events: none;
+      }
+      .reg-info-btn .reg-popover::before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: 12px;
+        width: 10px;
+        height: 10px;
+        background: #ffffff;
+        border-left: 1px solid #e2e8f0;
+        border-top: 1px solid #e2e8f0;
+        transform: rotate(45deg);
+      }
+      .reg-info-btn:hover .reg-popover,
+      .reg-info-btn:focus .reg-popover,
+      .reg-info-btn:focus-within .reg-popover {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
     </style>
   </head>
   <body class="font-sans bg-white text-slate-800 antialiased selection:bg-brandOrange selection:text-white">
@@ -996,7 +1048,7 @@
                     <tr class="border-b border-slate-200">
                       <!-- Participant Header: Distinct Navy Tint with larger font -->
                       <th class="py-3 px-4 sm:px-6 text-xs sm:text-sm font-black uppercase tracking-wider text-center border-r border-slate-200 bg-blue-50/90 text-brandNavy">
-                        <i class="fa-solid fa-graduation-cap text-xs mr-1 text-brandBlue"></i> Participant
+                        <i class="fa-solid fa-graduation-cap text-xs mr-1 text-brandBlue"></i> Participant/Observer
                       </th>
                       <!-- Presenter Header: Distinct Orange Tint with larger font -->
                       <th class="py-3 px-4 sm:px-6 text-xs sm:text-sm font-black uppercase tracking-wider text-center bg-orange-50/90 text-brandOrange">
@@ -1162,42 +1214,69 @@
                     <tr class="hover:bg-slate-50/80 transition-colors">
                       <td class="py-4 px-3 sm:px-4 font-bold text-slate-900 text-center align-top">1</td>
                       <td class="py-4 px-4 sm:px-6 font-bold text-brandNavy align-top">
-                        Presenter Conference
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                          <span>Presenter Conference</span>
+                          <button type="button" class="reg-info-btn lg:hidden text-slate-400 hover:text-brandOrange focus:text-brandOrange transition-colors p-0.5" aria-label="View Presenter Conference description">
+                            <i class="fa-solid fa-circle-info text-xs"></i>
+                            <span class="reg-popover">
+                              <strong class="block text-brandNavy font-extrabold mb-1 text-[11px]"><i class="fa-solid fa-file-lines text-emerald-600 mr-1"></i>Presenter Conference</strong>
+                              Present your research on AI in Education. Exclude publication opportunity in conference proceedings, full conference access, and certificate of presentation.
+                            </span>
+                          </button>
+                        </div>
                         <span class="block text-[11px] font-semibold text-emerald-600 mt-0.5"><i class="fa-solid fa-file-lines mr-1"></i>With Paper Presentation</span>
                       </td>
                       <td class="py-4 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden lg:table-cell">Present your research on AI in Education. Exclude publication opportunity in conference proceedings, full conference access, and certificate of presentation.</td>
                       <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top border-l border-slate-100 font-extrabold text-brandOrange text-sm sm:text-base">Rp1,200,000</td>
                       <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top border-r border-slate-100 font-extrabold text-brandOrange text-sm sm:text-base">Rp800,000</td>
-                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$159</td>
-                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$79</td>
+                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$159.00</td>
+                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$79.00</td>
                     </tr>
 
                     <!-- Row 2: Public Observer -->
                     <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
                       <td class="py-4 px-3 sm:px-4 font-bold text-slate-900 text-center align-top">2</td>
                       <td class="py-4 px-4 sm:px-6 font-bold text-brandNavy align-top">
-                        Public Observer
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                          <span>Public Observer</span>
+                          <button type="button" class="reg-info-btn lg:hidden text-slate-400 hover:text-brandOrange focus:text-brandOrange transition-colors p-0.5" aria-label="View Public Observer description">
+                            <i class="fa-solid fa-circle-info text-xs"></i>
+                            <span class="reg-popover">
+                              <strong class="block text-brandNavy font-extrabold mb-1 text-[11px]"><i class="fa-solid fa-user-check text-blue-600 mr-1"></i>Public Observer</strong>
+                              Full 3-day conference access as an observer (non-presenter), including keynote sessions, panel discussions, exhibition area, lunch, coffee breaks, and digital conference kit.
+                            </span>
+                          </button>
+                        </div>
                         <span class="block text-[11px] font-medium text-slate-500 mt-0.5"><i class="fa-solid fa-user-check mr-1"></i>Non-Presenter</span>
                       </td>
                       <td class="py-4 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden lg:table-cell">Full 3-day conference access as an observer (non-presenter), including keynote sessions, panel discussions, exhibition area, lunch, coffee breaks, and digital conference kit.</td>
                       <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top border-l border-slate-100 font-extrabold text-brandOrange text-sm sm:text-base">Rp800,000</td>
                       <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top border-r border-slate-100 font-extrabold text-brandOrange text-sm sm:text-base">Rp160,000</td>
-                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$79</td>
-                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$39</td>
+                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$79.00</td>
+                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$39.00</td>
                     </tr>
 
                     <!-- Row 3: Student Observer -->
                     <tr class="hover:bg-slate-50/80 transition-colors">
                       <td class="py-4 px-3 sm:px-4 font-bold text-slate-900 text-center align-top">3</td>
                       <td class="py-4 px-4 sm:px-6 font-bold text-brandNavy align-top">
-                        Student Observer
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                          <span>Student Observer</span>
+                          <button type="button" class="reg-info-btn lg:hidden text-slate-400 hover:text-brandOrange focus:text-brandOrange transition-colors p-0.5" aria-label="View Student Observer description">
+                            <i class="fa-solid fa-circle-info text-xs"></i>
+                            <span class="reg-popover">
+                              <strong class="block text-brandNavy font-extrabold mb-1 text-[11px]"><i class="fa-solid fa-graduation-cap text-blue-600 mr-1"></i>Student Observer</strong>
+                              Full 3-day conference access as an observer (non-presenter), including keynote sessions, panel discussions, exhibition area, lunch, coffee breaks, and digital conference kit.
+                            </span>
+                          </button>
+                        </div>
                         <span class="block text-[11px] font-medium text-slate-500 mt-0.5"><i class="fa-solid fa-graduation-cap mr-1"></i>Non-Presenter</span>
                       </td>
                       <td class="py-4 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden lg:table-cell">Full 3-day conference access as an observer (non-presenter), including keynote sessions, panel discussions, exhibition area, lunch, coffee breaks, and digital conference kit.</td>
                       <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top border-l border-slate-100 font-extrabold text-brandOrange text-sm sm:text-base">Rp640,000</td>
                       <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top border-r border-slate-100 font-extrabold text-brandOrange text-sm sm:text-base">Rp160,000</td>
-                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$63</td>
-                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$39</td>
+                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$63.00</td>
+                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$39.00</td>
                     </tr>
 
                     <!-- CATEGORY 2: WORKSHOP PASS -->
@@ -1215,13 +1294,22 @@
                     <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
                       <td class="py-4 px-3 sm:px-4 font-bold text-slate-900 text-center align-top">4</td>
                       <td class="py-4 px-4 sm:px-6 font-bold text-brandNavy align-top">
-                        Workshop Participant
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                          <span>Workshop Participant</span>
+                          <button type="button" class="reg-info-btn lg:hidden text-slate-400 hover:text-brandOrange focus:text-brandOrange transition-colors p-0.5" aria-label="View Workshop Participant description">
+                            <i class="fa-solid fa-circle-info text-xs"></i>
+                            <span class="reg-popover">
+                              <strong class="block text-brandNavy font-extrabold mb-1 text-[11px]"><i class="fa-solid fa-laptop-code text-brandOrange mr-1"></i>Workshop Participant</strong>
+                              Hands-on workshop on integrating AI tools in classroom practice. Includes materials, lunch, certificate of participation, and networking session.
+                            </span>
+                          </button>
+                        </div>
                         <span class="block text-[11px] font-semibold text-brandOrange mt-0.5"><i class="fa-solid fa-laptop-code mr-1"></i>Hands-on Workshop</span>
                       </td>
                       <td class="py-4 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden lg:table-cell">Hands-on workshop on integrating AI tools in classroom practice. Includes materials, lunch, certificate of participation, and networking session.</td>
                       <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top border-l border-slate-100 font-extrabold text-brandOrange text-sm sm:text-base">Rp1,200,000</td>
                       <td class="py-4 px-3 sm:px-4 text-right font-bold text-slate-400 align-top border-r border-slate-100">—</td>
-                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$159</td>
+                      <td class="py-4 px-3 sm:px-4 text-right whitespace-nowrap align-top font-extrabold text-brandOrange text-sm sm:text-base">$159.00</td>
                       <td class="py-4 px-3 sm:px-4 text-right font-bold text-slate-400 align-top">—</td>
                     </tr>
                   </tbody>
@@ -1320,7 +1408,16 @@
                     <tr class="hover:bg-slate-50/80 transition-colors">
                       <td class="py-4 px-3 sm:px-4 font-bold text-slate-900 text-center align-top">1</td>
                       <td class="py-4 px-4 sm:px-6 font-bold text-brandNavy align-top">
-                        Presenter Conference
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                          <span>Presenter Conference</span>
+                          <button type="button" class="reg-info-btn lg:hidden text-slate-400 hover:text-brandOrange focus:text-brandOrange transition-colors p-0.5" aria-label="View Presenter Conference description">
+                            <i class="fa-solid fa-circle-info text-xs"></i>
+                            <span class="reg-popover">
+                              <strong class="block text-brandNavy font-extrabold mb-1 text-[11px]"><i class="fa-solid fa-file-lines text-emerald-600 mr-1"></i>Presenter Conference</strong>
+                              Present your research on AI in Education. Exclude publication opportunity in conference proceedings, full conference access, and certificate of presentation.
+                            </span>
+                          </button>
+                        </div>
                         <span class="block text-[11px] font-semibold text-emerald-600 mt-0.5"><i class="fa-solid fa-file-lines mr-1"></i>With Paper Presentation</span>
                       </td>
                       <td class="py-4 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden lg:table-cell">Present your research on AI in Education. Exclude publication opportunity in conference proceedings, full conference access, and certificate of presentation.</td>
@@ -1334,7 +1431,16 @@
                     <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
                       <td class="py-4 px-3 sm:px-4 font-bold text-slate-900 text-center align-top">2</td>
                       <td class="py-4 px-4 sm:px-6 font-bold text-brandNavy align-top">
-                        Public Observer
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                          <span>Public Observer</span>
+                          <button type="button" class="reg-info-btn lg:hidden text-slate-400 hover:text-brandOrange focus:text-brandOrange transition-colors p-0.5" aria-label="View Public Observer description">
+                            <i class="fa-solid fa-circle-info text-xs"></i>
+                            <span class="reg-popover">
+                              <strong class="block text-brandNavy font-extrabold mb-1 text-[11px]"><i class="fa-solid fa-user-check text-blue-600 mr-1"></i>Public Observer</strong>
+                              Full 3-day conference access as an observer (non-presenter), including keynote sessions, panel discussions, exhibition area, lunch, coffee breaks, and digital conference kit.
+                            </span>
+                          </button>
+                        </div>
                         <span class="block text-[11px] font-medium text-slate-500 mt-0.5"><i class="fa-solid fa-user-check mr-1"></i>Non-Presenter</span>
                       </td>
                       <td class="py-4 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden lg:table-cell">Full 3-day conference access as an observer (non-presenter), including keynote sessions, panel discussions, exhibition area, lunch, coffee breaks, and digital conference kit.</td>
@@ -1348,7 +1454,16 @@
                     <tr class="hover:bg-slate-50/80 transition-colors">
                       <td class="py-4 px-3 sm:px-4 font-bold text-slate-900 text-center align-top">3</td>
                       <td class="py-4 px-4 sm:px-6 font-bold text-brandNavy align-top">
-                        Student Observer
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                          <span>Student Observer</span>
+                          <button type="button" class="reg-info-btn lg:hidden text-slate-400 hover:text-brandOrange focus:text-brandOrange transition-colors p-0.5" aria-label="View Student Observer description">
+                            <i class="fa-solid fa-circle-info text-xs"></i>
+                            <span class="reg-popover">
+                              <strong class="block text-brandNavy font-extrabold mb-1 text-[11px]"><i class="fa-solid fa-graduation-cap text-blue-600 mr-1"></i>Student Observer</strong>
+                              Full 3-day conference access as an observer (non-presenter), including keynote sessions, panel discussions, exhibition area, lunch, coffee breaks, and digital conference kit.
+                            </span>
+                          </button>
+                        </div>
                         <span class="block text-[11px] font-medium text-slate-500 mt-0.5"><i class="fa-solid fa-graduation-cap mr-1"></i>Non-Presenter</span>
                       </td>
                       <td class="py-4 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden lg:table-cell">Full 3-day conference access as an observer (non-presenter), including keynote sessions, panel discussions, exhibition area, lunch, coffee breaks, and digital conference kit.</td>
@@ -1373,7 +1488,16 @@
                     <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
                       <td class="py-4 px-3 sm:px-4 font-bold text-slate-900 text-center align-top">4</td>
                       <td class="py-4 px-4 sm:px-6 font-bold text-brandNavy align-top">
-                        Workshop Participant
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                          <span>Workshop Participant</span>
+                          <button type="button" class="reg-info-btn lg:hidden text-slate-400 hover:text-brandOrange focus:text-brandOrange transition-colors p-0.5" aria-label="View Workshop Participant description">
+                            <i class="fa-solid fa-circle-info text-xs"></i>
+                            <span class="reg-popover">
+                              <strong class="block text-brandNavy font-extrabold mb-1 text-[11px]"><i class="fa-solid fa-laptop-code text-brandOrange mr-1"></i>Workshop Participant</strong>
+                              Hands-on workshop on integrating AI tools in classroom practice. Includes materials, lunch, certificate of participation, and networking session.
+                            </span>
+                          </button>
+                        </div>
                         <span class="block text-[11px] font-semibold text-brandOrange mt-0.5"><i class="fa-solid fa-laptop-code mr-1"></i>Hands-on Workshop</span>
                       </td>
                       <td class="py-4 px-4 sm:px-6 text-slate-600 leading-relaxed align-top hidden lg:table-cell">Hands-on workshop on integrating AI tools in classroom practice. Includes materials, lunch, certificate of participation, and networking session.</td>
@@ -1461,8 +1585,7 @@
                     <div class="bg-slate-50 hover:bg-slate-100/80 transition-colors border border-slate-200/80 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                       <div class="space-y-1 max-w-xl">
                         <div class="flex items-center space-x-2.5 flex-wrap gap-y-1">
-                          <h6 class="font-extrabold text-slate-900 text-base">International Peer-Reviewed Journal</h6>
-                          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-blue-100 text-brandBlue border border-blue-200">Peer-Reviewed</span>
+                          <h6 class="font-extrabold text-slate-900 text-base">International Journal</h6>
                         </div>
                         <p class="text-xs text-slate-500 leading-snug">
                           Selected conference papers will have the opportunity to be considered for publication in an international peer-reviewed journal (education, social sciences, humanities, and interdisciplinary fields), subject to editorial review.
@@ -1755,7 +1878,7 @@
                   onclick="switchDay2Track('fgd')"
                   class="px-3 py-1 rounded-lg text-xs font-bold transition-all bg-brandOrange text-white"
                 >
-                  Focus Group Discussion
+                  Conference
                 </button>
                 <button
                   id="trackBtnWorkshop"
@@ -1771,7 +1894,7 @@
             <div id="trackFgdContent" class="bg-white border-x border-b border-slate-200 rounded-b-2xl shadow-lg overflow-hidden divide-y divide-slate-100">
               <div class="bg-slate-50 px-6 py-2.5 border-b border-slate-100 flex items-center justify-between">
                 <span class="text-xs font-extrabold text-brandNavy uppercase tracking-wider">
-                  Track A: Focus Group Discussion (Conference Track)
+                  Track A: Conference (Conference Track)
                 </span>
                 <span class="text-[11px] font-semibold text-slate-400">Breakout Rooms</span>
               </div>
