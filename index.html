@@ -165,6 +165,39 @@
         transform: translateY(0);
         pointer-events: auto;
       }
+
+      /* FAQ Accordion Styling matching user reference */
+      .faq-item {
+        transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+      }
+      .faq-item:hover {
+        border-color: #cbd5e1;
+      }
+      .faq-item.is-open {
+        box-shadow: 0 10px 25px -5px rgba(0, 33, 76, 0.07), 0 8px 10px -6px rgba(0, 33, 76, 0.04);
+        border-color: #e2e8f0;
+      }
+      .faq-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s ease;
+      }
+      .faq-item.is-open .faq-icon {
+        transform: rotate(45deg);
+        color: #F26419 !important;
+      }
+      .faq-grid-content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .faq-item.is-open .faq-grid-content {
+        grid-template-rows: 1fr;
+      }
+      .faq-grid-content > div {
+        overflow: hidden;
+      }
     </style>
   </head>
   <body class="font-sans bg-white text-slate-800 antialiased selection:bg-brandOrange selection:text-white">
@@ -210,6 +243,7 @@
             </div>
           </li>
 
+          <li><a href="#faq" class="hover:text-brandOrange transition-colors">FAQ</a></li>
           <li><a href="#contact" class="hover:text-brandOrange transition-colors">Contact</a></li>
 
           <li>
@@ -243,6 +277,7 @@
       <a href="#important-dates" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Important Dates</a>
       <a href="#registration-options" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Registration Options</a>
       <a href="#slides" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Program Slides</a>
+      <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">FAQ</a>
       <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Contact Us</a>
       <div class="pt-2">
         <a
@@ -2244,6 +2279,182 @@
         </div>
       </section>
 
+      <!-- FAQ SECTION -->
+      <section id="faq" class="relative bg-white py-20 border-t border-slate-100 scroll-mt-20">
+        <div class="mx-auto max-w-3xl px-6">
+          <div class="text-center max-w-2xl mx-auto mb-12 anim-fade-in-up">
+            <span class="text-xs font-bold uppercase tracking-widest text-brandOrange">Got Questions?</span>
+            <h2 class="mt-2 text-3xl lg:text-4xl font-bold text-brandNavy">Frequently Asked Questions</h2>
+            <div class="mt-3 h-1 w-16 bg-brandOrange mx-auto rounded-full"></div>
+            <p class="mt-4 text-slate-600 text-sm sm:text-base">Find answers to the most common questions about GECW 2026.</p>
+          </div>
+
+          <div class="space-y-3" id="faqAccordion">
+
+            <!-- FAQ 1 -->
+            <div class="faq-item is-open bg-slate-50 border border-slate-200 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
+              <button class="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none" type="button">
+                <span class="text-sm sm:text-base font-bold text-slate-900 pr-4">What is GECW?</span>
+                <span class="faq-icon text-slate-400 text-xl flex-shrink-0">+</span>
+              </button>
+              <div class="faq-grid-content">
+                <div>
+                  <div class="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                    GECW (Global Educator Conference &amp; Workshop) 2026 is a global conference and workshop that brings together educators, students, researchers, school leaders, and education practitioners to explore how Artificial Intelligence (AI) is shaping the future of learning. This year's theme is "AI in the Future of Learning: Friend or Foe?"
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item bg-slate-50 border border-slate-200 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
+              <button class="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none" type="button">
+                <span class="text-sm sm:text-base font-bold text-slate-900 pr-4">Who can join GECW?</span>
+                <span class="faq-icon text-slate-400 text-xl flex-shrink-0">+</span>
+              </button>
+              <div class="faq-grid-content">
+                <div>
+                  <div class="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                    Anyone can join! GECW is open to students, educators, teachers, lecturers, researchers, school leaders, and education practitioners who are interested in the future of education and AI.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item bg-slate-50 border border-slate-200 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
+              <button class="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none" type="button">
+                <span class="text-sm sm:text-base font-bold text-slate-900 pr-4">Can students be presenters at the conference?</span>
+                <span class="faq-icon text-slate-400 text-xl flex-shrink-0">+</span>
+              </button>
+              <div class="faq-grid-content">
+                <div>
+                  <div class="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                    Yes! Students can present their research, projects, or ideas at the conference. Students who wish to present can register as a Conference Presenter and go through the required submission and review process.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item bg-slate-50 border border-slate-200 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
+              <button class="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none" type="button">
+                <span class="text-sm sm:text-base font-bold text-slate-900 pr-4">Is there an online session?</span>
+                <span class="faq-icon text-slate-400 text-xl flex-shrink-0">+</span>
+              </button>
+              <div class="faq-grid-content">
+                <div>
+                  <div class="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                    Yes. Online participation is available for the Conference track. Online participants can join the conference virtually through the platform provided by the committee.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item bg-slate-50 border border-slate-200 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
+              <button class="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none" type="button">
+                <span class="text-sm sm:text-base font-bold text-slate-900 pr-4">Can online participants present at the conference?</span>
+                <span class="faq-icon text-slate-400 text-xl flex-shrink-0">+</span>
+              </button>
+              <div class="faq-grid-content">
+                <div>
+                  <div class="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                    Yes! Presenters can present their research or work online, subject to the conference submission, review, and scheduling requirements.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="faq-item bg-slate-50 border border-slate-200 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
+              <button class="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none" type="button">
+                <span class="text-sm sm:text-base font-bold text-slate-900 pr-4">Does the registration fee include accommodation?</span>
+                <span class="faq-icon text-slate-400 text-xl flex-shrink-0">+</span>
+              </button>
+              <div class="faq-grid-content">
+                <div>
+                  <div class="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                    No. The GECW registration fee does not include accommodation. However, the committee provides accommodation packages for participants who need them. Please contact the committee for available options and rates.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="faq-item bg-slate-50 border border-slate-200 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
+              <button class="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none" type="button">
+                <span class="text-sm sm:text-base font-bold text-slate-900 pr-4">Do I need a research paper to join GECW?</span>
+                <span class="faq-icon text-slate-400 text-xl flex-shrink-0">+</span>
+              </button>
+              <div class="faq-grid-content">
+                <div>
+                  <div class="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                    No. A paper or abstract is only required if you would like to participate as a Conference Presenter. Participants who join as observers do not need to submit a paper.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="faq-item bg-slate-50 border border-slate-200 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
+              <button class="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none" type="button">
+                <span class="text-sm sm:text-base font-bold text-slate-900 pr-4">What is the difference between the Conference and Workshop?</span>
+                <span class="faq-icon text-slate-400 text-xl flex-shrink-0">+</span>
+              </button>
+              <div class="faq-grid-content">
+                <div>
+                  <div class="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                    The Conference focuses on research, academic discussions, presentations, and knowledge sharing, while the Workshop focuses on hands-on learning, practical applications, and exploring AI in education.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 9 -->
+            <div class="faq-item bg-slate-50 border border-slate-200 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
+              <button class="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none" type="button">
+                <span class="text-sm sm:text-base font-bold text-slate-900 pr-4">Will participants receive a certificate?</span>
+                <span class="faq-icon text-slate-400 text-xl flex-shrink-0">+</span>
+              </button>
+              <div class="faq-grid-content">
+                <div>
+                  <div class="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                    Yes. Participants will receive a certificate according to their registered participation category.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 10 -->
+            <div class="faq-item bg-slate-50 border border-slate-200 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
+              <button class="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none" type="button">
+                <span class="text-sm sm:text-base font-bold text-slate-900 pr-4">Can my conference paper be published?</span>
+                <span class="faq-icon text-slate-400 text-xl flex-shrink-0">+</span>
+              </button>
+              <div class="faq-grid-content">
+                <div>
+                  <div class="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                    Yes. Selected papers may have opportunities for publication through available international journal and SINTA journal options, subject to the respective journal's review and acceptance process. Publication is separate from conference participation and is subject to additional requirements and fees.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="mt-6 bg-brandNavy/5 border border-brandNavy/10 rounded-2xl px-6 py-5">
+              <p class="text-sm font-bold text-brandNavy mb-1"><i class="fa-regular fa-circle-question text-brandOrange mr-2"></i>Still have questions?</p>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                For any inquiries regarding registration, submissions, or event logistics, you can reach out to the organizing committee:<br>
+                <span class="font-semibold">Email:</span> <a href="mailto:gecw@krya.global" class="text-brandOrange hover:underline">gecw@krya.global</a> &nbsp;|&nbsp;
+                <span class="font-semibold">WhatsApp:</span> <a href="https://wa.me/628172362236" target="_blank" rel="noopener noreferrer" class="text-brandOrange hover:underline">+62 817-2362-236 (Carol)</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="relative bg-slate-50 py-16 border-t border-slate-200">
         <div class="mx-auto max-w-7xl px-6">
           <div id="organizers" class="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -2341,6 +2552,7 @@
               <li><a href="#speakers" class="hover:text-brandOrange transition-colors">Keynote Speakers</a></li>
               <li><a href="#agenda" class="hover:text-brandOrange transition-colors">Event Agenda</a></li>
               <li><a href="#slides" class="hover:text-brandOrange transition-colors">Program Slides</a></li>
+              <li><a href="#faq" class="hover:text-brandOrange transition-colors">FAQ</a></li>
               <li><a href="#contact" class="hover:text-brandOrange transition-colors">Organizers &amp; Venue</a></li>
             </ul>
           </div>
@@ -2388,6 +2600,17 @@
 
     <!-- JAVASCRIPT ENGINE -->
     <script>
+      // FAQ Accordion Toggle — only one open at a time, smooth CSS grid animation
+      function toggleFaq(clickedItem) {
+        const allItems = document.querySelectorAll('#faqAccordion .faq-item');
+        allItems.forEach(function(item) {
+          if (item !== clickedItem && item.classList.contains('is-open')) {
+            item.classList.remove('is-open');
+          }
+        });
+        clickedItem.classList.toggle('is-open');
+      }
+
       // Focus Area Guiding Questions Toggle — smooth height animation, each independent
       function toggleFocusQuestion(id) {
         const content = document.getElementById('focusContent' + id);
