@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Speaker | GECW 2026</title>
+    <meta name="description" content="Speaker profile – GECW 2026: Global Educator Conference & Workshop." />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" href="images/GECW%20Logo%20Icon.png" />
+    <link rel="apple-touch-icon" href="images/GECW%20Logo%20Icon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Speaker | GECW 2026" />
+    <meta property="og:image" content="https://gecw.krya.global/images/GECW%20Logo.png" />
+    <meta property="og:url" content="https://gecw.krya.global" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandOrange: "#F26419",
+              brandOrangeHover: "#D9530F",
+              brandNavy: "#00214C",
+              brandBlue: "#00214C",
+              brandDark: "#00214C",
+            },
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Hero banner parallax background */
+      .speaker-hero-bg {
+        background-image: url('https://gecw.krya.global/images/Global%20Educator%20Conference%20%26%20Workshop%20(GEC)%208.jpg');
+        background-size: cover;
+        background-position: center 30%;
+        background-attachment: scroll;
+      }
+
+      /* Entrance animations */
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeInLeft {
+        from { opacity: 0; transform: translateX(-40px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      @keyframes fadeInRight {
+        from { opacity: 0; transform: translateX(40px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      @keyframes scaleIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+      }
+
+      .anim-fade-in-up {
+        opacity: 0;
+        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .anim-fade-in-left {
+        opacity: 0;
+        animation: fadeInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .anim-fade-in-right {
+        opacity: 0;
+        animation: fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .anim-scale-in {
+        opacity: 0;
+        animation: scaleIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .anim-delay-1 { animation-delay: 0.15s; }
+      .anim-delay-2 { animation-delay: 0.3s; }
+      .anim-delay-3 { animation-delay: 0.45s; }
+      .anim-delay-4 { animation-delay: 0.6s; }
+
+      /* Decorative sunburst pattern for the info card */
+      .sunburst-pattern {
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        width: 180px;
+        height: 180px;
+        opacity: 0.12;
+        background: repeating-conic-gradient(
+          #fff 0deg 10deg,
+          transparent 10deg 20deg
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      /* Smooth scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #f1f5f9; }
+      ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+      ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+  </head>
+  <body class="font-sans bg-white text-slate-800 antialiased selection:bg-brandOrange selection:text-white">
+
+    <!-- HEADER / NAVBAR -->
+    <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-300 transform translate-y-0">
+      <nav class="mx-auto flex h-20 lg:h-24 max-w-7xl items-center justify-between px-6 lg:px-8">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-3 group">
+          <img
+            src="images/GECW%20Logo%20header.png"
+            alt="GECW 2026 - Global Educator Conference & Workshop"
+            class="h-10 sm:h-12 lg:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+            onerror="this.onerror=null; this.src='https://gecw.krya.global/images/GECW%20Logo%20header.png';"
+          />
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="hidden lg:flex items-center gap-8 text-slate-700 font-semibold text-sm">
+          <li><a href="index.html#home" class="hover:text-brandOrange transition-colors">Home</a></li>
+          <li><a href="index.html#about" class="hover:text-brandOrange transition-colors">About</a></li>
+          <li><a href="index.html#speakers" class="text-brandOrange font-bold transition-colors">Speakers</a></li>
+          <li><a href="index.html#agenda" class="hover:text-brandOrange transition-colors">Agenda</a></li>
+          <li><a href="index.html#faq" class="hover:text-brandOrange transition-colors">FAQ</a></li>
+          <li><a href="index.html#contact" class="hover:text-brandOrange transition-colors">Contact</a></li>
+          <li>
+            <a
+              href="https://forms.gle/Dj8LCmXXoVhunZXo7" target="_blank" rel="noopener noreferrer"
+              class="rounded-xl bg-brandOrange px-5 py-2.5 font-bold text-white shadow-md transition hover:bg-brandOrangeHover inline-block"
+            >
+              Register Now
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Toggle Button -->
+        <button
+          onclick="toggleMobileMenu()"
+          class="lg:hidden text-slate-800 text-2xl focus:outline-none"
+          aria-label="Toggle menu"
+        >
+          <i id="menuIcon" class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden fixed top-20 left-0 right-0 z-40 bg-white border-b border-slate-200 shadow-2xl px-6 py-6 space-y-3 max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <a href="index.html" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Home</a>
+      <a href="index.html#speakers" class="block py-2 text-base font-bold text-brandOrange">Speakers</a>
+      <a href="index.html#agenda" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Agenda</a>
+      <a href="index.html#faq" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">FAQ</a>
+      <a href="index.html#contact" class="block py-2 text-base font-bold text-slate-800 hover:text-brandOrange">Contact Us</a>
+      <div class="pt-2">
+        <a
+          href="https://forms.gle/Dj8LCmXXoVhunZXo7" target="_blank" rel="noopener noreferrer"
+          class="block text-center w-full rounded-xl bg-brandOrange py-3 font-bold text-white shadow-md hover:bg-brandOrangeHover transition-colors"
+        >
+          Register Now
+        </a>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- HERO BANNER (Dark overlay with conference image) -->
+      <section class="speaker-hero-bg relative pt-28 lg:pt-32 pb-10 lg:pb-14 overflow-hidden">
+        <!-- Deep Navy Overlay -->
+        <div class="absolute inset-0 bg-[#00214C]/85 z-0"></div>
+        <!-- Dot grid texture -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F26419_1px,transparent_1px)] [background-size:18px_18px] z-0 pointer-events-none"></div>
+        <!-- Orange glow -->
+        <div class="absolute top-0 left-1/4 w-[400px] h-[250px] bg-brandOrange/15 blur-[120px] rounded-full pointer-events-none z-0"></div>
+
+        <div class="relative z-10 mx-auto max-w-7xl px-6">
+          <!-- Breadcrumb -->
+          <nav class="flex items-center space-x-2 text-sm text-slate-300 mb-6 anim-fade-in-up" aria-label="Breadcrumb">
+            <a href="index.html" class="hover:text-white transition-colors flex items-center space-x-1">
+              <span>Home</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+            </a>
+            <span class="text-slate-500">·</span>
+            <a href="index.html#speakers" class="hover:text-white transition-colors flex items-center space-x-1">
+              <span id="breadcrumbCategory">Speakers</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+            </a>
+            <span class="text-slate-500">·</span>
+            <span id="breadcrumbName" class="text-brandOrange font-semibold">Speaker Name</span>
+          </nav>
+
+          <!-- Speaker Name in Hero -->
+          <h1 id="heroName" class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight anim-fade-in-up anim-delay-1">
+            Speaker Name
+          </h1>
+        </div>
+      </section>
+
+      <!-- SPEAKER PROFILE CARD + BIO SECTION -->
+      <section class="relative py-12 lg:py-20 bg-white">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+
+            <!-- LEFT: Speaker Photo -->
+            <div class="lg:col-span-5 anim-fade-in-left anim-delay-1">
+              <div class="relative">
+                <div class="bg-gradient-to-br from-slate-100 to-slate-50 rounded-3xl p-4 sm:p-6 shadow-xl border border-slate-200/60">
+                  <img
+                    id="speakerPhoto"
+                    src=""
+                    alt="Speaker Photo"
+                    class="w-full max-w-sm mx-auto object-contain rounded-2xl"
+                  />
+                </div>
+                <!-- Decorative orange accent line below photo on mobile -->
+                <div class="mt-4 h-1 w-16 bg-brandOrange rounded-full mx-auto lg:hidden"></div>
+              </div>
+            </div>
+
+            <!-- RIGHT: Info Card + Details -->
+            <div class="lg:col-span-7 space-y-8">
+              <!-- Info Card (Orange/Navy card like reference) -->
+              <div class="relative overflow-hidden rounded-3xl bg-brandOrange text-white p-6 sm:p-8 shadow-2xl shadow-orange-500/20 anim-fade-in-right anim-delay-2">
+                <!-- Sunburst decoration -->
+                <div class="sunburst-pattern"></div>
+                
+                <!-- Organization label -->
+                <p id="cardOrganization" class="text-xs sm:text-sm font-bold uppercase tracking-wider text-orange-200 mb-2">
+                  Organization
+                </p>
+                <!-- Name -->
+                <h2 id="cardName" class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+                  Speaker Name
+                </h2>
+                <!-- Divider -->
+                <div class="h-px w-full bg-white/20 mb-4"></div>
+                <!-- Title/Position -->
+                <p id="cardTitle" class="text-sm sm:text-base text-white/90 leading-relaxed font-medium">
+                  Speaker Title
+                </p>
+
+                <!-- Country badge -->
+                <div class="mt-5 inline-flex items-center space-x-2 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+                  <i class="fa-solid fa-location-dot text-xs"></i>
+                  <span id="cardCountry" class="text-xs sm:text-sm font-semibold">Country</span>
+                </div>
+              </div>
+
+              <!-- Quick Info Pills -->
+              <div class="flex flex-wrap gap-3 anim-fade-in-up anim-delay-3">
+                <!-- LinkedIn -->
+                <a id="linkedinLink" href="#" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center space-x-2 bg-[#0077B5]/10 text-[#0077B5] px-4 py-2.5 rounded-xl text-sm font-bold hover:bg-[#0077B5] hover:text-white transition-all duration-300 border border-[#0077B5]/20 hover:border-[#0077B5] group">
+                  <i class="fa-brands fa-linkedin-in text-base group-hover:scale-110 transition-transform"></i>
+                  <span>LinkedIn Profile</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+                </a>
+                <!-- Role Badge -->
+                <div id="roleBadge"
+                  class="inline-flex items-center space-x-2 bg-brandNavy/10 text-brandNavy px-4 py-2.5 rounded-xl text-sm font-bold border border-brandNavy/15">
+                  <i class="fa-solid fa-microphone-lines text-base"></i>
+                  <span id="roleLabel">Keynote Speaker</span>
+                </div>
+              </div>
+
+              <!-- Bio Section -->
+              <div class="anim-fade-in-up anim-delay-4">
+                <div class="flex items-center space-x-3 mb-5">
+                  <div class="w-10 h-10 rounded-xl bg-brandOrange/10 flex items-center justify-center">
+                    <i class="fa-solid fa-user-tie text-brandOrange text-lg"></i>
+                  </div>
+                  <h3 class="text-xl sm:text-2xl font-extrabold text-brandNavy tracking-tight uppercase">About</h3>
+                </div>
+                <div id="speakerBio" class="text-slate-600 text-sm sm:text-base leading-relaxed text-justify space-y-4">
+                  <p>Loading speaker biography...</p>
+                </div>
+              </div>
+
+              <!-- Back to Speakers button -->
+              <div class="pt-4 anim-fade-in-up anim-delay-4">
+                <a href="index.html#speakers"
+                  class="inline-flex items-center space-x-2 rounded-xl bg-brandNavy px-6 py-3 font-bold text-white text-sm shadow-md hover:bg-brandNavy/90 transition-all group">
+                  <i class="fa-solid fa-arrow-left text-xs group-hover:-translate-x-1 transition-transform"></i>
+                  <span>Back to All Speakers</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- OTHER SPEAKERS SECTION -->
+      <section class="relative bg-slate-50 py-16 border-t border-slate-200">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="text-center mb-10">
+            <span class="text-xs font-bold uppercase tracking-widest text-brandOrange">Meet the Team</span>
+            <h2 class="mt-2 text-2xl sm:text-3xl font-extrabold text-brandNavy tracking-tight">Other Speakers & Facilitators</h2>
+            <div class="mt-3 h-1 w-16 bg-brandOrange mx-auto rounded-full"></div>
+          </div>
+
+          <div id="otherSpeakersGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#00214C] pt-14 pb-8 text-slate-300">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+          <!-- Column 1: Logo & Summary -->
+          <div>
+            <img
+              src="images/GECW%20Logo.png"
+              alt="GECW 2026 Logo"
+              class="h-14 w-auto mb-4"
+              onerror="this.onerror=null; this.src='https://gecw.krya.global/images/GECW%20Logo.png';"
+            />
+            <p class="text-sm leading-relaxed text-slate-400">
+              Global Educator Conference & Workshop 2026. AI in the Future of Learning: Friend or Foe?
+            </p>
+          </div>
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h4 class="font-bold text-white text-base">Quick Links</h4>
+            <div class="mt-2 h-0.5 w-8 bg-brandOrange rounded-full mb-4"></div>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li><a href="index.html" class="hover:text-brandOrange transition-colors">Home</a></li>
+              <li><a href="index.html#about" class="hover:text-brandOrange transition-colors">About GECW 2026</a></li>
+              <li><a href="index.html#speakers" class="hover:text-brandOrange transition-colors">Keynote Speakers</a></li>
+              <li><a href="index.html#agenda" class="hover:text-brandOrange transition-colors">Event Agenda</a></li>
+              <li><a href="index.html#faq" class="hover:text-brandOrange transition-colors">FAQ</a></li>
+            </ul>
+          </div>
+          <!-- Column 3: Get in Touch -->
+          <div>
+            <h4 class="font-bold text-white text-base">Get in Touch</h4>
+            <div class="mt-2 h-0.5 w-8 bg-brandOrange rounded-full mb-4"></div>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-start space-x-2.5">
+                <i class="fa-regular fa-envelope text-brandOrange mt-1 shrink-0"></i>
+                <a href="mailto:gecw@krya.global" class="hover:text-white hover:underline transition-colors">gecw@krya.global</a>
+              </li>
+              <li class="flex items-start space-x-2.5">
+                <i class="fa-brands fa-whatsapp text-emerald-400 mt-1 shrink-0"></i>
+                <a href="https://wa.me/628172362236" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline transition-colors">+62 817-2362-236 (Carol)</a>
+              </li>
+              <li class="flex items-start space-x-2.5">
+                <i class="fa-solid fa-location-dot text-brandOrange mt-1 shrink-0"></i>
+                <span>Surabaya, East Java, Indonesia</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Column 4: Register -->
+          <div>
+            <h4 class="font-bold text-white text-base">Join GECW 2026</h4>
+            <div class="mt-2 h-0.5 w-8 bg-brandOrange rounded-full mb-4"></div>
+            <p class="text-sm text-slate-400 mb-4">20–22 November 2026, Surabaya, Indonesia</p>
+            <a href="https://forms.gle/Dj8LCmXXoVhunZXo7" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center space-x-2 rounded-xl bg-brandOrange px-5 py-2.5 font-bold text-white text-sm shadow-md hover:bg-brandOrangeHover transition-all">
+              <span>Register Now</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-12 pt-6 border-t border-slate-700/60 text-center text-xs text-slate-400">
+          <p>&copy; 2026 Global Educator Conference & Workshop. All rights reserved. Surabaya, Indonesia.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT ENGINE -->
+    <script>
+      // ============================================================
+      // SPEAKER DATA
+      // ============================================================
+      const speakersData = {
+        'meg-colasante': {
+          name: 'Prof. Meg Colasante',
+          organization: 'RMIT University, Australia',
+          title: 'Lecturer, Professional Practice, College of Business and Law, RMIT University',
+          country: 'Australia',
+          role: 'keynote',
+          roleLabel: 'Keynote Speaker',
+          linkedin: 'https://www.linkedin.com/in/dr-meg-colasante-ba2a392a/',
+          photo: 'https://gecw.krya.global/images/speakers/Prof.%20Meg%20Colasante.png',
+          bio: `After years working in academic development, curriculum design, and SoTL management in RMIT's STEM College (followed by various academic development and teaching/research roles at other universities, including teaching the Graduate Certificate in Higher Education - Learning and Teaching), Meg returned to RMIT to work in the College of Business and Law (CoBL). Initially a sessional lecturer to teach Business Research Design in the MBA, now Meg is back based in CoBL's Learning, Teaching and Quality portfolio, teaching and coordinating undergraduate work-integrated learning (WIL) courses and leading a SoTL capacity building project.`
+        },
+        'anindhita-dewabharata': {
+          name: 'Prof. Anindhita Dewabharata',
+          organization: 'BINUS, Indonesia',
+          title: 'Associate Lecturer Specialist at Bina Nusantara University, Indonesia',
+          country: 'Indonesia',
+          role: 'keynote',
+          roleLabel: 'Keynote Speaker',
+          linkedin: 'https://www.linkedin.com/in/anindhita-dewabharata-a223392/',
+          photo: 'https://gecw.krya.global/images/speakers/Prof.%20Anindhita%20Dewabharata.png',
+          bio: `Dr. Anindhita Dewabharata is a lecturer and researcher specializing in Artificial Intelligence, data analytics, and metaheuristic optimization. With a Ph.D. in Industrial Management from National Taiwan University of Science and Technology (NTUST), his professional background spans academic positions across Asia as well as industrial engineering experience with Chevron Indonesia. His research focuses on applying machine learning, deep learning, and predictive modeling to renewable energy systems, smart logistics, and smart infrastructure. Passionate about fostering tech-driven societal impact, Dr. Dewabharata actively contributes to international research collaborations, curriculum development, and sustainable technology initiatives.`
+        },
+        'ratchanikorn-chonchaiya': {
+          name: 'Dr. Ratchanikorn Chonchaiya',
+          organization: "King Mongkut's University of Technology Thonburi, Thailand",
+          title: "Lecturer at King Mongkut's University of Technology Thonburi, Thailand",
+          country: 'Thailand',
+          role: 'keynote',
+          roleLabel: 'Keynote Speaker',
+          linkedin: 'https://www.linkedin.com/in/ratchanikorn-chonchaiya-19082a326/',
+          photo: 'https://gecw.krya.global/images/speakers/Dr.%20Ratchanikorn%20Chonchaiya.png',
+          bio: `Dr. Chonchaiya has extensive teaching experience at both undergraduate and graduate levels in various mathematics and mathematics education courses. His research interests span both pure mathematics and mathematics education, with publications in areas such as operator theory, spectral theory, fuzzy set theory, and mathematics teaching methodologies. He has authored book chapters on number theory, combinatorics, and probability for mathematics teacher education.`
+        },
+        'umawathy-techanamurthy': {
+          name: 'Dr. Umawathy Techanamurthy',
+          organization: 'University Kebangsaan Malaysia, Malaysia',
+          title: 'Lecturer at University Kebangsaan Malaysia, Malaysia',
+          country: 'Malaysia',
+          role: 'keynote',
+          roleLabel: 'Keynote Speaker',
+          linkedin: 'https://www.linkedin.com/in/umawathy-techanamurthy-phd/',
+          photo: 'https://gecw.krya.global/images/speakers/Dr.%20Umawathy%20Techanamurthy.png',
+          bio: `Dr. Umawathy Techanamurthy is a senior lecturer at the Engineering Education Department, Faculty of Engineering and Built Environment, National University of Malaysia (UKM). Previously, she served as Senior Assistant Director at the Instructional and Digital Learning Division, Ministry of Higher Education, Malaysia, from 2018 to 2022, and as a lecturer in Multimedia-related subjects at Kolej Komuniti Selayang and Hulu Selangor. With a PhD in Instructional Technology from University Malaya, her expertise lies in instructional design, microlearning, and pedagogical frameworks. Dr. Umawathy is passionate about fostering creativity, digital transformation, and sustainability in education through collaborative and impactful initiatives.`
+        },
+        'hani-soewandi': {
+          name: 'Dr. Hani Soewandi',
+          organization: 'pWin.ai, United States',
+          title: 'GenAI Engineer at pWin.ai',
+          country: 'United States',
+          role: 'keynote',
+          roleLabel: 'Keynote Speaker',
+          linkedin: 'https://www.linkedin.com/in/hani-soewandi/',
+          photo: 'https://gecw.krya.global/images/speakers/Dr.%20Hani%20Soewandi.png',
+          bio: `Hani (Hanijanto) Soewandi is a GenAI Engineer at pWin.ai with extensive experience in software engineering, business intelligence, and artificial intelligence. He previously spent 25 years at MicroStrategy, where he held senior roles including Vice President of Software Engineering in Test and Principal Architect. He earned his Ph.D. in Operations Research from North Carolina State University and a Master of Engineering in Industrial Engineering and Management from the Asian Institute of Technology. His professional and research interests include generative AI, software engineering, business intelligence, operations research, and optimisation.`
+        },
+        'michael-lee': {
+          name: 'Michael Lee',
+          organization: 'CreBiz Factory',
+          title: 'Nomadic Entrepreneur & Author of Bibimbap Design Thinking',
+          country: 'South Korea',
+          role: 'facilitator',
+          roleLabel: 'Coach & Facilitator',
+          linkedin: 'https://www.linkedin.com/in/michaellee1129/',
+          photo: 'https://gecw.krya.global/images/speakers/Michael%20Lee.png',
+          bio: `Michael Lee is Nomadic entrepreneur with a diverse national and international outreach, constantly inspired and motivated by empowering people to achieve their dreams and mobilizing people to develop global entrepreneurship ecosystem. He is the South Korea's delegate in B20 2022 in Bali and the author of Bibimbap Design Thinking.`
+        },
+        'daryl-lim': {
+          name: 'Daryl Lim',
+          organization: 'DesignThinkers Asia',
+          title: 'Co-Founder of DesignThinkers Academy, Singapore',
+          country: 'Singapore',
+          role: 'facilitator',
+          roleLabel: 'Coach & Facilitator',
+          linkedin: 'https://www.linkedin.com/in/daryllimps/',
+          photo: 'https://gecw.krya.global/images/speakers/Daryl%20Lim.png',
+          bio: `Daryl Lim is a design thinking practitioner specialising in organisational transformation and human-centred innovation across Singapore and ASEAN. As Co-Founder of DesignThinkers Academy, he supports leaders and teams in navigating complex challenges through structured yet empathetic approaches. His work spans leadership development, stakeholder engagement, and innovation capability building. Daryl is known for translating strategy into practical action, guiding teams through frameworks such as the Double Diamond to co-create meaningful solutions. He brings a facilitative style that aligns diverse stakeholders, strengthens collaboration, and enables sustainable, people-centred outcomes. His practice integrates systems thinking, reflective learning, and disciplined execution to drive real impact.`
+        },
+        'sintowati-soetanto': {
+          name: 'Sintowati Soetanto',
+          organization: 'Krya Global',
+          title: 'Passionate Curriculum Designer & School Management Coach',
+          country: 'Indonesia',
+          role: 'facilitator',
+          roleLabel: 'Coach & Inspirator',
+          linkedin: 'https://www.linkedin.com/in/sintowati/',
+          photo: 'https://gecw.krya.global/images/speakers/Sintowati%20Soetanto.png',
+          bio: `A Passionate Curriculum Designer & School Management Coach. With decades of experience, she specializes in shaping effective learning systems and empowering educational leaders. Transforming schools through innovative strategies and proven expertise.`
+        },
+        'antonius-malem-barus': {
+          name: 'Antonius Malem Barus',
+          organization: 'Krya Global',
+          title: 'Co-Founder and Chief Executive of Krya',
+          country: 'Indonesia',
+          role: 'facilitator',
+          roleLabel: 'Coach & Inspirator',
+          linkedin: 'https://www.linkedin.com/in/antoniusmb/',
+          photo: 'https://gecw.krya.global/images/speakers/Antonius%20Malem%20Barus.png',
+          bio: `Antonius Malem Barus is an ecosystem builder, learning experience designer, and youth innovation champion empowering next-generation changemakers across Asia. As Co-Founder and Chief Executive of Krya, he leads regional initiatives equipping young innovators and entrepreneurs with the design thinking, problem-solving, and entrepreneurial skills needed to drive social impact.\n\nHe is the Co-Initiator of the Startup Innovation Weekend (SIW) under the International Creativity and Innovation Award (ICIA), which bridges international early-stage founders with regional startup ecosystems in Southeast Asia. Antonius also designed the M!ND* (Make the Innovation and Dedicate IT!), talent frameworks to help youth translate ideas into scalable solutions.\n\nAn Advisory Board member for World Creativity and Innovation Week/Day (WCIW/D), Antonius regularly serves as a global mentor, speaker, and judge evaluating innovation and social impact.`
+        }
+      };
+
+      // ============================================================
+      // LOAD SPEAKER DETAIL
+      // ============================================================
+      function loadSpeakerDetail() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const speakerId = urlParams.get('id');
+
+        if (!speakerId || !speakersData[speakerId]) {
+          // Redirect to speakers section if invalid
+          window.location.href = 'index.html#speakers';
+          return;
+        }
+
+        const speaker = speakersData[speakerId];
+
+        // Update page title
+        document.title = `${speaker.name} | GECW 2026`;
+        document.querySelector('meta[name="description"]').setAttribute('content',
+          `${speaker.name} – ${speaker.title}. Speaker at GECW 2026: Global Educator Conference & Workshop.`
+        );
+
+        // Update hero
+        document.getElementById('heroName').textContent = speaker.name;
+        document.getElementById('breadcrumbName').textContent = speaker.name;
+        
+        // Update breadcrumb category based on role
+        const breadcrumbCategory = document.getElementById('breadcrumbCategory');
+        if (speaker.role === 'keynote') {
+          breadcrumbCategory.textContent = 'Keynote Speakers';
+        } else {
+          breadcrumbCategory.textContent = 'Coach, Facilitator & Inspirator';
+        }
+
+        // Update photo
+        const photo = document.getElementById('speakerPhoto');
+        photo.src = speaker.photo;
+        photo.alt = speaker.name;
+
+        // Update info card
+        document.getElementById('cardOrganization').textContent = speaker.organization;
+        document.getElementById('cardName').textContent = speaker.name;
+        document.getElementById('cardTitle').textContent = speaker.title;
+        document.getElementById('cardCountry').textContent = speaker.country;
+
+        // Update LinkedIn
+        const linkedinLink = document.getElementById('linkedinLink');
+        linkedinLink.href = speaker.linkedin;
+
+        // Update role badge
+        const roleLabel = document.getElementById('roleLabel');
+        const roleBadge = document.getElementById('roleBadge');
+        roleLabel.textContent = speaker.roleLabel;
+        
+        if (speaker.role === 'facilitator') {
+          roleBadge.className = 'inline-flex items-center space-x-2 bg-emerald-50 text-emerald-700 px-4 py-2.5 rounded-xl text-sm font-bold border border-emerald-200';
+          roleBadge.querySelector('i').className = 'fa-solid fa-chalkboard-user text-base';
+        }
+
+        // Update bio
+        const bioContainer = document.getElementById('speakerBio');
+        const paragraphs = speaker.bio.split('\n\n').filter(p => p.trim());
+        bioContainer.innerHTML = paragraphs.map(p => `<p>${p.trim()}</p>`).join('');
+
+        // Populate other speakers
+        populateOtherSpeakers(speakerId);
+      }
+
+      // ============================================================
+      // POPULATE OTHER SPEAKERS GRID
+      // ============================================================
+      function populateOtherSpeakers(currentId) {
+        const grid = document.getElementById('otherSpeakersGrid');
+        grid.innerHTML = '';
+
+        Object.entries(speakersData).forEach(([id, speaker]) => {
+          if (id === currentId) return;
+
+          const card = document.createElement('a');
+          card.href = `speaker-detail.html?id=${id}`;
+          card.className = 'group text-center bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300';
+          card.innerHTML = `
+            <div class="mx-auto w-24 sm:w-28 mb-3">
+              <img src="${speaker.photo}" alt="${speaker.name}"
+                class="w-full object-contain transition-transform duration-300 group-hover:scale-105" />
+            </div>
+            <h4 class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-brandOrange transition-colors leading-snug">${speaker.name}</h4>
+            <p class="mt-1 text-[10px] sm:text-xs text-slate-500 font-medium leading-snug">${speaker.organization}</p>
+          `;
+          grid.appendChild(card);
+        });
+      }
+
+      // ============================================================
+      // MOBILE MENU
+      // ============================================================
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+        if (mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove("hidden");
+          menuIcon.classList.remove("fa-bars");
+          menuIcon.classList.add("fa-xmark");
+        } else {
+          mobileMenu.classList.add("hidden");
+          menuIcon.classList.remove("fa-xmark");
+          menuIcon.classList.add("fa-bars");
+        }
+      }
+
+      // ============================================================
+      // SCROLL DIRECTION HEADER HIDE/REVEAL
+      // ============================================================
+      (function initHeaderScroll() {
+        let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        const header = document.getElementById("mainHeader");
+        const scrollThreshold = 10;
+
+        window.addEventListener("scroll", () => {
+          const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (currentScrollY <= 80) {
+            header.classList.remove("-translate-y-full");
+            header.classList.add("translate-y-0", "shadow-sm");
+            lastScrollY = currentScrollY;
+            return;
+          }
+
+          if (Math.abs(currentScrollY - lastScrollY) < scrollThreshold) return;
+
+          if (currentScrollY > lastScrollY) {
+            header.classList.remove("translate-y-0");
+            header.classList.add("-translate-y-full", "shadow-md");
+          } else {
+            header.classList.remove("-translate-y-full");
+            header.classList.add("translate-y-0", "shadow-md");
+          }
+
+          lastScrollY = currentScrollY;
+        }, { passive: true });
+      })();
+
+      // ============================================================
+      // INIT
+      // ============================================================
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadSpeakerDetail);
+      } else {
+        loadSpeakerDetail();
+      }
+    </script>
+  </body>
+</html>
