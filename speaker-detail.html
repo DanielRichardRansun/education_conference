@@ -310,17 +310,49 @@
         </div>
       </section>
 
-      <!-- OTHER SPEAKERS SECTION -->
+      <!-- OTHER SPEAKERS SECTION (CAROUSEL / SLIDER) -->
       <section class="relative bg-slate-50 py-16 border-t border-slate-200">
         <div class="mx-auto max-w-7xl px-6">
           <div class="text-center mb-10">
             <span class="text-xs font-bold uppercase tracking-widest text-brandOrange">Meet the Team</span>
-            <h2 class="mt-2 text-2xl sm:text-3xl font-extrabold text-brandNavy tracking-tight">Other Speakers & Facilitators</h2>
+            <h2 class="mt-2 text-2xl sm:text-3xl font-extrabold text-brandNavy tracking-tight">Other Speakers &amp; Facilitators</h2>
             <div class="mt-3 h-1 w-16 bg-brandOrange mx-auto rounded-full"></div>
           </div>
 
-          <div id="otherSpeakersGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
-            <!-- Dynamically populated -->
+          <!-- Carousel Container -->
+          <div class="relative max-w-6xl mx-auto px-4 sm:px-8">
+            <!-- Navigation Buttons -->
+            <button
+              id="prevSpeakerBtn"
+              onclick="slideSpeakers(-1)"
+              class="absolute -left-2 sm:left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white text-brandNavy shadow-md hover:shadow-xl border border-slate-200/80 hover:bg-brandOrange hover:text-white hover:border-brandOrange transition-all flex items-center justify-center cursor-pointer focus:outline-none"
+              aria-label="Previous speakers"
+            >
+              <i class="fa-solid fa-chevron-left text-sm"></i>
+            </button>
+
+            <button
+              id="nextSpeakerBtn"
+              onclick="slideSpeakers(1)"
+              class="absolute -right-2 sm:right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white text-brandNavy shadow-md hover:shadow-xl border border-slate-200/80 hover:bg-brandOrange hover:text-white hover:border-brandOrange transition-all flex items-center justify-center cursor-pointer focus:outline-none"
+              aria-label="Next speakers"
+            >
+              <i class="fa-solid fa-chevron-right text-sm"></i>
+            </button>
+
+            <!-- Carousel Viewport -->
+            <div class="overflow-hidden py-3 -my-3">
+              <div
+                id="otherSpeakersTrack"
+                class="flex transition-transform duration-500 ease-out"
+                style="transform: translateX(0%);"
+              >
+                <!-- Dynamically populated speaker cards -->
+              </div>
+            </div>
+
+            <!-- Dots Pagination -->
+            <div id="speakerSliderDots" class="flex justify-center items-center space-x-2 mt-8"></div>
           </div>
         </div>
       </section>
@@ -406,7 +438,7 @@
           role: 'keynote',
           roleLabel: 'Keynote Speaker',
           linkedin: 'https://www.linkedin.com/in/dr-meg-colasante-ba2a392a/',
-          photo: 'https://gecw.krya.global/images/speakers/Prof.%20Meg%20Colasante.png',
+          photo: 'https://gecw.krya.global/images/speakers_detail/Prof.%20Meg%20Colasante.png',
           bio: `After years working in academic development, curriculum design, and SoTL management in RMIT's STEM College (followed by various academic development and teaching/research roles at other universities, including teaching the Graduate Certificate in Higher Education - Learning and Teaching), Meg returned to RMIT to work in the College of Business and Law (CoBL). Initially a sessional lecturer to teach Business Research Design in the MBA, now Meg is back based in CoBL's Learning, Teaching and Quality portfolio, teaching and coordinating undergraduate work-integrated learning (WIL) courses and leading a SoTL capacity building project.`
         },
         'anindhita-dewabharata': {
@@ -417,7 +449,7 @@
           role: 'keynote',
           roleLabel: 'Keynote Speaker',
           linkedin: 'https://www.linkedin.com/in/anindhita-dewabharata-a223392/',
-          photo: 'https://gecw.krya.global/images/speakers/Prof.%20Anindhita%20Dewabharata.png',
+          photo: 'https://gecw.krya.global/images/speakers_detail/Prof.%20Anindhita%20Dewabharata.png',
           bio: `Dr. Anindhita Dewabharata is a lecturer and researcher specializing in Artificial Intelligence, data analytics, and metaheuristic optimization. With a Ph.D. in Industrial Management from National Taiwan University of Science and Technology (NTUST), his professional background spans academic positions across Asia as well as industrial engineering experience with Chevron Indonesia. His research focuses on applying machine learning, deep learning, and predictive modeling to renewable energy systems, smart logistics, and smart infrastructure. Passionate about fostering tech-driven societal impact, Dr. Dewabharata actively contributes to international research collaborations, curriculum development, and sustainable technology initiatives.`
         },
         'ratchanikorn-chonchaiya': {
@@ -428,7 +460,7 @@
           role: 'keynote',
           roleLabel: 'Keynote Speaker',
           linkedin: 'https://www.linkedin.com/in/ratchanikorn-chonchaiya-19082a326/',
-          photo: 'https://gecw.krya.global/images/speakers/Dr.%20Ratchanikorn%20Chonchaiya.png',
+          photo: 'https://gecw.krya.global/images/speakers_detail/Dr.%20Ratchanikorn%20Chonchaiya.png',
           bio: `Dr. Chonchaiya has extensive teaching experience at both undergraduate and graduate levels in various mathematics and mathematics education courses. His research interests span both pure mathematics and mathematics education, with publications in areas such as operator theory, spectral theory, fuzzy set theory, and mathematics teaching methodologies. He has authored book chapters on number theory, combinatorics, and probability for mathematics teacher education.`
         },
         'umawathy-techanamurthy': {
@@ -439,7 +471,7 @@
           role: 'keynote',
           roleLabel: 'Keynote Speaker',
           linkedin: 'https://www.linkedin.com/in/umawathy-techanamurthy-phd/',
-          photo: 'https://gecw.krya.global/images/speakers/Dr.%20Umawathy%20Techanamurthy.png',
+          photo: 'https://gecw.krya.global/images/speakers_detail/Dr.%20Umawathay%20Techanamurthy.png',
           bio: `Dr. Umawathy Techanamurthy is a senior lecturer at the Engineering Education Department, Faculty of Engineering and Built Environment, National University of Malaysia (UKM). Previously, she served as Senior Assistant Director at the Instructional and Digital Learning Division, Ministry of Higher Education, Malaysia, from 2018 to 2022, and as a lecturer in Multimedia-related subjects at Kolej Komuniti Selayang and Hulu Selangor. With a PhD in Instructional Technology from University Malaya, her expertise lies in instructional design, microlearning, and pedagogical frameworks. Dr. Umawathy is passionate about fostering creativity, digital transformation, and sustainability in education through collaborative and impactful initiatives.`
         },
         'hani-soewandi': {
@@ -450,7 +482,7 @@
           role: 'keynote',
           roleLabel: 'Keynote Speaker',
           linkedin: 'https://www.linkedin.com/in/hani-soewandi/',
-          photo: 'https://gecw.krya.global/images/speakers/Dr.%20Hani%20Soewandi.png',
+          photo: 'https://gecw.krya.global/images/speakers_detail/Dr.%20Hani%20Soewandi.png',
           bio: `Hani (Hanijanto) Soewandi is a GenAI Engineer at pWin.ai with extensive experience in software engineering, business intelligence, and artificial intelligence. He previously spent 25 years at MicroStrategy, where he held senior roles including Vice President of Software Engineering in Test and Principal Architect. He earned his Ph.D. in Operations Research from North Carolina State University and a Master of Engineering in Industrial Engineering and Management from the Asian Institute of Technology. His professional and research interests include generative AI, software engineering, business intelligence, operations research, and optimisation.`
         },
         'michael-lee': {
@@ -461,7 +493,7 @@
           role: 'facilitator',
           roleLabel: 'Coach & Facilitator',
           linkedin: 'https://www.linkedin.com/in/michaellee1129/',
-          photo: 'https://gecw.krya.global/images/speakers/Michael%20Lee.png',
+          photo: 'https://gecw.krya.global/images/speakers_detail/Michael%20Lee.png',
           bio: `Michael Lee is Nomadic entrepreneur with a diverse national and international outreach, constantly inspired and motivated by empowering people to achieve their dreams and mobilizing people to develop global entrepreneurship ecosystem. He is the South Korea's delegate in B20 2022 in Bali and the author of Bibimbap Design Thinking.`
         },
         'daryl-lim': {
@@ -472,7 +504,7 @@
           role: 'facilitator',
           roleLabel: 'Coach & Facilitator',
           linkedin: 'https://www.linkedin.com/in/daryllimps/',
-          photo: 'https://gecw.krya.global/images/speakers/Daryl%20Lim.png',
+          photo: 'https://gecw.krya.global/images/speakers_detail/Daryl%20Lim.png',
           bio: `Daryl Lim is a design thinking practitioner specialising in organisational transformation and human-centred innovation across Singapore and ASEAN. As Co-Founder of DesignThinkers Academy, he supports leaders and teams in navigating complex challenges through structured yet empathetic approaches. His work spans leadership development, stakeholder engagement, and innovation capability building. Daryl is known for translating strategy into practical action, guiding teams through frameworks such as the Double Diamond to co-create meaningful solutions. He brings a facilitative style that aligns diverse stakeholders, strengthens collaboration, and enables sustainable, people-centred outcomes. His practice integrates systems thinking, reflective learning, and disciplined execution to drive real impact.`
         },
         'sintowati-soetanto': {
@@ -483,7 +515,7 @@
           role: 'facilitator',
           roleLabel: 'Coach & Inspirator',
           linkedin: 'https://www.linkedin.com/in/sintowati/',
-          photo: 'https://gecw.krya.global/images/speakers/Sintowati%20Soetanto.png',
+          photo: 'https://gecw.krya.global/images/speakers_detail/Sintowati%20Soetanto.png',
           bio: `A Passionate Curriculum Designer & School Management Coach. With decades of experience, she specializes in shaping effective learning systems and empowering educational leaders. Transforming schools through innovative strategies and proven expertise.`
         },
         'antonius-malem-barus': {
@@ -494,7 +526,7 @@
           role: 'facilitator',
           roleLabel: 'Coach & Inspirator',
           linkedin: 'https://www.linkedin.com/in/antoniusmb/',
-          photo: 'https://gecw.krya.global/images/speakers/Antonius%20Malem%20Barus.png',
+          photo: 'https://gecw.krya.global/images/speakers_detail/Antonius%20Malem%20Barus.png',
           bio: `Antonius Malem Barus is an ecosystem builder, learning experience designer, and youth innovation champion empowering next-generation changemakers across Asia. As Co-Founder and Chief Executive of Krya, he leads regional initiatives equipping young innovators and entrepreneurs with the design thinking, problem-solving, and entrepreneurial skills needed to drive social impact.\n\nHe is the Co-Initiator of the Startup Innovation Weekend (SIW) under the International Creativity and Innovation Award (ICIA), which bridges international early-stage founders with regional startup ecosystems in Southeast Asia. Antonius also designed the M!ND* (Make the Innovation and Dedicate IT!), talent frameworks to help youth translate ideas into scalable solutions.\n\nAn Advisory Board member for World Creativity and Innovation Week/Day (WCIW/D), Antonius regularly serves as a global mentor, speaker, and judge evaluating innovation and social impact.`
         }
       };
@@ -567,29 +599,132 @@
       }
 
       // ============================================================
-      // POPULATE OTHER SPEAKERS GRID
+      // POPULATE OTHER SPEAKERS SLIDER / CAROUSEL (4 visible)
       // ============================================================
+      let currentSpeakerIndex = 0;
+      let totalOtherSpeakers = 0;
+      let autoSlideTimer = null;
+
+      function getVisibleSpeakersCount() {
+        if (window.innerWidth >= 1024) return 4;
+        if (window.innerWidth >= 768) return 3;
+        if (window.innerWidth >= 640) return 2;
+        return 1;
+      }
+
       function populateOtherSpeakers(currentId) {
-        const grid = document.getElementById('otherSpeakersGrid');
-        grid.innerHTML = '';
+        const track = document.getElementById('otherSpeakersTrack');
+        if (!track) return;
+        track.innerHTML = '';
+        currentSpeakerIndex = 0;
 
-        Object.entries(speakersData).forEach(([id, speaker]) => {
-          if (id === currentId) return;
+        const otherSpeakers = Object.entries(speakersData).filter(([id]) => id !== currentId);
+        totalOtherSpeakers = otherSpeakers.length;
 
-          const card = document.createElement('a');
-          card.href = `speaker-detail.html?id=${id}`;
-          card.className = 'group text-center bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300';
-          card.innerHTML = `
-            <div class="mx-auto w-24 sm:w-28 mb-3">
-              <img src="${speaker.photo}" alt="${speaker.name}"
-                class="w-full object-contain transition-transform duration-300 group-hover:scale-105" />
-            </div>
-            <h4 class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-brandOrange transition-colors leading-snug">${speaker.name}</h4>
-            <p class="mt-1 text-[10px] sm:text-xs text-slate-500 font-medium leading-snug">${speaker.organization}</p>
+        otherSpeakers.forEach(([id, speaker]) => {
+          const slide = document.createElement('div');
+          slide.className = 'w-full sm:w-1/2 md:w-1/3 lg:w-1/4 shrink-0 px-3 sm:px-4';
+          slide.innerHTML = `
+            <a href="speaker-detail.html?id=${id}" class="group block text-center p-3 rounded-2xl transition-all duration-300 hover:-translate-y-1.5 hover:bg-white hover:shadow-md cursor-pointer">
+              <div class="mx-auto w-32 sm:w-36 mb-3">
+                <img src="${speaker.photo}" alt="${speaker.name}"
+                  class="w-full object-contain transition-transform duration-300 group-hover:scale-105" />
+              </div>
+              <h4 class="text-sm sm:text-base font-bold text-slate-900 group-hover:text-brandOrange transition-colors leading-snug">${speaker.name}</h4>
+              <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">${speaker.organization}</p>
+            </a>
           `;
-          grid.appendChild(card);
+          track.appendChild(slide);
+        });
+
+        renderDots();
+        updateSliderPosition();
+        startAutoSlide();
+      }
+
+      function getMaxSpeakerIndex() {
+        const visible = getVisibleSpeakersCount();
+        return Math.max(0, totalOtherSpeakers - visible);
+      }
+
+      function slideSpeakers(direction) {
+        const maxIndex = getMaxSpeakerIndex();
+        currentSpeakerIndex += direction;
+        if (currentSpeakerIndex < 0) {
+          currentSpeakerIndex = maxIndex;
+        } else if (currentSpeakerIndex > maxIndex) {
+          currentSpeakerIndex = 0;
+        }
+        updateSliderPosition();
+        resetAutoSlide();
+      }
+
+      function goToSpeakerSlide(index) {
+        const maxIndex = getMaxSpeakerIndex();
+        currentSpeakerIndex = Math.min(Math.max(0, index), maxIndex);
+        updateSliderPosition();
+        resetAutoSlide();
+      }
+
+      function updateSliderPosition() {
+        const track = document.getElementById('otherSpeakersTrack');
+        if (!track) return;
+        const visible = getVisibleSpeakersCount();
+        const slideWidthPercent = 100 / visible;
+        track.style.transform = `translateX(-${currentSpeakerIndex * slideWidthPercent}%)`;
+        updateDots();
+      }
+
+      function renderDots() {
+        const dotsContainer = document.getElementById('speakerSliderDots');
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = '';
+        const maxIndex = getMaxSpeakerIndex();
+        const dotsCount = maxIndex + 1;
+
+        if (dotsCount <= 1) return;
+
+        for (let i = 0; i < dotsCount; i++) {
+          const dot = document.createElement('button');
+          dot.className = `h-2.5 rounded-full transition-all duration-300 cursor-pointer ${i === currentSpeakerIndex ? 'bg-brandOrange w-6' : 'bg-slate-300 w-2.5 hover:bg-slate-400'}`;
+          dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+          dot.onclick = () => goToSpeakerSlide(i);
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function updateDots() {
+        const dotsContainer = document.getElementById('speakerSliderDots');
+        if (!dotsContainer) return;
+        const dots = dotsContainer.querySelectorAll('button');
+        dots.forEach((dot, i) => {
+          if (i === currentSpeakerIndex) {
+            dot.className = 'w-6 h-2.5 rounded-full bg-brandOrange transition-all duration-300 cursor-pointer';
+          } else {
+            dot.className = 'w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300 cursor-pointer';
+          }
         });
       }
+
+      function startAutoSlide() {
+        clearInterval(autoSlideTimer);
+        autoSlideTimer = setInterval(() => {
+          slideSpeakers(1);
+        }, 4500);
+      }
+
+      function resetAutoSlide() {
+        startAutoSlide();
+      }
+
+      window.addEventListener('resize', () => {
+        const maxIndex = getMaxSpeakerIndex();
+        if (currentSpeakerIndex > maxIndex) {
+          currentSpeakerIndex = maxIndex;
+        }
+        renderDots();
+        updateSliderPosition();
+      });
 
       // ============================================================
       // MOBILE MENU
