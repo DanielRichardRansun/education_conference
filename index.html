@@ -96,6 +96,41 @@
       .anim-delay-2 { transition-delay: 0.2s; }
       .anim-delay-3 { transition-delay: 0.3s; }
       .anim-delay-4 { transition-delay: 0.4s; }
+
+      /* Floating smooth micro-animations */
+      @keyframes floatSlow {
+        0%, 100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-8px) rotate(0.5deg);
+        }
+      }
+      @keyframes floatReverse {
+        0%, 100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(8px) rotate(-0.5deg);
+        }
+      }
+      @keyframes floatSide {
+        0%, 100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(3px, -5px);
+        }
+      }
+      .anim-float {
+        animation: floatSlow 4.5s ease-in-out infinite;
+      }
+      .anim-float-reverse {
+        animation: floatReverse 5s ease-in-out infinite 0.5s;
+      }
+      .anim-float-slow {
+        animation: floatSide 5.5s ease-in-out infinite 1s;
+      }
       /* Info tooltip */
       .info-tooltip { position: relative; cursor: pointer; }
       .info-tooltip .tooltip-text {
@@ -343,13 +378,70 @@
               </div>
             </div>
 
-            <!-- Right Column Clean Image Card (5 cols) -->
-            <div class="relative anim-fade-in-up anim-delay-2 lg:col-span-5">
-              <img
-                src="https://gecw.krya.global/images/Global%20Educator%20Conference%20%26%20Workshop%20(GEC)%2061.jpg"
-                alt="GECW 2026 Conference"
-                class="w-full rounded-2xl object-cover shadow-2xl h-[320px] sm:h-[380px] lg:h-[420px]"
-              />
+            <!-- Right Column Image Card with Modern Floating Elements (5 cols) -->
+            <div class="relative anim-fade-in-up anim-delay-2 lg:col-span-5 select-none mt-6 lg:mt-0">
+              <!-- Ambient Glow & Geometric Accents Behind Image -->
+              <div class="absolute -top-6 -right-6 w-48 h-48 bg-brandOrange/20 rounded-full blur-3xl pointer-events-none"></div>
+              <div class="absolute -bottom-8 -left-8 w-56 h-56 bg-[#00214C]/15 rounded-full blur-3xl pointer-events-none"></div>
+              <div class="absolute -bottom-5 -right-5 w-24 h-24 opacity-25 bg-[radial-gradient(#F26419_2px,transparent_2px)] [background-size:10px_10px] pointer-events-none hidden sm:block"></div>
+
+              <!-- Main Hero Image Card with Sleek Border & Glow -->
+              <div class="relative p-1.5 sm:p-2 rounded-3xl bg-gradient-to-tr from-brandOrange/30 via-white to-[#00214C]/25 shadow-2xl shadow-slate-900/10 transition-all duration-500 hover:shadow-orange-500/10">
+                <div class="relative rounded-[20px] sm:rounded-[22px] overflow-hidden bg-slate-100 group">
+                  <img
+                    src="https://gecw.krya.global/images/Global%20Educator%20Conference%20%26%20Workshop%20(GEC)%2061.jpg"
+                    alt="GECW 2026 Conference"
+                    class="w-full object-cover h-[320px] sm:h-[380px] lg:h-[420px] transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                  <!-- Subtle gradient vignette for readability -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#00214C]/50 via-transparent to-[#00214C]/10 pointer-events-none"></div>
+
+                  <!-- Floating Badge Inside Image (Top Right): CPD Certification -->
+                  <div class="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 anim-float-slow z-10">
+                    <div class="inline-flex items-center space-x-1.5 sm:space-x-2 bg-[#00214C]/90 backdrop-blur-md text-white px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-bold border border-white/20 shadow-lg shadow-black/20">
+                      <i class="fa-solid fa-award text-amber-400 text-xs sm:text-sm"></i>
+                      <span>Certified CPD Hours</span>
+                    </div>
+                  </div>
+
+                  <!-- Floating Pill Inside Image (Bottom Left): 3 Perspective Tracks -->
+                  <div class="absolute bottom-3.5 left-3.5 sm:bottom-4 sm:left-4 z-10">
+                    <div class="inline-flex items-center space-x-1.5 sm:space-x-2 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-bold text-brandNavy border border-white/60 shadow-md">
+                      <i class="fa-solid fa-chalkboard-user text-brandOrange text-xs sm:text-sm"></i>
+                      <span>3 Perspective Tracks</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Card 1 (Top-Left floating over corner): AI & Innovation Hub -->
+              <div class="absolute -top-4 -left-3 sm:-top-6 sm:-left-6 anim-float z-20">
+                <div class="bg-white/95 backdrop-blur-md rounded-2xl p-2.5 sm:p-3.5 shadow-xl shadow-slate-900/10 border border-slate-100/90 flex items-center space-x-3 transition-transform hover:scale-105">
+                  <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-orange-500/10 flex items-center justify-center text-brandOrange flex-shrink-0 border border-orange-500/20">
+                    <i class="fa-solid fa-wand-magic-sparkles text-sm sm:text-base"></i>
+                  </div>
+                  <div class="pr-1">
+                    <span class="block text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-brandOrange">Innovation Hub</span>
+                    <span class="block text-xs sm:text-sm font-extrabold text-[#00214C] leading-tight">Classroom AI Tools</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Card 2 (Bottom-Right floating over corner): 500+ Educators & Network -->
+              <div class="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-5 anim-float-reverse z-20">
+                <div class="bg-white/95 backdrop-blur-md rounded-2xl p-2.5 sm:p-3.5 shadow-xl shadow-slate-900/10 border border-slate-100/90 flex items-center space-x-3 transition-transform hover:scale-105">
+                  <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-[#00214C] flex items-center justify-center text-white flex-shrink-0 shadow-md shadow-[#00214C]/30">
+                    <i class="fa-solid fa-users text-xs sm:text-sm text-amber-300"></i>
+                  </div>
+                  <div class="pr-1">
+                    <div class="flex items-center space-x-1.5">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                      <span class="text-[9px] sm:text-[10px] font-bold text-slate-500 uppercase tracking-wide">Global Network</span>
+                    </div>
+                    <span class="block text-xs sm:text-sm font-extrabold text-[#00214C] leading-tight">500+ Global Educators</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -594,16 +686,16 @@
           <div class="mt-8 space-y-8 sm:space-y-10 max-w-5xl mx-auto">
             <!-- Top Row: 3 Speakers -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-start">
-              <!-- Speaker 1 (Prof. Meg Colasante) -->
+              <!-- Speaker 1 (Dr. Meg Colasante) -->
               <a href="speaker-detail.html?id=meg-colasante" class="group anim-fade-in-up anim-delay-1 block cursor-pointer p-3 -m-3 rounded-2xl transition-all duration-300 hover:-translate-y-1.5 hover:bg-slate-50/80">
                 <div class="mx-auto w-44 sm:w-52">
                   <img
                     src="https://gecw.krya.global/images/speakers/Prof.%20Meg%20Colasante.png"
-                    alt="Prof. Meg Colasante"
+                    alt="Dr. Meg Colasante"
                     class="w-full object-contain transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Prof. Meg Colasante</h3>
+                <h3 class="mt-4 text-base sm:text-lg font-bold text-slate-900 group-hover:text-brandOrange transition-colors">Dr. Meg Colasante</h3>
                 <p class="mt-1 text-xs sm:text-sm text-slate-500 font-medium leading-snug">RMIT University, Australia</p>
               </a>
 
