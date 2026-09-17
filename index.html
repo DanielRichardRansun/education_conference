@@ -396,29 +396,46 @@
                   <!-- Subtle gradient vignette for readability -->
                   <div class="absolute inset-0 bg-gradient-to-t from-[#00214C]/50 via-transparent to-[#00214C]/10 pointer-events-none"></div>
 
-                  <!-- Floating Badge Inside Image (Top Right): All-Inclusive Perks & Kit -> Scroll to #registration-options -->
+                  <!-- Floating Badge Inside Image (Top Right): E-Certificate & E-Prosiding -> Scroll to #registration-options -->
                   <a
                     href="#registration-options"
                     class="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 anim-float-slow z-10 block cursor-pointer group/pill transition-all duration-300 hover:scale-105 active:scale-95"
-                    title="Click to view Registration Options & Perks"
                   >
                     <div class="inline-flex items-center space-x-1.5 sm:space-x-2 bg-[#00214C]/90 group-hover/pill:bg-brandOrange backdrop-blur-md text-white px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-bold border border-white/20 shadow-lg shadow-black/20 transition-colors">
-                      <i class="fa-solid fa-gift text-amber-400 group-hover/pill:text-white text-xs sm:text-sm transition-colors"></i>
-                      <span>All-Inclusive Perks &amp; Kit</span>
+                      <i class="fa-solid fa-certificate text-amber-400 group-hover/pill:text-white text-xs sm:text-sm transition-colors"></i>
+                      <span>E-Certificate &amp; E-Prosiding</span>
                     </div>
                   </a>
 
-                  <!-- Floating Pill Inside Image (Bottom Left): 2 Tailored Journeys -> Scroll to #journey -->
-                  <a
-                    href="#journey"
-                    class="absolute bottom-3.5 left-3.5 sm:bottom-4 sm:left-4 z-10 block cursor-pointer group/pill transition-all duration-300 hover:scale-105 active:scale-95"
-                    title="Click to explore Choose Your Journey"
-                  >
-                    <div class="inline-flex items-center space-x-1.5 sm:space-x-2 bg-white/95 group-hover/pill:bg-white backdrop-blur-md px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-bold text-brandNavy border border-white/60 shadow-md group-hover/pill:border-brandOrange transition-all">
-                      <i class="fa-solid fa-route text-brandOrange text-xs sm:text-sm group-hover/pill:translate-x-0.5 transition-transform"></i>
-                      <span>2 Tailored Journeys</span>
-                    </div>
-                  </a>
+                  <!-- Floating Pill Inside Image (Bottom Left): 2 Types of Journey -> Hover shows animated Conference & Workshop children -> Scroll to #journey -->
+                  <div class="absolute bottom-3.5 left-3.5 sm:bottom-4 sm:left-4 z-10 group/journey">
+                    <!-- Animated Child Badges (Conference & Workshop) on Hover -->
+                    <a
+                      href="#journey"
+                      class="absolute bottom-full left-0 mb-2 opacity-0 -translate-y-1.5 scale-95 pointer-events-none group-hover/journey:opacity-100 group-hover/journey:translate-y-0 group-hover/journey:scale-100 group-hover/journey:pointer-events-auto transition-all duration-300 ease-out z-30"
+                    >
+                      <div class="flex items-center gap-1.5 p-1.5 rounded-xl bg-white/95 backdrop-blur-md shadow-xl shadow-black/15 border border-slate-200/90 text-[10px] sm:text-[11px] font-bold whitespace-nowrap">
+                        <span class="inline-flex items-center space-x-1 px-2 py-1 rounded-lg bg-orange-500/10 text-brandOrange border border-orange-500/20 shadow-xs">
+                          <i class="fa-solid fa-microphone-lines text-[10px]"></i>
+                          <span>Conference</span>
+                        </span>
+                        <span class="text-slate-300 font-light">&amp;</span>
+                        <span class="inline-flex items-center space-x-1 px-2 py-1 rounded-lg bg-[#00214C]/10 text-brandNavy border border-[#00214C]/15 shadow-xs">
+                          <i class="fa-solid fa-laptop-code text-[10px]"></i>
+                          <span>Workshop</span>
+                        </span>
+                      </div>
+                    </a>
+
+                    <!-- Main Pill Button -->
+                    <a
+                      href="#journey"
+                      class="inline-flex items-center space-x-1.5 sm:space-x-2 bg-white/95 group-hover/journey:bg-white backdrop-blur-md px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-bold text-brandNavy border border-white/60 shadow-md group-hover/journey:border-brandOrange group-hover/journey:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+                    >
+                      <i class="fa-solid fa-layer-group text-brandOrange text-xs sm:text-sm group-hover/journey:rotate-12 transition-transform duration-300"></i>
+                      <span>2 Types of Journey</span>
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -426,7 +443,6 @@
               <a
                 href="#focus-area"
                 class="absolute -top-4 -left-3 sm:-top-6 sm:-left-6 anim-float z-20 block cursor-pointer group/card transition-all duration-300 hover:scale-105 active:scale-95"
-                title="Click to view Focus Area & Guiding Questions"
               >
                 <div class="bg-white/95 backdrop-blur-md rounded-2xl p-2.5 sm:p-3.5 shadow-xl shadow-slate-900/10 border border-slate-100/90 flex items-center space-x-3 group-hover/card:border-brandOrange/40 group-hover/card:shadow-orange-500/15 transition-all">
                   <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-orange-500/10 group-hover/card:bg-brandOrange flex items-center justify-center text-brandOrange group-hover/card:text-white flex-shrink-0 border border-orange-500/20 transition-colors">
@@ -439,22 +455,21 @@
                 </div>
               </a>
 
-              <!-- Floating Card 2 (Bottom-Right floating over corner): 10+ Countries & Nationalities -> Scroll to #speakers -->
+              <!-- Floating Card 2 (Bottom-Right floating over corner): 10+ Countries -> Scroll to #speakers -->
               <a
                 href="#speakers"
                 class="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-5 anim-float-reverse z-20 block cursor-pointer group/card transition-all duration-300 hover:scale-105 active:scale-95"
-                title="Click to view Keynote Speakers"
               >
                 <div class="bg-white/95 backdrop-blur-md rounded-2xl p-2.5 sm:p-3.5 shadow-xl shadow-slate-900/10 border border-slate-100/90 flex items-center space-x-3 group-hover/card:border-brandOrange/40 group-hover/card:shadow-orange-500/15 transition-all">
                   <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-[#00214C] group-hover/card:bg-brandOrange flex items-center justify-center text-white flex-shrink-0 shadow-md shadow-[#00214C]/30 transition-colors">
-                    <i class="fa-solid fa-earth-asia text-xs sm:text-sm text-amber-300 group-hover/card:text-white transition-colors"></i>
+                    <i class="fa-solid fa-users text-xs sm:text-sm text-amber-300 group-hover/card:text-white transition-colors"></i>
                   </div>
                   <div class="pr-1">
                     <div class="flex items-center space-x-1.5">
                       <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                      <span class="text-[9px] sm:text-[10px] font-bold text-slate-500 uppercase tracking-wide">Global Perspectives</span>
+                      <span class="text-[9px] sm:text-[10px] font-bold text-slate-500 uppercase tracking-wide">Global Network</span>
                     </div>
-                    <span class="block text-xs sm:text-sm font-extrabold text-[#00214C] group-hover/card:text-brandOrange leading-tight transition-colors">10+ Countries &amp; Nationalities</span>
+                    <span class="block text-xs sm:text-sm font-extrabold text-[#00214C] group-hover/card:text-brandOrange leading-tight transition-colors">10+ Countries</span>
                   </div>
                 </div>
               </a>
