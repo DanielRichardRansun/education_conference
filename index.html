@@ -1615,7 +1615,7 @@
                   </div>
                   <div>
                     <div class="text-sm sm:text-base font-extrabold text-brandBlue">
-                      Early Bird ends <span class="text-brandOrange">20 September 2026</span>
+                      Early Bird ends <span class="text-brandOrange">4 October 2026</span>
                     </div>
                     <div class="text-xs text-slate-500 font-medium mt-0.5">
                       Save 20% on all registration categories before early bird closes.
@@ -2993,11 +2993,11 @@
         }
       }
 
-      // Conference Main Countdown (20 Nov 2026) & Early Bird Countdown (20 Sep 2026)
+      // Conference Main Countdown (20 Nov 2026) & Early Bird Countdown (4 Oct 2026)
       function initCountdown() {
         const now = Date.now();
         let targetDate = new Date(2026, 10, 20, 9, 0, 0).getTime();
-        let ebTargetDate = new Date(2026, 8, 20, 23, 59, 59).getTime();
+        let ebTargetDate = new Date(2026, 9, 4, 23, 59, 59).getTime();
 
         if (isNaN(targetDate) || !targetDate || targetDate <= now) {
           targetDate = now + (97 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000) + (30 * 60 * 1000);
@@ -3036,7 +3036,7 @@
             }
           }
 
-          // Early Bird Countdown (20 Sep 2026)
+          // Early Bird Countdown (4 Oct 2026)
           const ebDifference = ebTargetDate - currentNow;
           const ebDays = document.getElementById("eb-days");
           const ebHours = document.getElementById("eb-hours");
