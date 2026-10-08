@@ -1392,13 +1392,15 @@
                 </table>
               </div>
 
-              <!-- Important Dates Footer Note -->
+              <!-- Important Dates Footer Note (Hidden: Early Bird Note) -->
+              <!--
               <div class="bg-slate-50/90 px-5 sm:px-6 py-3 border-t border-slate-200/80 text-xs text-slate-600 flex items-start space-x-2.5">
                 <i class="fa-solid fa-circle-info text-brandBlue shrink-0 mt-0.5"></i>
                 <p class="leading-relaxed">
                   <span class="font-bold text-slate-800">Early Bird Eligibility:</span> Early-bird registration applies based on the abstract submission date for conference presenters and the registration date for workshop participants.
                 </p>
               </div>
+              -->
 
               <!-- Action Bar -->
               <div class="bg-slate-50 p-5 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
@@ -1416,14 +1418,15 @@
             </div>
           </div>
 
-          <!-- SUB-SECTION 3: REGISTRATION OPTIONS (Tabbed Early Bird / Regular) -->
+          <!-- SUB-SECTION 3: REGISTRATION OPTIONS (Regular Rates) -->
           <div id="registration-options" class="scroll-mt-24 text-center anim-fade-in-up">
             <div class="text-center mb-6">
               <h3 class="text-3xl font-black text-brandNavy tracking-tight uppercase">REGISTRATION OPTIONS</h3>
               <div class="mt-2 h-1 w-16 bg-brandOrange mx-auto rounded-full"></div>
             </div>
 
-            <!-- Floating Pill Tab Buttons -->
+            <!-- Floating Pill Tab Buttons (Hidden / Commented out for Early Bird) -->
+            <!--
             <div class="flex justify-center mb-6 gap-3">
               <button id="tabEarlyBird" onclick="switchRegTab('earlybird')" class="px-6 sm:px-8 py-2.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-full transition-all duration-300 bg-brandOrange text-white shadow-lg shadow-orange-500/25 hover:bg-brandOrangeHover">
                 <i class="fa-solid fa-tag mr-1.5"></i> Early Bird (20% OFF)
@@ -1432,9 +1435,10 @@
                 <i class="fa-solid fa-ticket mr-1.5"></i> Regular Rate
               </button>
             </div>
+            -->
 
-            <!-- EARLY BIRD VIEW -->
-            <div id="regViewEarlyBird" class="bg-white border border-slate-200/90 rounded-2xl shadow-xl overflow-hidden text-left">
+            <!-- EARLY BIRD VIEW (Hidden) -->
+            <div id="regViewEarlyBird" class="bg-white border border-slate-200/90 rounded-2xl shadow-xl overflow-hidden text-left hidden" style="display: none !important;">
               <!-- Early Bird Table -->
               <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
@@ -1652,7 +1656,7 @@
             </div>
 
             <!-- REGULAR RATE VIEW -->
-            <div id="regViewRegular" class="bg-white border border-slate-200/90 rounded-2xl shadow-xl overflow-hidden text-left hidden">
+            <div id="regViewRegular" class="bg-white border border-slate-200/90 rounded-2xl shadow-xl overflow-hidden text-left">
               <!-- Regular Table -->
               <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
@@ -1826,14 +1830,14 @@
               </div>
 
               <!-- Regular Registration Action Bar -->
-              <!-- <div class="bg-slate-50 border-t border-slate-200 p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4">
+              <div class="bg-slate-50 border-t border-slate-200 p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4">
                 <div class="flex flex-col sm:flex-row items-center sm:items-start space-y-2 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
                   <div class="w-10 h-10 rounded-xl bg-blue-100 text-brandBlue flex items-center justify-center shrink-0">
                     <i class="fa-solid fa-ticket text-lg"></i>
                   </div>
                   <div>
                     <div class="text-sm sm:text-base font-extrabold text-brandNavy">
-                      Standard Registration Rate
+                      Register GECW 2026
                     </div>
                     <div class="text-xs text-slate-500 font-medium mt-0.5">
                       Register now to secure your pass for GECW 2026.
@@ -1845,9 +1849,9 @@
                   href="https://forms.gle/Dj8LCmXXoVhunZXo7" target="_blank" rel="noopener noreferrer"
                   class="rounded-xl bg-brandOrange px-6 py-2.5 font-bold text-white text-xs shadow-md hover:bg-brandOrangeHover transition-all whitespace-nowrap"
                 >
-                  Submit Now
+                  Register Now
                 </a>
-              </div> -->
+              </div>
             </div>
           </div>
 
@@ -2840,7 +2844,7 @@
             <ul class="space-y-2.5 text-sm text-slate-300">
               <li><a href="#focus-area" class="hover:text-brandOrange transition-colors">Focus Area &amp; Questions</a></li>
               <li><a href="#important-dates" class="hover:text-brandOrange transition-colors">Important Dates</a></li>
-              <li><a href="#registration-options" class="hover:text-brandOrange transition-colors">Registration Options (Early Bird &amp; Regular)</a></li>
+              <li><a href="#registration-options" class="hover:text-brandOrange transition-colors">Registration Options</a></li>
               <li><a href="#additional-package" class="hover:text-brandOrange transition-colors">Publication (Optional)</a></li>
             </ul>
           </div>
@@ -2910,6 +2914,7 @@
         const regularView = document.getElementById('regViewRegular');
         const tabEarlyBird = document.getElementById('tabEarlyBird');
         const tabRegular = document.getElementById('tabRegular');
+        if (!earlyBirdView || !regularView) return;
 
         const activeEarlyClass = 'px-6 sm:px-8 py-2.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-full transition-all duration-300 bg-brandOrange text-white shadow-lg shadow-orange-500/25 hover:bg-brandOrangeHover';
         const activeRegularClass = 'px-6 sm:px-8 py-2.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-full transition-all duration-300 bg-brandNavy text-white shadow-lg hover:shadow-xl';
@@ -2917,14 +2922,16 @@
 
         if (tab === 'earlybird') {
           earlyBirdView.classList.remove('hidden');
+          earlyBirdView.style.display = '';
           regularView.classList.add('hidden');
-          tabEarlyBird.className = activeEarlyClass;
-          tabRegular.className = inactiveClass;
+          if (tabEarlyBird) tabEarlyBird.className = activeEarlyClass;
+          if (tabRegular) tabRegular.className = inactiveClass;
         } else {
           earlyBirdView.classList.add('hidden');
+          earlyBirdView.style.display = 'none';
           regularView.classList.remove('hidden');
-          tabRegular.className = activeRegularClass;
-          tabEarlyBird.className = inactiveClass;
+          if (tabRegular) tabRegular.className = activeRegularClass;
+          if (tabEarlyBird) tabEarlyBird.className = inactiveClass;
         }
       }
 
