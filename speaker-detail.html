@@ -485,6 +485,17 @@
           photo: 'https://gecw.krya.global/images/speakers_detail/Dr.%20Hani%20Soewandi.png',
           bio: `Hani (Hanijanto) Soewandi is a GenAI Engineer at pWin.ai with extensive experience in software engineering, business intelligence, and artificial intelligence. He previously spent 25 years at MicroStrategy, where he held senior roles including Vice President of Software Engineering in Test and Principal Architect. He earned his Ph.D. in Operations Research from North Carolina State University and a Master of Engineering in Industrial Engineering and Management from the Asian Institute of Technology. His professional and research interests include generative AI, software engineering, business intelligence, operations research, and optimisation.`
         },
+        'bri-livingood': {
+          name: 'Bri Livingood',
+          organization: 'NextMinds, USA',
+          title: 'Director of Digital Learning, NextMinds',
+          country: 'USA',
+          role: 'keynote',
+          roleLabel: 'Keynote Speaker',
+          linkedin: '#',
+          photo: 'https://gecw.krya.global/images/speakers_detail/Bri%20Livingood.png',
+          bio: `Bri Livingood is an educational leader and innovation specialist with over 15 years of experience advancing invention education and student-centered learning globally. As Director of Digital Learning at NextMinds, she designs inclusive, scalable programs that empower students and independent innovators to solve real-world problems.\n\nShe has served as a director, principal, and instructional leader, and has collaborated with organizations including Lemelson-MIT, RTX, and Spark!Lab at the National Museum of American History, InventEd, and others.`
+        },
         'michael-lee': {
           name: 'Michael Lee',
           organization: 'CreBiz Factory',
@@ -577,7 +588,12 @@
 
         // Update LinkedIn
         const linkedinLink = document.getElementById('linkedinLink');
-        linkedinLink.href = speaker.linkedin;
+        if (speaker.linkedin && speaker.linkedin !== '#') {
+          linkedinLink.style.display = 'inline-flex';
+          linkedinLink.href = speaker.linkedin;
+        } else {
+          linkedinLink.style.display = 'none';
+        }
 
         // Update role badge
         const roleLabel = document.getElementById('roleLabel');
